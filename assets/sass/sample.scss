@@ -1,0 +1,148 @@
+/* ================= VARIABLES ================= */
+$white: #ffffff;
+$black: #000;
+$gray: #555;
+$light-gray: #ddd;
+$border-gray: #ccc;
+$card-bg: #fff;
+$theme-color: #5a4d4d;
+$theme-hover: #3f3535;
+$img-bg: #f5efef;
+
+$radius-lg: 18px;
+$radius-pill: 30px;
+$shadow-normal: 0 10px 25px rgba(0,0,0,0.08);
+$shadow-hover: 0 20px 40px rgba(0,0,0,0.15);
+
+/* ================= MIXINS ================= */
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition($props: all, $time: 0.35s, $ease: ease) {
+  transition: $props $time $ease;
+}
+
+@mixin hover-lift {
+  transform: translateY(-10px);
+  box-shadow: $shadow-hover;
+}
+
+@mixin img-fit($fit: cover) {
+  width: 100%;
+  height: 100%;
+  object-fit: $fit;
+}
+
+/* ================= CAROUSEL ================= */
+.carousel-item {
+  height: 30rem;
+
+  img {
+    @include img-fit(cover);
+  }
+}
+
+/* ============ CATEGORY + SORT BAR ============ */
+.category-sort-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: $white;
+  border-bottom: 1px solid $light-gray;
+  padding: 10px 0;
+
+  .nav-tabs {
+    border-bottom: none;
+  }
+
+  .nav-link {
+    color: $gray;
+    font-weight: 500;
+
+    &.active {
+      border: none;
+      border-bottom: 3px solid $theme-color;
+      color: $black;
+    }
+  }
+}
+
+/* ================= SORT BOX ================= */
+.sort-box {
+  @include flex-center;
+  gap: 10px;
+  font-weight: 500;
+
+  select {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid $border-gray;
+    outline: none;
+  }
+}
+
+/* ================= CARD STYLE ================= */
+.card {
+  border: none;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  background: $card-bg;
+  box-shadow: $shadow-normal;
+  @include transition;
+
+  &:hover {
+    @include hover-lift;
+  }
+
+  &-img-wrapper {
+    height: 240px;
+    background: $img-bg;
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      @include transition(transform, 0.4s);
+    }
+  }
+
+  &:hover &-img-wrapper img {
+    transform: scale(1.08);
+  }
+
+  &-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .btn {
+      margin-top: auto;
+      border-radius: $radius-pill;
+      padding: 10px;
+      background-color: $theme-color;
+      border: none;
+      @include transition(background-color);
+
+      &:hover {
+        background-color: $theme-hover;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  &-text {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+}
