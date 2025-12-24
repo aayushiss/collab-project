@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as *;
+
+.hero-section {
+  background: linear-gradient(135deg, $primary-teal, $blue-color);
+  padding: 6rem 1rem;
+  text-align: center;
+  color: $color-white;
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Palette override (MUST remain later) */
+.hero-section {
+  background: linear-gradient(135deg, #E9E5F3, #F5FAFE);
+}

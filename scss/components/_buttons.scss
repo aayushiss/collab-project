@@ -1,0 +1,127 @@
+
+@use "../abstracts/variables" as *;
+
+/* =========================================================
+   BASE BUTTONS
+   ========================================================= */
+
+button,
+.btn {
+  font-family: $font-body;
+  border: none;
+  cursor: pointer;
+  transition: $transition-base;
+}
+
+/* =========================================================
+   ADD TO CART – FLASH SALES
+   ========================================================= */
+
+.add-to-cart-btn {
+  width: 100%;
+  background: $accent-yellow;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+
+  &:hover {
+    background: #e3b400;
+    transform: translateY(-2px);
+  }
+}
+
+/* =========================================================
+   ADD TO CART – DEALS / PRODUCTS (DARK CTA)
+   ========================================================= */
+
+.btn-add-cart {
+  width: 100%;
+  background: $primary-text;
+  color: $color-white;
+  border: none;
+  border-radius: 12px;
+  padding: 0.65rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background: #000;
+    transform: translateY(-2px);
+  }
+}
+
+/* =========================================================
+   PRODUCTS SECTION OVERRIDE
+   ========================================================= */
+
+.products-section {
+  .btn-add-cart {
+    background: $primary-text;
+    color: $color-white;
+    border-radius: 10px;
+    padding: 0.55rem;
+    font-size: 0.85rem;
+    width: 100%;
+
+    &:hover {
+      background: #000;
+    }
+  }
+}
+
+/* =========================================================
+   SPECIALS / CTA BUTTON
+   ========================================================= */
+
+.btn-specials {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: $accent-yellow;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #e2b600;
+    transform: translateY(-2px);
+  }
+}
+
+/* =========================================================
+   QUICK VIEW BUTTON (DEALS OVERLAY)
+   ========================================================= */
+
+.btn-quick-view {
+  background: $color-white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================================================
+   GLOBAL ACCENT OVERRIDE (PALETTE BALANCING)
+   ========================================================= */
+
+.btn-add-cart,
+.add-to-cart-btn,
+.btn-specials {
+  background: $accent-yellow;
+  color: $primary-text;
+
+  &:hover {
+    background: #e9be10;
+  }
+}

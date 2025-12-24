@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.nav-menu {
+  background: $bg-white;
+  border-bottom: 1px solid $border-light;
+
+  .container-fluid {
+    padding: .75rem 1rem;
+  }
+
+  .nav-link {
+    font-size: .95rem;
+    font-weight: 500;
+    padding: .5rem 1.25rem;
+    position: relative;
+
+    &:hover {
+      color: $accent-yellow;
+
+      &::after {
+        width: 60%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: $accent-yellow;
+      transform: translateX(-50%);
+      transition: $transition-base;
+    }
+  }
+
+  @include responsive(768px) {
+    .nav-link {
+      font-size: .9rem;
+      padding: .4rem .8rem;
+    }
+  }
+}
