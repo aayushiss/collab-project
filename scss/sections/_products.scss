@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.products-section {
+  background: #F1F2F6;
+  .product-card {
+     background: #fdfdfd;
+     border: 1px solid $border-color;
+    border-radius: 20px;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
+
+
+    &:hover {
+      background: $bg-soft-hover;   
+      transform: translateY(-4px);
+       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+}
+
+/* Section Header */
+.products-section .section-header h1 {
+  font-family: $font-display;
+  color: $primary-text;
+}
+
+.products-section .section-header p {
+  color: $muted-text;
+ 
+}
+
+/* Product Card */
+.products-section .product-card {
+  border-radius: 18px;
+  background: $color-white;
+  border: 1px solid $border-color;
+  height: 100%;
+}
+
+/* Alternate cards */
+.products-section .product-card:nth-child(even) {
+  background: #fdfdfd;
+   &:hover {
+      background: $bg-soft-hover;
+    }
+}
+
+/* Image */
+.products-section .product-image {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Info */
+.product-info {
+  padding: 1.1rem;
+  ;
+}
+
+.category-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $muted-text;
+}
+
+/* Pricing */
+.price-wrapper {
+  display: flex;
+  gap: 0.6rem;
+  
+}
+
+
+
+@include responsive(768px) {
+  .products-section .product-image {
+    height: 180px;
+  }
+}

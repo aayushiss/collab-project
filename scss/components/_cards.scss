@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as *;
+
+.product-card {
+  background: #FEFEFE;
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-6px);
+    background: #E9E5F3;
+  }
+
+  .product-image {
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .discount-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: linear-gradient(135deg, $accent-yellow, #FFD84D);
+    padding: .4rem .85rem;
+    border-radius: 999px;
+    font-size: .72rem;
+    font-weight: 700;
+    box-shadow:
+      0 6px 18px rgba(244,198,17,.45),
+      inset 0 1px 0 rgba(255,255,255,.6);
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      border-radius: inherit;
+      background: linear-gradient(120deg, rgba(255,255,255,.35), transparent);
+    }
+  }
+}
