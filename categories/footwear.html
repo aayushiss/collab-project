@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(ShopIt)Footwear Store</title>
+  
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+  <!-- Compiled CSS from SCSS -->
+  <link rel="stylesheet" href="css/category-main.css">
+</head>
+
+<body>
+
+<!-- ===================== Top Header ===================== -->
+    <header class="top-header">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-md-2 col-3">
+            <a href="#" class="logo">ShopIt</a>
+          </div>
+
+          <div class="col-md-8 col-6">
+            <div class="search-container position-relative">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search for products..."
+              />
+            </div>
+          </div>
+
+          <div class="col-md-2 col-3 text-end">
+            <a href="#" class="icon-link"><i class="far fa-user"></i></a>
+            <a href="#" class="icon-link"
+              ><i class="fas fa-shopping-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== Navigation Menu ===================== -->
+    <nav class="nav-menu">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-center flex-wrap">
+          <a href="../index.html" class="nav-link">All Products</a>
+          <a href="#" class="nav-link">About Us</a>
+          <a href="#" class="nav-link">Gaming</a>
+          <a href="#" class="nav-link">Books</a>
+          <a href="#" class="nav-link">Clothing</a>
+          <a href="#" class="nav-link">Electronics</a>
+          <a href="cosmetics.html" class="nav-link">Cosmetics</a>
+          <a href="footwear.html" class="nav-link">Footwear</a>
+        </div>
+      </div>
+    </nav>
+
+<!-- ========================================================================================== -->
+
+<section class="container py-5">
+<!-- Carousel -->   
+    <section>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../assets/images/categories/footwear/cc1.png" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="../assets/images/categories/footwear/cc2.jpg" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="../assets/images/categories/footwear/cc3.jpg" alt="">
+        </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    </section>
+
+<!--ADS SECTION-->
+  <div class="row g-4">
+
+    <div class="col-lg-4">
+      <div class="feature-card">
+        <img src="../assets/images/categories/footwear/ads.png" alt="">
+        <div class="overlay">
+          <small>Fresh Arrivals</small>
+          <h3>Stylish women's picks</h3>
+          <button class="btn btn-light">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="feature-card">
+        <img src="../assets/images/categories/footwear/ads2.jpg" alt="">
+        <div class="overlay center">
+          <small>New Collection</small>
+          <h3>Hot Deals</h3>
+          <p>Up to 30% OFF</p>
+          <button class="btn btn-light">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="feature-card">
+        <img src="../assets/images/categories/footwear/ads3.jpg" alt="">
+        <div class="overlay">
+          <span>Up to 30% OFF</span>
+          <h3>Chic Styles</h3>
+          <button class="btn btn-light">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TITLE -->
+<section class="section-title text-center py-4 container">
+  <small>New Collection</small>
+  <h2>Fashion for Every You</h2>
+  <p>Unleash Your Style</p>
+</section>
+
+<!-- CATEGORY SCROLL -->
+<section class="scroll-wrapper container">
+  <div class="scroll-track">
+
+    <div class="round-card">
+      <img src="../assets/images/categories/footwear/cat1.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Flats</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>
+
+    <div class="round-card">
+      <img src="../assets/images/categories/footwear/cat2.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Heels</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>
+
+    <div class="round-card">
+      <img src="../assets/images/categories/footwear/cat3.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Loafer</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>
+
+    <div class="round-card">
+      <img src="../assets/images/categories/footwear/cat4.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Shoe</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>
+
+    <div class="round-card">
+      <img src="../assets/images/categories/footwear/cat5.jpeg" alt="">
+      <div class="card-overlay">
+        <h4>Boots</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>
+
+    <div class="round-card">
+      <img src="../assets/images/categories/footwear/cat6.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Flip Flops</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>
+
+    <div class="round-card">
+      <img src="../assets/images/categories/footwear/cat7.jpeg" alt="">
+      <div class="card-overlay">
+        <h4>Clogs</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>    
+
+  </div>
+</section>
+
+<section class="container">
+    <div class="sort-bar">
+      <span>Sort by</span>
+      <select>
+        <option>Default Sorting</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+      </select>
+    </div>
+</section>
+
+<!-- SHOP LAYOUT -->
+<section class="container py-4">
+  <div class="row">
+
+    <!-- FILTERS -->
+    <aside class="col-lg-3 mb-4">       
+    
+      <div class="filter-panel">
+        <h3>Filter</h3>
+
+        <div class="price-box">
+          <div class="price-values">
+            <span>₹<span id="minVal">100</span></span>
+            <span>₹<span id="maxVal">600</span></span>
+          </div>
+
+          <div class="range-wrapper">
+            <input type="range" id="minRange" min="100" max="600" value="100">
+            <input type="range" id="maxRange" min="100" max="600" value="600">
+          </div>
+        </div>
+
+        <h5>Filter  by sub category</h5>
+        <label class="filter-check"><input type="checkbox"> shoe</label>
+        <label class="filter-check"><input type="checkbox"> Boots</label>
+        <label class="filter-check"><input type="checkbox"> Sandals</label>
+        <label class="filter-check"><input type="checkbox"> Flip- flop</label>
+        <label class="filter-check"><input type="checkbox"> Clogs</label>
+        <label class="filter-check"><input type="checkbox"> Loafer</label>
+        <label class="filter-check"><input type="checkbox"> Heels</label>
+
+        <h5>Filter by Gender</h5>
+        <label class="filter-check"><input type="checkbox"> Male</label>
+        <label class="filter-check"><input type="checkbox"> Female</label>
+        <label class="filter-check"><input type="checkbox"> Uniser</label>
+
+        <h5>Filter by Size</h5>
+        <label class="filter-check"><input type="checkbox"> 4</label>
+        <label class="filter-check"><input type="checkbox"> 5</label>
+        <label class="filter-check"><input type="checkbox"> 6</label>
+        <label class="filter-check"><input type="checkbox"> 7</label>
+        <label class="filter-check"><input type="checkbox"> 8</label>
+
+        <div class="filter-actions">
+        <button class="btn-apply">Apply</button>
+        <button class="btn-clear">Clear</button>
+        </div>
+
+        <div class="filter-banner">
+         <!-- <img src="https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/2025/MAY/19/sjV17trC_1716c93d352a4eec952de472ef7c2aa5.jpg" alt="">-->
+          <img src="../assets/images/categories/footwear/banner.jpg" alt="">
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- PRODUCTS -->
+     <div class="col-lg-9">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+         <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/footwear/card1.jpg" alt="">
+            <h6>shoe</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹1600 <span>₹2500</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+         <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/footwear/card2.jpg" alt="">
+            <h6>Boots</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹3400 <span>₹3600</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+        <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/footwear/card3.jpg" alt="">
+            <h6>Flip-Flops</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹300 <span>₹550</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+        
+         <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/footwear/card4.jpg" alt="">
+            <h6>Clogs</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹800 <span>₹1000</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+        
+         <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/footwear/card5.jpg" alt="">
+            <h6>shoe</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹1400 <span>₹2000</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+         <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/footwear/card6.jpg" alt="">
+            <h6>Boots</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹1400 <span>₹2300</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+         <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/footwear/card7.jpg" alt="">
+            <h6>Loafer</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹600 <span>₹960</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+        <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/footwear/card8.jpg" alt="">
+            <h6>Flats</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹400 <span>₹670</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+        <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/footwear/card9.jpg" alt="">
+            <h6>Heels</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹900 <span>₹1470</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+    </div></div>
+    </main>
+
+</div>
+
+<section class="testimonials">
+  <h2 class="title">People 💗 ShopIt</h2>
+
+  <div class="carousel">
+    <div class="card">
+      <div class="top">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+        <div class="stars">★★★★★</div>
+      </div>
+      <p>
+        ShopIt is the  best online shopping website I found
+        in a long time. !
+      </p>
+      <h4>Courtney</h4>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+        <div class="stars">★★★★★</div>
+      </div>
+      <p>
+        Most of my purchase are from ShopIt, it is most trustable website !!!
+      </p>
+      <h4>Lyle</h4>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="">
+        <div class="stars">★★★★★</div>
+      </div>
+      <p>
+        Love the website and its easy to find my needs, ShopIt makes my life easy.
+      </p>
+      <h4>Kim</h4>
+    </div>
+  </div>
+
+  </div>
+</section>
+</section>
+
+<!-- ========================================================================================== -->
+
+<!-- ===================== Footer ===================== -->
+ <section>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-animate">
+            <h5 class="footer-brand">ShopIt</h5>
+            <p class="footer-desc">
+              ShopIt brings you a premium shopping experience with carefully
+              curated products and seamless delivery.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6 footer-animate">
+            <h6 class="footer-title">Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Deals</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Customer Support -->
+          <div class="col-lg-3 col-md-6 footer-animate">
+            <h6 class="footer-title">Customer Support</h6>
+            <ul class="footer-links">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Returns & Refunds</a></li>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-lg-3 col-md-6 footer-animate">
+            <h6 class="footer-title">Stay Updated</h6>
+            <p class="footer-desc">
+              Subscribe to get special offers and latest updates.
+            </p>
+
+            <form class="footer-newsletter">
+              <input type="email" placeholder="Your email address" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+              <p>© 2025 ShopIt. All rights reserved.</p>
+            </div>
+          </div>
+      </div>
+        </footer>
+      </section>
+        
+        
+    
+    <!-- ========= Bootstrap  ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ===================================================================================== -->
+</body>
+
+
+<script>
+const minRange = document.getElementById("minRange");
+const maxRange = document.getElementById("maxRange");
+const minVal = document.getElementById("minVal");
+const maxVal = document.getElementById("maxVal");
+const wrapper = document.querySelector(".range-wrapper");
+
+function updateRange() {
+  let min = parseInt(minRange.value);
+  let max = parseInt(maxRange.value);
+
+  if (min > max) [min, max] = [max, min];
+
+  minVal.textContent = min;
+  maxVal.textContent = max;
+
+  wrapper.style.setProperty("--min", min);
+  wrapper.style.setProperty("--max", max);
+}
+
+minRange.addEventListener("input", updateRange);
+maxRange.addEventListener("input", updateRange);
+
+updateRange();
+</script>
+
+</html>
