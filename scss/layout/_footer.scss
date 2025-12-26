@@ -1,0 +1,218 @@
+@use "../abstracts/variables" as *;
+
+.site-footer {
+  position: relative;
+  background: linear-gradient(180deg, #F4F6FA 0%, #EEEFF3 100%);
+  padding: 4rem 0 2rem;
+  border-top: 1px solid $border-light;
+}
+
+/* ================= Yellow Accent Divider ================= */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba($accent-yellow, 0.9),
+    transparent
+  );
+}
+
+/* ================= Titles ================= */
+.footer-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+  color: $primary-text;
+  position: relative;
+}
+.footer-title::after {
+  content: "";
+  display: block;
+  width: 125px;
+  height: 2px;
+  background: $accent-yellow;
+  margin-top: 0.4rem;
+  border-radius: 2px;
+}
+
+/* ================= Brand ================= */
+.footer-brand {
+  font-family: $font-display;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: $primary-text;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  color: $muted-text;
+  line-height: 1.65;
+  margin-top: 0.7rem;
+}
+
+/* ================= Links ================= */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 0.6rem;
+  }
+
+  a {
+    position: relative;
+    font-size: 0.9rem;
+    color: $muted-text;
+    text-decoration: none;
+    padding-bottom: 2px;
+    transition: color $transition-base;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(
+        90deg,
+        $accent-yellow,
+        lighten($accent-yellow, 10%)
+      );
+      transition: width 300ms ease;
+      border-radius: 2px;
+    }
+
+    &:hover {
+      color: $accent-yellow;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* ================= Newsletter ================= */
+.footer-newsletter {
+  display: flex;
+  margin-top: 0.9rem;
+
+  input {
+    flex: 1;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+    border: 1px solid $border-light;
+    border-radius: $radius-sm 0 0 $radius-sm;
+    outline: none;
+    background: $bg-white;
+
+    &:focus {
+      border-color: $accent-yellow;
+    }
+  }
+
+  button {
+    padding: 0 1.1rem;
+    background: $accent-yellow;
+    color: $primary-text;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0 $radius-sm $radius-sm 0;
+    cursor: pointer;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+/* ================= Bottom Bar ================= */
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid $border-light;
+  text-align: center;
+
+  p {
+    font-size: 0.85rem;
+    color: $muted-text;
+    margin: 0;
+  }
+}
+
+/* ================= Social Icons ================= */
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+
+  a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: $bg-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $muted-text;
+    font-size: 1rem;
+    border: 1px solid $border-light;
+    transition: all 300ms ease;
+
+    &:hover {
+      color: $primary-text;
+      border-color: $accent-yellow;
+      box-shadow:
+        0 0 0 6px rgba($accent-yellow, 0.15),
+        0 8px 20px rgba(0, 0, 0, 0.12);
+      transform: translateY(-3px);
+    }
+  }
+}
+/* ================= Scroll Animation ================= */
+.footer-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: footerFadeUp 0.8s ease forwards;
+}
+.footer-animate:nth-child(1) { animation-delay: 0.1s; }
+.footer-animate:nth-child(2) { animation-delay: 0.25s; }
+.footer-animate:nth-child(3) { animation-delay: 0.4s; }
+.footer-animate:nth-child(4) { animation-delay: 0.55s; }
+
+@keyframes footerFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================= Responsive ================= */
+@media (max-width: $bp-md) {
+  .footer-newsletter {
+    flex-direction: column;
+
+    input,
+    button {
+      width: 100%;
+      border-radius: $radius-sm;
+    }
+
+    button {
+      margin-top: 0.6rem;
+    }
+  }
+}
