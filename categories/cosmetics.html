@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(ShopIt)Footwear Store</title>
+  
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+  <!-- Compiled CSS from SCSS -->
+  <link rel="stylesheet" href="css/category-main.css">
+</head>
+
+<body>
+
+<!-- ===================== Top Header ===================== -->
+    <header class="top-header">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-md-2 col-3">
+            <a href="#" class="logo">ShopIt</a>
+          </div>
+
+          <div class="col-md-8 col-6">
+            <div class="search-container position-relative">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search for products..."
+              />
+            </div>
+          </div>
+
+          <div class="col-md-2 col-3 text-end">
+            <a href="#" class="icon-link"><i class="far fa-user"></i></a>
+            <a href="#" class="icon-link"
+              ><i class="fas fa-shopping-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== Navigation Menu ===================== -->
+    <nav class="nav-menu">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-center flex-wrap">
+          <a href="../index.html" class="nav-link">All Products</a>
+          <a href="#" class="nav-link">About Us</a>
+          <a href="#" class="nav-link">Gaming</a>
+          <a href="#" class="nav-link">Books</a>
+          <a href="#" class="nav-link">Clothing</a>
+          <a href="#" class="nav-link">Electronics</a>
+          <a href="cosmetics.html" class="nav-link">Cosmetics</a>
+          <a href="footwear.html" class="nav-link">Footwear</a>
+        </div>
+      </div>
+    </nav>
+
+<!-- ========================================================================================== -->
+
+<section class="container py-5">
+<!-- Carousel -->   
+    <section>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../assets/images/categories/cosmetics/cc1.jpg" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="../assets/images/categories/cosmetics/cc2.jpg" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="../assets/images/categories/cosmetics/cc3.jpg" alt="">
+        </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    </section>
+
+<!--ADS SECTION-->
+  <div class="row g-4">
+
+    <div class="col-lg-4">
+      <div class="feature-card">
+        <img src="../assets/images/categories/cosmetics/ads2.jpeg" alt="">
+        <div class="overlay">
+          <small>Fresh Arrivals</small>
+          <h3>Stylish women's picks</h3>
+          <button class="btn btn-light">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="feature-card">
+        <img src="../assets/images/categories/cosmetics/ad4.jpg" alt="">
+        <div class="overlay center">
+          <small>New Collection</small>
+          <h3>Hot Deals</h3>
+          <p>Up to 30% OFF</p>
+          <button class="btn btn-light">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="feature-card">
+        <img src="../assets/images/categories/cosmetics/ads.jpg" alt="">
+        <div class="overlay">
+          <span>Up to 30% OFF</span>
+          <h3>Chic Styles</h3>
+          <button class="btn btn-light">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TITLE -->
+<section class="section-title text-center py-4 container">
+  <small>New Arrivals</small>
+  <h2>Beauty for Every You</h2>
+  <p>Unleash your natural glow with shades made to celebrate every mood.</p>
+</section>
+
+<!-- CATEGORY SCROLL -->
+<section class="scroll-wrapper container">
+  <div class="scroll-track">
+
+    <div class="round-card">
+      <img src="../assets/images/categories/cosmetics/cat1.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Skincare</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>
+
+    <div class="round-card">
+      <img src="../assets/images/categories/cosmetics/cat2.jpg" alt="">
+      <div class="card-overlay">
+        <h4>bodycare</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>
+
+    <div class="round-card">
+      <img src="../assets/images/categories/cosmetics/cat3.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Perfume</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>
+
+    <div class="round-card">
+      <img src="../assets/images/categories/cosmetics/cat4.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Haircare</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>
+
+    <div class="round-card">
+      <img src="../assets/images/categories/cosmetics/cat5.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Hair Dryers</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>
+
+    <div class="round-card">
+      <img src="../assets/images/categories/cosmetics/cat6.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Nail care</h4>
+        <button>Shop Now</button>
+      </div>
+    </div>   
+
+  </div>
+</section>
+
+<section class="container">
+    <div class="sort-bar">
+      <span>Sort by</span>
+      <select>
+        <option>Default Sorting</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+      </select>
+    </div>
+</section>
+
+<!-- SHOP LAYOUT -->
+<section class="container py-4">
+  <div class="row">
+
+    <!-- FILTERS -->
+    <aside class="col-lg-3 mb-4">       
+    
+      <div class="filter-panel">
+        <h3>Filter</h3>
+
+        <div class="price-box">
+          <div class="price-values">
+            <span>₹<span id="minVal">10</span></span>
+            <span>₹<span id="maxVal">600</span></span>
+          </div>
+
+          <div class="range-wrapper">
+            <input type="range" id="minRange" min="100" max="600" value="100">
+            <input type="range" id="maxRange" min="100" max="600" value="600">
+          </div>
+        </div>
+
+        <h5>Filter  by sub category</h5>
+        <label class="filter-check"><input type="checkbox"> Skincare</label>
+        <label class="filter-check"><input type="checkbox"> Bodycare</label>
+        <label class="filter-check"><input type="checkbox"> Haircare</label>
+        <label class="filter-check"><input type="checkbox"> Hair Dryer</label>
+        <label class="filter-check"><input type="checkbox"> Perfume</label>
+        <label class="filter-check"><input type="checkbox"> Nailcare</label>
+
+        <div class="filter-actions">
+        <button class="btn-apply">Apply</button>
+        <button class="btn-clear">Clear</button>
+        </div>
+
+        <div class="filter-banner">
+          <img src="../assets/images/categories/cosmetics/fbanner.jpg" alt="">
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- PRODUCTS -->
+     <div class="col-lg-9">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+         <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/cosmetics/card1.jpg" alt="">
+            <h6>Skincare - Serum</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹400 <span>₹670</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+         <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/cosmetics/card2.jpg" alt="">
+            <h6>Perfume</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹600 <span>₹870</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+        <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/cosmetics/card3.jpg" alt="">
+            <h6>Haircare - Hair oil</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹300 <span>₹550</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+        
+         <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/cosmetics/card4.jpg" alt="">
+            <h6>Bodycare - moisturizer</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹500 <span>₹730</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+        
+         <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/cosmetics/card5.jpg" alt="">
+            <h6>Haircare - Hair oil</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹220 <span>₹370</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+         <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/cosmetics/card6.jpg" alt="">
+            <h6>Hair Dryer</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹6000 <span>₹9700</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+         <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/cosmetics/card7.jpg" alt="">
+            <h6>Nailcare- Nail polish</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹40 <span>₹80</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+        <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/cosmetics/card8.jpg" alt="">
+            <h6>Perfume</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹550 <span>₹990</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+        <div class="col">
+        <div class="product-card">
+            <img src="../assets/images/categories/cosmetics/card9.jpg" alt="">
+            <h6>Skincare - Sunscreen</h6>
+            <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>(4)</span>
+            </div>
+            <div class="price">₹400 <span>₹670</span></div>
+            <button class="btn btn-warning w-100">Add to Cart</button>
+        </div></div>
+
+    </div></div>
+    </main>
+
+</div>
+
+<section class="testimonials">
+  <h2 class="title">People 💗 ShopIt</h2>
+
+  <div class="carousel">
+    <div class="card">
+      <div class="top">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+        <div class="stars">★★★★★</div>
+      </div>
+      <p>
+        ShopIt is the  best online shopping website I found
+        in a long time. !
+      </p>
+      <h4>Courtney</h4>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+        <div class="stars">★★★★★</div>
+      </div>
+      <p>
+        Most of my purchase are from ShopIt, it is most trustable website !!!
+      </p>
+      <h4>Lyle</h4>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="">
+        <div class="stars">★★★★★</div>
+      </div>
+      <p>
+        Love the website and its easy to find my needs, ShopIt makes my life easy.
+      </p>
+      <h4>Kim</h4>
+    </div>
+  </div>
+
+  </div>
+</section>
+</section>
+
+<!-- ========================================================================================== -->
+
+<!-- ===================== Footer ===================== -->
+ <section>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-animate">
+            <h5 class="footer-brand">ShopIt</h5>
+            <p class="footer-desc">
+              ShopIt brings you a premium shopping experience with carefully
+              curated products and seamless delivery.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6 footer-animate">
+            <h6 class="footer-title">Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Deals</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Customer Support -->
+          <div class="col-lg-3 col-md-6 footer-animate">
+            <h6 class="footer-title">Customer Support</h6>
+            <ul class="footer-links">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Returns & Refunds</a></li>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-lg-3 col-md-6 footer-animate">
+            <h6 class="footer-title">Stay Updated</h6>
+            <p class="footer-desc">
+              Subscribe to get special offers and latest updates.
+            </p>
+
+            <form class="footer-newsletter">
+              <input type="email" placeholder="Your email address" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        <!-- Bottom Bar -->
+            <div class="footer-bottom">
+            <p>© 2025 ShopIt. All rights reserved.</p>
+            </div>
+        </div></div>
+        </footer>
+      </section>
+        
+        
+    
+    <!-- ========= Bootstrap  ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ===================================================================================== -->
+</body>
+
+
+<script>
+const minRange = document.getElementById("minRange");
+const maxRange = document.getElementById("maxRange");
+const minVal = document.getElementById("minVal");
+const maxVal = document.getElementById("maxVal");
+const wrapper = document.querySelector(".range-wrapper");
+
+function updateRange() {
+  let min = parseInt(minRange.value);
+  let max = parseInt(maxRange.value);
+
+  if (min > max) [min, max] = [max, min];
+
+  minVal.textContent = min;
+  maxVal.textContent = max;
+
+  wrapper.style.setProperty("--min", min);
+  wrapper.style.setProperty("--max", max);
+}
+
+minRange.addEventListener("input", updateRange);
+maxRange.addEventListener("input", updateRange);
+
+updateRange();
+</script>
+
+</html>

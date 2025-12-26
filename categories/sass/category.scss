@@ -1,0 +1,12 @@
+@use "../../scss/abstracts/variables";
+@use "../../scss/abstracts/mixins";
+
+@use "../../scss/base/reset";
+@use "../../scss/base/typography";
+@use "../../scss/base/globals";
+
+@use "../../scss/layout/header";
+@use "../../scss/layout/nav";
+@use "../../scss/layout/footer";
+
+@use "category-layout.scss"
