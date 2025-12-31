@@ -5,6 +5,8 @@
   background: $bg-white;
   border-bottom: 1px solid $border-light;
   padding: 1rem 0;
+   position: relative;
+  z-index: 1001; 
 
   .logo {
     font-family: $font-display;
@@ -57,4 +59,45 @@
       margin-left: 1rem;
     }
   }
+}
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+   position: relative;
+  z-index: 1002;
+
+  span {
+    width: 24px;
+    height: 2px;
+    background: $text-primary;
+    transition: $transition-base;
+  }
+}
+.nav-toggle:checked + .top-header .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle:checked + .top-header .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle:checked + .top-header .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: $transition-base;
+  z-index: 999;
+}
+.nav-toggle:checked ~ .nav-overlay {
+  opacity: 1;
+  pointer-events: auto;
 }
