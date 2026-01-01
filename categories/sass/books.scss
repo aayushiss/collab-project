@@ -1,0 +1,681 @@
+@use "../../scss/layout/footer";
+
+$primary-dark: #0A3A2A;
+$accent-yellow: #F4C430;
+$bg-light: #F5F5F7;
+$bg-section: #E8E6F0;
+$white: #FFFFFF;
+$border-light: #E0E0E0;
+$text-dark: #1A1A1A;
+$text-gray: #6B7280;
+
+/* =========================================================
+   RESET & GLOBAL
+   ========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $bg-light;
+  font-family: "Inter", sans-serif;
+  color: $text-dark;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+/* =========================================================
+   HEADER (MATCHING REFERENCE)
+   ========================================================= */
+.top-header {
+  background: $white;
+  border-bottom: 1px solid $border-light;
+  padding: 1.25rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .logo {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primary-dark;
+    flex-shrink: 0;
+  }
+
+  .search-wrapper {
+    flex: 1;
+    max-width: 800px;
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 0.85rem 1.25rem 0.85rem 3rem;
+      border-radius: 50px;
+      border: none;
+      background: #E8E8EA;
+      font-size: 0.95rem;
+      font-family: "Inter", sans-serif;
+      color: $text-dark;
+
+      &::placeholder {
+        color: $text-gray;
+      }
+
+      &:focus {
+        outline: none;
+        background: #DEDEE0;
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $text-gray;
+      font-size: 1rem;
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+
+    i {
+      font-size: 1.35rem;
+      color: $text-dark;
+      cursor: pointer;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $accent-yellow;
+      }
+    }
+  }
+}
+
+/* =========================================================
+   NAV BAR (EXACTLY MATCHING REFERENCE)
+   ========================================================= */
+.main-nav {
+  background: $white;
+  border-bottom: 1px solid $border-light;
+  position: sticky;
+  top: 73px;
+  z-index: 99;
+
+  .nav-links {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .nav-item {
+    position: relative;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: $text-dark;
+    padding: 1rem 0;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      background: $accent-yellow;
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      color: $text-dark;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
+    &.active {
+      color: $text-dark;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+/* =========================================================
+   VIDEO BANNER
+   ========================================================= */
+.video-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 58, 42, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-content {
+    text-align: center;
+    color: $white;
+    max-width: 800px;
+    padding: 2rem;
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .cta-button {
+      padding: 1rem 2.5rem;
+      background: $accent-yellow;
+      color: $text-dark;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: darken($accent-yellow, 8%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(244, 196, 48, 0.4);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+/* =========================================================
+   BESTSELLERS CAROUSEL SECTION
+   ========================================================= */
+.bestsellers-section {
+  background: $white;
+  padding: 3rem 0;
+  border-bottom: 1px solid $border-light;
+
+  .section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    color: $text-dark;
+    margin-bottom: 2rem;
+    font-family: "Playfair Display", serif;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .carousel-container {
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.4s ease;
+  }
+
+  .carousel-btn {
+    background: $white;
+    border: 2px solid $border-light;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    z-index: 10;
+
+    i {
+      color: $text-dark;
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      background: $accent-yellow;
+      border-color: $accent-yellow;
+      transform: scale(1.1);
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+
+      &:hover {
+        background: $white;
+        border-color: $border-light;
+        transform: scale(1);
+      }
+    }
+  }
+
+  .book-card {
+    min-width: 220px;
+    flex-shrink: 0;
+  }
+}
+
+/* =========================================================
+   SECTION TITLE (SHARED)
+   ========================================================= */
+.section-title {
+  font-size: 2rem;
+  color: $text-dark;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+/* =========================================================
+   BOOK STORE LAYOUT
+   ========================================================= */
+.books-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2.5rem;
+}
+
+/* =========================================================
+   SIDEBAR FILTERS
+   ========================================================= */
+.filter-sidebar {
+  background: $white;
+  border-radius: 12px;
+  padding: 1.75rem;
+  border: 1px solid $border-light;
+  height: fit-content;
+  position: sticky;
+  top: 180px;
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: $text-dark;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 2rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      color: $text-dark;
+
+      input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        accent-color: $accent-yellow;
+      }
+
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* =========================================================
+   CONTENT HEADER
+   ========================================================= */
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .section-title {
+    margin: 0;
+  }
+
+  .sort-select {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid $border-light;
+    background: $white;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    color: $text-dark;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border-color: $accent-yellow;
+    }
+  }
+}
+
+/* =========================================================
+   BOOKS GRID
+   ========================================================= */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.75rem;
+}
+
+/* =========================================================
+   BOOK CARD
+   ========================================================= */
+.book-card {
+  background: $white;
+  border: 1px solid $border-light;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .book-image {
+    margin-bottom: 1rem;
+
+    img {
+      height: 260px;
+      width: auto;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+  }
+
+  .book-info {
+    h4 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: $text-dark;
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .author {
+      font-size: 0.85rem;
+      color: $text-gray;
+      margin-bottom: 0.5rem;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-bottom: 0.6rem;
+
+      .stars {
+        color: $accent-yellow;
+        font-size: 0.9rem;
+      }
+
+      .reviews {
+        font-size: 0.8rem;
+        color: $text-gray;
+      }
+    }
+
+    .price {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: $text-dark;
+      margin-bottom: 0.75rem;
+    }
+
+    .add-to-cart {
+      width: 100%;
+      padding: 0.65rem 1rem;
+      background: $accent-yellow;
+      color: $text-dark;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: darken($accent-yellow, 8%);
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1024px) {
+  .books-section {
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+  }
+
+  .main-nav .nav-links {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-banner {
+    height: 300px;
+
+    .banner-content {
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .bestsellers-section {
+    padding: 2rem 0;
+
+    .section-container {
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+    }
+
+    .carousel-btn {
+      width: 40px;
+      height: 40px;
+
+      i {
+        font-size: 1rem;
+      }
+    }
+
+    .book-card {
+      min-width: 180px;
+    }
+  }
+
+  .top-header {
+    .header-container {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .search-wrapper {
+      order: 3;
+      flex-basis: 100%;
+      max-width: none;
+    }
+  }
+
+  .main-nav {
+    overflow-x: auto;
+    
+    .nav-links {
+      justify-content: flex-start;
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+  }
+
+  .books-section {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1rem;
+  }
+
+  .filter-sidebar {
+    display: none;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .content-header h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-banner {
+    height: 250px;
+
+    .banner-content {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-button {
+        padding: 0.75rem 2rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .bestsellers-section {
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .carousel-btn {
+      width: 36px;
+      height: 36px;
+    }
+
+    .book-card {
+      min-width: 160px;
+    }
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .top-header .logo {
+    font-size: 1.5rem;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}

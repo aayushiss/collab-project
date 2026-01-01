@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books | ShopIt</title>
+
+     <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+  <link rel="stylesheet" href="sass/books.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="top-header">
+  <div class="header-container">
+    <a class="logo" href="http://127.0.0.1:5500/collab-project/index.html">ShopIt</a>
+
+    <div class="search-wrapper">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" placeholder="Search for products..." />
+    </div>
+
+    <div class="header-actions">
+      <i class="far fa-user"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </div>
+</header>
+
+<!-- ================= NAV BAR ================= -->
+<nav class="main-nav">
+  <div class="nav-links">
+    <a href="http://127.0.0.1:5500/collab-project/index.html" class="nav-item">All Products</a>
+    <a href="#" class="nav-item">About Us</a>
+    <a href="http://127.0.0.1:5500/collab-project/categories/gaming.html" class="nav-item">Gaming</a>
+    <a href="#" class="nav-item active">Books</a>
+    <a href="#" class="nav-item">Clothing</a>
+    <a href="#" class="nav-item">Electronics</a>
+    <a href="#" class="nav-item">Cosmetics</a>
+    <a href="#" class="nav-item">Footwear</a>
+    <a href="#" class="nav-item">Furniture</a>
+  </div>
+</nav>
+
+<!-- ================= VIDEO BANNER ================= -->
+<section class="video-banner">
+  <video autoplay muted loop playsinline>
+    <source src="/collab-project/assets/images/banners/books banner.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="banner-overlay">
+    <div class="banner-content">
+      <h2>Discover Amazing Books</h2>
+      <p>Explore our curated collection of bestsellers and hidden gems</p>
+      <button class="cta-button">Shop Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BESTSELLERS CAROUSEL ================= -->
+<section class="bestsellers-section">
+  <div class="section-container">
+    <h2 class="section-title">Bestsellers</h2>
+    
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev-btn" id="prevBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <div class="carousel-container" id="carouselContainer">
+        <div class="carousel-track" id="carouselTrack">
+          
+          <!-- Bestseller Card 1 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="/collab-project/assets/images/categories/books/bestsellers/midnight.jpg" alt="Bestseller 1">
+            </div>
+            <div class="book-info">
+              <h4>The Midnight Library</h4>
+              <p class="author">Matt Haig</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(5,432)</span>
+              </div>
+              <div class="price">₹599</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 2 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="/collab-project/assets/images/categories/books/bestsellers/atomic.jpg" alt="Bestseller 2">
+            </div>
+            <div class="book-info">
+              <h4>Atomic Habits</h4>
+              <p class="author">James Clear</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(8,921)</span>
+              </div>
+              <div class="price">₹699</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 3 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="/collab-project/assets/images/categories/books/bestsellers/crawdads.jpg" alt="Bestseller 3">
+            </div>
+            <div class="book-info">
+              <h4>Where the Crawdads Sing</h4>
+              <p class="author">Delia Owens</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(7,654)</span>
+              </div>
+              <div class="price">₹549</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 4 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="/collab-project/assets/images/categories/books/bestsellers/silent_patient.jpg" alt="Bestseller 4">
+            </div>
+            <div class="book-info">
+              <h4>The Silent Patient</h4>
+              <p class="author">Alex Michaelides</p>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="reviews">(6,234)</span>
+              </div>
+              <div class="price">₹499</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 5 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="/collab-project/assets/images/categories/books/bestsellers/educated.jpg" alt="Bestseller 5">
+            </div>
+            <div class="book-info">
+              <h4>Educated</h4>
+              <p class="author">Tara Westover</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(9,876)</span>
+              </div>
+              <div class="price">₹649</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 6 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="/collab-project/assets/images/categories/books/bestsellers/becoming.jpg" alt="Bestseller 6">
+            </div>
+            <div class="book-info">
+              <h4>Becoming</h4>
+              <p class="author">Michelle Obama</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(11,234)</span>
+              </div>
+              <div class="price">₹799</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 7 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="/collab-project/assets/images/categories/books/bestsellers/alchemist.jpg" alt="Bestseller 7">
+            </div>
+            <div class="book-info">
+              <h4>The Alchemist</h4>
+              <p class="author">Paulo Coelho</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(15,432)</span>
+              </div>
+              <div class="price">₹399</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 8 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="/collab-project/assets/images/categories/books/bestsellers/sapiens.jpg" alt="Bestseller 8">
+            </div>
+            <div class="book-info">
+              <h4>Sapiens</h4>
+              <p class="author">Yuval Noah Harari</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(12,876)</span>
+              </div>
+              <div class="price">₹899</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 9 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="/collab-project/assets/images/categories/books/bestsellers/powerofnow.jpg" alt="Bestseller 9">
+            </div>
+            <div class="book-info">
+              <h4>The Power of Now</h4>
+              <p class="author">Eckhart Tolle</p>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="reviews">(7,543)</span>
+              </div>
+              <div class="price">₹549</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 10 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="/collab-project/assets/images/categories/books/bestsellers/onenineeightfour.jpg" alt="Bestseller 10">
+            </div>
+            <div class="book-info">
+              <h4>1984</h4>
+              <p class="author">George Orwell</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(18,765)</span>
+              </div>
+              <div class="price">₹449</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <button class="carousel-btn next-btn" id="nextBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OUR RECOMMENDATIONS ================= -->
+<section class="books-section">
+
+  <!-- Sidebar -->
+  <aside class="filter-sidebar">
+    <h3>Departments</h3>
+    <ul>
+      <li><input type="checkbox" id="fiction"><label for="fiction">Fiction</label></li>
+      <li><input type="checkbox" id="nonfiction"><label for="nonfiction">Non-Fiction</label></li>
+      <li><input type="checkbox" id="education"><label for="education">Education</label></li>
+      <li><input type="checkbox" id="children"><label for="children">Children</label></li>
+      <li><input type="checkbox" id="comics"><label for="comics">Comics</label></li>
+    </ul>
+
+    <h3>Format</h3>
+    <ul>
+      <li><input type="checkbox" id="hardcover"><label for="hardcover">Hardcover</label></li>
+      <li><input type="checkbox" id="paperback"><label for="paperback">Paperback</label></li>
+      <li><input type="checkbox" id="kindle"><label for="kindle">Kindle</label></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="books-main">
+    <div class="content-header">
+      <h2 class="section-title">Our Recommendations</h2>
+      <select class="sort-select">
+        <option>Sort by: Popularity</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+      </select>
+    </div>
+
+    <div class="books-grid">
+
+      <!-- Book Card -->
+      <div class="book-card">
+        <div class="book-image">
+          <img src="/collab-project/assets/images/categories/books/booksimgs/spyandthetraitor.jpg" alt="The Art of Coding">
+        </div>
+        <div class="book-info">
+          <h4>The Spy And The Traitor</h4>
+          <p class="author">Ben Macintyre</p>
+          <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(1,245)</span>
+          </div>
+          <div class="price">₹799</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-image">
+          <img src="/collab-project/assets/images/categories/books/booksimgs/stevejobs.jpg" alt="Design Thinking">
+        </div>
+        <div class="book-info">
+          <h4>Steve Jobs</h4>
+          <p class="author">Walter Issacson</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(876)</span>
+          </div>
+          <div class="price">₹1,099</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-image">
+          <img src="/collab-project/assets/images/categories/books/booksimgs/autobiographyofayogi.jpg" alt="Web Development">
+        </div>
+        <div class="book-info">
+          <h4>Autobiography of a Yogi</h4>
+          <p class="author">Paramahansa Yogananda</p>
+          <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(2,134)</span>
+          </div>
+          <div class="price">₹899</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-image">
+          <img src="/collab-project/assets/images/categories/books/booksimgs/godfather.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>The Godfather</h4>
+          <p class="author">Mario Puzo</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹699</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+            <div class="book-card">
+        <div class="book-image">
+          <img src="/collab-project/assets/images/categories/books/booksimgs/littleprince.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>The Little Prince</h4>
+          <p class="author">Antoine De Saint-Exupery</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹399</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+            <div class="book-card">
+        <div class="book-image">
+          <img src="/collab-project/assets/images/categories/books/booksimgs/fountainhead.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>The Fountainhead</h4>
+          <p class="author">Ayn Rand</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹499</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+            <div class="book-card">
+        <div class="book-image">
+          <img src="/collab-project/assets/images/categories/books/booksimgs/gullivers.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>Gulliver's Travels</h4>
+          <p class="author">Jonathan Swift</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹399</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+        <div class="book-card">
+        <div class="book-image">
+          <img src="/collab-project/assets/images/categories/books/booksimgs/mockingbird.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>To Kill a Mockingbird</h4>
+          <p class="author">Harper Lee</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹499</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+            <div class="book-card">
+        <div class="book-image">
+          <img src="/collab-project/assets/images/categories/books/booksimgs/factfullness.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>Factfulness</h4>
+          <p class="author">Hans Rosling</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹699</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+            <div class="book-card">
+        <div class="book-image">
+          <img src="/collab-project/assets/images/categories/books/booksimgs/sherlock.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>Sherlock Holmes</h4>
+          <p class="author">Sir Arthur Conan Doyle</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹699</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+        <div class="book-card">
+        <div class="book-image">
+          <img src="/collab-project/assets/images/categories/books/booksimgs/crimeandpunishment.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>Crime and Punishment</h4>
+          <p class="author">Fyodor Dostoevsky</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹799</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+        <div class="book-card">
+        <div class="book-image">
+          <img src="/collab-project/assets/images/categories/books/booksimgs/davincidode.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>The Da Vinci Code</h4>
+          <p class="author">Dan Brown</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹599</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+</section>
+
+    <!-- ===================== Footer ===================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-animate">
+            <h5 class="footer-brand">ShopIt</h5>
+            <p class="footer-desc">
+              ShopIt brings you a premium shopping experience with carefully
+              curated products and seamless delivery.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6 footer-animate">
+            <h6 class="footer-title">Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Deals</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Customer Support -->
+          <div class="col-lg-3 col-md-6 footer-animate">
+            <h6 class="footer-title">Customer Support</h6>
+            <ul class="footer-links">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Returns & Refunds</a></li>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-lg-3 col-md-6 footer-animate">
+            <h6 class="footer-title">Stay Updated</h6>
+            <p class="footer-desc">
+              Subscribe to get special offers and latest updates.
+            </p>
+
+            <form class="footer-newsletter">
+              <input type="email" placeholder="Your email address" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>© 2025 ShopIt. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+<script src="/collab-project/bookspage.js"></script>
+</body>
+</html>
