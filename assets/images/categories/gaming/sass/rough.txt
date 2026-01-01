@@ -1,0 +1,209 @@
+$body-bg:#1b2838;
+$body-txt-bg:#c7d5e0;
+$top-nav-color: #171a21;
+$navlink-hover-color:#66c0f4;
+$btn-color:  #08a70879;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1b2838; 
+  color: #c7d5e0;
+  font-family: Arial, Helvetica, sans-serif;
+    background-image: url(3862904_39.jpg);
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    overflow-y: auto;   
+    overflow-x: hidden; 
+}
+.top-nav {
+  width: 100%;
+  height: 40px;
+  background: #171a21;
+  
+}
+
+.nav-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: $body-txt-bg;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 6px 0;
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: $navlink-hover-color;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: $navlink-hover-color;
+}
+.video-banner {
+  width: 100%;
+  height: 30vh; 
+  min-height: 120px;
+  max-height: 200px;
+  overflow: hidden;
+  
+}
+.video-banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+
+.game-card {
+  background: #16202d;
+  border-radius: 4px;
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-4px);
+    
+  }
+
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+}
+
+.game-info {
+  padding: 12px;
+
+  h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #c7d5e0;
+  }
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: bold;
+  color: #c7d5e0;
+
+  &.free {
+    color: #6aff6a;
+  }
+}
+
+.cart-btn {
+  
+  border: none;
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: $btn-color;
+}
+
+.image-carousel {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s ease;
+
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  padding: 4px 10px;
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  &.prev {
+    left: 6px;
+  }
+
+  &.next {
+    right: 6px;
+  }
+}
+
+/* Hide arrows until hover (Steam-like effect) */
+.game-card .carousel-btn {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.game-card:hover .carousel-btn {
+  opacity: 1;
+}
+
+
