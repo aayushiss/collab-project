@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Delu - Your One-Stop Shop</title>
+    <title>ShopIt-Your One-Stop Shop</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -34,15 +34,26 @@
   </head>
 
   <body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-overlay"></label>
     <!-- ===================== Top Header ===================== -->
     <header class="top-header">
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-md-2 col-3">
+          <!-- Hamburger (mobile only) -->
+          <div class="col-2 d-md-none">
+            <label for="nav-toggle" class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+
+          <div class="col-md-2 col-4">
             <a href="#" class="logo">ShopIt</a>
           </div>
 
-          <div class="col-md-8 col-6">
+          <div class="col-md-8 d-none d-md-block">
             <div class="search-container position-relative">
               <i class="fas fa-search search-icon"></i>
               <input
@@ -53,7 +64,7 @@
             </div>
           </div>
 
-          <div class="col-md-2 col-3 text-end">
+          <div class="col-md-2 col-6 text-end">
             <a href="#" class="icon-link"><i class="far fa-user"></i></a>
             <a href="#" class="icon-link"
               ><i class="fas fa-shopping-cart"></i
@@ -66,25 +77,896 @@
     <!-- ===================== Navigation Menu ===================== -->
     <nav class="nav-menu">
       <div class="container-fluid">
-        <div class="d-flex justify-content-center flex-wrap">
-          <a href="#" class="nav-link">All Products</a>
-          <a href="#" class="nav-link">About Us</a>
-          <a href="http://127.0.0.1:5500/collab-project/categories/gaming.html" class="nav-link">Gaming</a>
-          <a href="http://127.0.0.1:5500/collab-project/categories/books.html" class="nav-link">Books</a>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="#" class="nav-link">Gaming</a>
+          <a href="#" class="nav-link">Books</a>
           <a href="#" class="nav-link">Clothing</a>
           <a href="#" class="nav-link">Electronics</a>
           <a href="#" class="nav-link">Cosmetics</a>
           <a href="#" class="nav-link">Footwear</a>
           <a href="#" class="nav-link">Furniture</a>
+          <a href="./categories/Aboutus.html" class="nav-link">About Us</a>
+          <a href="./categories/contact.html" class="nav-link">Contact Us</a>
         </div>
       </div>
     </nav>
 
     <!-- ===================== Hero Section ===================== -->
-    <section class="hero-section">
-      <div class="container">
-        <h1 class="hero-title">Welcome to ShopIt</h1>
-        <p class="hero-subtitle">Your One-Stop Shop for Everything You Need</p>
+    <section id="hero-carousel">
+      <div class="carousel-container">
+        <!-- PAGE 1 -->
+        <section class="carousel-page page-1" id="page-1">
+          <style>
+            .page-1 {
+              --bg-gradient-top: #9fa8b8;
+              --bg-gradient-upper: #7b879f;
+              --bg-gradient-lower: #4a5776;
+              --bg-gradient-bottom: #2e3853;
+              --btn-color: #5dd9db;
+              --btn-glow: rgba(93, 217, 219, 0.5);
+            }
+          </style>
+          <div class="hero-wrapper">
+            <div class="hero-left">
+              <h1 class="hero-title">Handcrafted<br />with Soul</h1>
+              <p class="hero-subtitle">
+                Timeless, handcrafted sneakers made to move with you.
+              </p>
+              <button class="btn btn-shop">Shop Collection</button>
+              <div class="features-list">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M10 10h20M10 10v20h20V10" />
+                      <path
+                        d="M14 14h2M24 14h2M14 20h2M24 20h2"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>100%<br />Signature Crafted</h3>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="20" cy="20" r="15" />
+                      <path d="M20 8v24M8 20h24" stroke-linecap="round" />
+                      <path d="M28 12l-16 16M12 12l16 16" opacity="0.5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Eco-friendly<br />& Durable</h3>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M20 4l4 12h12l-9 7 3 12-10-8-10 8 3-12-9-7h12z"
+                        fill="currentColor"
+                        opacity="0.3"
+                      />
+                      <rect
+                        x="8"
+                        y="24"
+                        width="6"
+                        height="6"
+                        fill="none"
+                        stroke="currentColor"
+                      />
+                      <rect
+                        x="18"
+                        y="28"
+                        width="6"
+                        height="6"
+                        fill="none"
+                        stroke="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Unique, No Two<br />Pieces Alike</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-center">
+              <div class="arch-background">
+                <div class="arch-ring arch-ring-1"></div>
+                <div class="arch-ring arch-ring-2"></div>
+                <div class="arch-ring arch-ring-3"></div>
+              </div>
+              <img
+                src="./Landing_page_assets/Hero/s4.png"
+                alt="Handcrafted ceramic vase with white flowers"
+                class="vase-img"
+              />
+            </div>
+            <div class="hero-right">
+              <div class="product-card">
+                <div class="card-icon">
+                  <svg
+                    width="52"
+                    height="52"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <!-- Sole -->
+                    <path
+                      d="M6 26c0 3 4 5 10 5h12c4 0 6-2 6-4 0-2-2-4-5-4H14c-4 0-8 1-8 3z"
+                    />
+
+                    <!-- Upper body -->
+                    <path d="M10 23c1-6 6-9 14-9 4 0 7 2 8 4" />
+
+                    <!-- Stitch / strap detail -->
+                    <path d="M16 22h8" />
+
+                    <!-- Heel curve -->
+                    <path d="M6 26c0-4 2-6 4-7" />
+                  </svg>
+                </div>
+                <h3 class="card-title">Loafers</h3>
+                <p class="card-text">
+                  Handcrafted comfort with a refined, timeless look.
+                </p>
+              </div>
+              <div class="product-card">
+                <div class="card-icon">
+                  <svg
+                    width="52"
+                    height="52"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <!-- Sole -->
+                    <path
+                      d="M8 28c0 2 3 4 8 4h10c5 0 8-2 8-4s-3-4-8-4H16c-5 0-8 2-8 4z"
+                    />
+
+                    <!-- Front strap -->
+                    <path d="M14 22h12" />
+
+                    <!-- Middle strap -->
+                    <path d="M18 20v6" />
+
+                    <!-- Back strap -->
+                    <path d="M10 24c0-2 2-4 4-4" />
+                  </svg>
+                </div>
+                <h3 class="card-title">Sandals</h3>
+                <p class="card-text">
+                  Light, breathable, and made for everyday ease.
+                </p>
+              </div>
+              <button class="btn btn-explore">Explore Story</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PAGE 2 -->
+        <section class="carousel-page page-2" id="page-2">
+          <style>
+            .page-2 {
+              --bg-gradient-top: #d4a5a5;
+              --bg-gradient-upper: #c08080;
+              --bg-gradient-lower: #a0604a;
+              --bg-gradient-bottom: #6b3e2e;
+              --btn-color: #f4a261;
+              --btn-glow: rgba(244, 162, 97, 0.5);
+            }
+          </style>
+          <div class="hero-wrapper">
+            <div class="hero-left">
+              <h1 class="hero-title">Luxury<br />Skincare</h1>
+              <p class="hero-subtitle">
+                Indulge in the purity of nature and science with every bottle
+              </p>
+              <button class="btn btn-shop">Shop Collection</button>
+              <div class="features-list">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M10 10h20M10 10v20h20V10" />
+                      <path
+                        d="M14 14h2M24 14h2M14 20h2M24 20h2"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>100%<br />Natural</h3>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="20" cy="20" r="15" />
+                      <path d="M20 8v24M8 20h24" stroke-linecap="round" />
+                      <path d="M28 12l-16 16M12 12l16 16" opacity="0.5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Eco-friendly<br />& Healthy</h3>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M20 4l4 12h12l-9 7 3 12-10-8-10 8 3-12-9-7h12z"
+                        fill="currentColor"
+                        opacity="0.3"
+                      />
+                      <rect
+                        x="8"
+                        y="24"
+                        width="6"
+                        height="6"
+                        fill="none"
+                        stroke="currentColor"
+                      />
+                      <rect
+                        x="18"
+                        y="28"
+                        width="6"
+                        height="6"
+                        fill="none"
+                        stroke="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>No Chemicals<br />Praben Free</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-center">
+              <div class="arch-background">
+                <div class="arch-ring arch-ring-1"></div>
+                <div class="arch-ring arch-ring-2"></div>
+                <div class="arch-ring arch-ring-3"></div>
+              </div>
+              <img
+                src="./Landing_page_assets/Hero/c1.png"
+                alt="Artisan pottery collection"
+                class="vase-img"
+              />
+            </div>
+            <div class="hero-right">
+              <div class="product-card">
+                <div class="card-icon">
+                  <svg
+                    width="52"
+                    height="52"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  >
+                    <path
+                      d="M8 12h24c1 0 2 1 2 2v12c0 1-1 2-2 2H8c-1 0-2-1-2-2V14c0-1 1-2 2-2z"
+                    />
+                    <ellipse cx="20" cy="14" rx="12" ry="3" />
+                    <path d="M10 28h20" stroke-linecap="round" />
+                    <circle cx="14" cy="28" r="2" fill="currentColor" />
+                    <circle cx="26" cy="28" r="2" fill="currentColor" />
+                  </svg>
+                </div>
+                <h3 class="card-title">Natural Lip Balm</h3>
+                <p class="card-text">
+                  Nourish your lips with rich, natural ingredients for a soft,
+                  lasting glow
+                </p>
+              </div>
+              <div class="product-card">
+                <div class="card-icon">
+                  <svg
+                    width="52"
+                    height="52"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  >
+                    <path d="M12 4h16v6c0 2-2 3-4 3h-8c-2 0-4-1-4-3V4z" />
+                    <path
+                      d="M10 10h20c1.5 0 2 1 2 2v20c0 2-2 4-4 4H12c-2 0-4-2-4-4V12c0-1 .5-2 2-2z"
+                    />
+                    <path
+                      d="M16 18c0-2 1-3 4-3s4 1 4 3"
+                      fill="currentColor"
+                      opacity="0.2"
+                    />
+                  </svg>
+                </div>
+                <h3 class="card-title">Hydrating Face Cream</h3>
+                <p class="card-text">
+                  Keep your skin radiant and moisturized with a blend of
+                  botanicals and vitamins
+                </p>
+              </div>
+              <button class="btn btn-explore">Explore Story</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PAGE 3 -->
+        <section class="carousel-page page-3" id="page-3">
+          <style>
+            .page-3 {
+              --bg-gradient-top: #c9a6d9;
+              --bg-gradient-upper: #a876ba;
+              --bg-gradient-lower: #7d3fa0;
+              --bg-gradient-bottom: #4a1f5f;
+              --btn-color: #d8a2d6;
+              --btn-glow: rgba(216, 162, 214, 0.5);
+            }
+          </style>
+          <div class="hero-wrapper">
+            <div class="hero-left">
+              <h1 class="hero-title">Premium<br />Collection</h1>
+              <p class="hero-subtitle">
+                Elevate your style with our precision-crafted, timeless watches
+              </p>
+              <button class="btn btn-shop">Shop Collection</button>
+              <div class="features-list">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M10 10h20M10 10v20h20V10" />
+                      <path
+                        d="M14 14h2M24 14h2M14 20h2M24 20h2"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>100%<br />Crafted</h3>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="20" cy="20" r="15" />
+                      <path d="M20 8v24M8 20h24" stroke-linecap="round" />
+                      <path d="M28 12l-16 16M12 12l16 16" opacity="0.5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Elegant<br />& Durable</h3>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M20 4l4 12h12l-9 7 3 12-10-8-10 8 3-12-9-7h12z"
+                        fill="currentColor"
+                        opacity="0.3"
+                      />
+                      <rect
+                        x="8"
+                        y="24"
+                        width="6"
+                        height="6"
+                        fill="none"
+                        stroke="currentColor"
+                      />
+                      <rect
+                        x="18"
+                        y="28"
+                        width="6"
+                        height="6"
+                        fill="none"
+                        stroke="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Exclusive Design<br />Each One Distinct</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-center">
+              <div class="arch-background">
+                <div class="arch-ring arch-ring-1"></div>
+                <div class="arch-ring arch-ring-2"></div>
+                <div class="arch-ring arch-ring-3"></div>
+              </div>
+              <img
+                src="./Landing_page_assets/Hero/f1.png"
+                alt="Premium pottery collection"
+                class="vase-img"
+              />
+            </div>
+            <div class="hero-right">
+              <div class="product-card">
+                <div class="card-icon">
+                  <svg
+                    width="52"
+                    height="52"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  >
+                    <path
+                      d="M8 12h24c1 0 2 1 2 2v12c0 1-1 2-2 2H8c-1 0-2-1-2-2V14c0-1 1-2 2-2z"
+                    />
+                    <ellipse cx="20" cy="14" rx="12" ry="3" />
+                    <path d="M10 28h20" stroke-linecap="round" />
+                    <circle cx="14" cy="28" r="2" fill="currentColor" />
+                    <circle cx="26" cy="28" r="2" fill="currentColor" />
+                  </svg>
+                </div>
+                <h3 class="card-title">Designer Handbags</h3>
+                <p class="card-text">
+                  Carry style and sophistication wherever you go with our
+                  curated collections
+                </p>
+              </div>
+              <div class="product-card">
+                <div class="card-icon">
+                  <svg
+                    width="52"
+                    height="52"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  >
+                    <path d="M12 4h16v6c0 2-2 3-4 3h-8c-2 0-4-1-4-3V4z" />
+                    <path
+                      d="M10 10h20c1.5 0 2 1 2 2v20c0 2-2 4-4 4H12c-2 0-4-2-4-4V12c0-1 .5-2 2-2z"
+                    />
+                    <path
+                      d="M16 18c0-2 1-3 4-3s4 1 4 3"
+                      fill="currentColor"
+                      opacity="0.2"
+                    />
+                  </svg>
+                </div>
+                <h3 class="card-title">Luxury Scarves</h3>
+                <p class="card-text">
+                  Wrap yourself in elegance with fabrics that blend comfort and
+                  fashion
+                </p>
+              </div>
+              <button class="btn btn-explore">Explore Story</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PAGE 4 -->
+        <section class="carousel-page page-4" id="page-4">
+          <style>
+            .page-4 {
+              --bg-gradient-top: #a8d8ea;
+              --bg-gradient-upper: #7ecce8;
+              --bg-gradient-lower: #3b9ac7;
+              --bg-gradient-bottom: #1a5f7a;
+              --btn-color: #00bcd4;
+              --btn-glow: rgba(0, 188, 212, 0.5);
+            }
+          </style>
+          <div class="hero-wrapper">
+            <div class="hero-left">
+              <h1 class="hero-title">Wizarding<br />World</h1>
+              <p class="hero-subtitle">
+                Discover spells, stories, and magic in every Harry Potter book
+              </p>
+
+              <button class="btn btn-shop">Shop Collection</button>
+              <div class="features-list">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M10 10h20M10 10v20h20V10" />
+                      <path
+                        d="M14 14h2M24 14h2M14 20h2M24 20h2"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Authentic<br />Editions</h3>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="20" cy="20" r="15" />
+                      <path d="M20 8v24M8 20h24" stroke-linecap="round" />
+                      <path d="M28 12l-16 16M12 12l16 16" opacity="0.5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Enchanted<br />& Collectible</h3>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M20 4l4 12h12l-9 7 3 12-10-8-10 8 3-12-9-7h12z"
+                        fill="currentColor"
+                        opacity="0.3"
+                      />
+                      <rect
+                        x="8"
+                        y="24"
+                        width="6"
+                        height="6"
+                        fill="none"
+                        stroke="currentColor"
+                      />
+                      <rect
+                        x="18"
+                        y="28"
+                        width="6"
+                        height="6"
+                        fill="none"
+                        stroke="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Each Book<br />A Treasure</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-center">
+              <div class="arch-background">
+                <div class="arch-ring arch-ring-1"></div>
+                <div class="arch-ring arch-ring-2"></div>
+                <div class="arch-ring arch-ring-3"></div>
+              </div>
+              <img
+                src="./Landing_page_assets/Hero/b2.png"
+                alt="Ocean inspired pottery"
+                class="vase-img"
+              />
+            </div>
+            <div class="hero-right">
+              <div class="product-card">
+                <div class="card-icon">
+                  <svg
+                    width="52"
+                    height="52"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  >
+                    <path
+                      d="M8 12h24c1 0 2 1 2 2v12c0 1-1 2-2 2H8c-1 0-2-1-2-2V14c0-1 1-2 2-2z"
+                    />
+                    <ellipse cx="20" cy="14" rx="12" ry="3" />
+                    <path d="M10 28h20" stroke-linecap="round" />
+                    <circle cx="14" cy="28" r="2" fill="currentColor" />
+                    <circle cx="26" cy="28" r="2" fill="currentColor" />
+                  </svg>
+                </div>
+                <h3 class="card-title">Mystery Thrillers</h3>
+                <p class="card-text">
+                  Unravel suspense and intrigue with every page, keeping you on
+                  the edge
+                </p>
+              </div>
+              <div class="product-card">
+                <div class="card-icon">
+                  <svg
+                    width="52"
+                    height="52"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  >
+                    <path d="M12 4h16v6c0 2-2 3-4 3h-8c-2 0-4-1-4-3V4z" />
+                    <path
+                      d="M10 10h20c1.5 0 2 1 2 2v20c0 2-2 4-4 4H12c-2 0-4-2-4-4V12c0-1 .5-2 2-2z"
+                    />
+                    <path
+                      d="M16 18c0-2 1-3 4-3s4 1 4 3"
+                      fill="currentColor"
+                      opacity="0.2"
+                    />
+                  </svg>
+                </div>
+                <h3 class="card-title">Travel Adventures</h3>
+                <p class="card-text">
+                  Explore the world from your bookshelf with guides to every
+                  hidden gem
+                </p>
+              </div>
+              <button class="btn btn-explore">Explore Story</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PAGE 5 -->
+        <section class="carousel-page page-5" id="page-5">
+          <style>
+            .page-5 {
+              --bg-gradient-top: #b8d4b4;
+              --bg-gradient-upper: #8ba77d;
+              --bg-gradient-lower: #5a7e5f;
+              --bg-gradient-bottom: #2d4a35;
+              --btn-color: #6ba574;
+              --btn-glow: rgba(107, 165, 116, 0.5);
+            }
+          </style>
+          <div class="hero-wrapper">
+            <div class="hero-left">
+              <h1 class="hero-title">Gaming<br />Universe</h1>
+              <p class="hero-subtitle">
+                Explore, conquer, and play with our curated collection of top PC
+                games
+              </p>
+              <button class="btn btn-shop">Shop Collection</button>
+              <div class="features-list">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M10 10h20M10 10v20h20V10" />
+                      <path
+                        d="M14 14h2M24 14h2M14 20h2M24 20h2"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Digitally<br />Mastered</h3>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="20" cy="20" r="15" />
+                      <path d="M20 8v24M8 20h24" stroke-linecap="round" />
+                      <path d="M28 12l-16 16M12 12l16 16" opacity="0.5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Immersive<br />& Engaging</h3>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M20 4l4 12h12l-9 7 3 12-10-8-10 8 3-12-9-7h12z"
+                        fill="currentColor"
+                        opacity="0.3"
+                      />
+                      <rect
+                        x="8"
+                        y="24"
+                        width="6"
+                        height="6"
+                        fill="none"
+                        stroke="currentColor"
+                      />
+                      <rect
+                        x="18"
+                        y="28"
+                        width="6"
+                        height="6"
+                        fill="none"
+                        stroke="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>Every Quest<br />Is Unique</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-center">
+              <div class="arch-background">
+                <div class="arch-ring arch-ring-1"></div>
+                <div class="arch-ring arch-ring-2"></div>
+                <div class="arch-ring arch-ring-3"></div>
+              </div>
+              <img
+                src="./Landing_page_assets/Hero/g1.png"
+                alt="Nature inspired pottery"
+                class="vase-img"
+              />
+            </div>
+            <div class="hero-right">
+              <div class="product-card">
+                <div class="card-icon">
+                  <svg
+                    width="52"
+                    height="52"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  >
+                    <path
+                      d="M8 12h24c1 0 2 1 2 2v12c0 1-1 2-2 2H8c-1 0-2-1-2-2V14c0-1 1-2 2-2z"
+                    />
+                    <ellipse cx="20" cy="14" rx="12" ry="3" />
+                    <path d="M10 28h20" stroke-linecap="round" />
+                    <circle cx="14" cy="28" r="2" fill="currentColor" />
+                    <circle cx="26" cy="28" r="2" fill="currentColor" />
+                  </svg>
+                </div>
+                <h3 class="card-title">Next-Gen Consoles</h3>
+                <p class="card-text">
+                  Experience cutting-edge graphics and seamless gameplay with
+                  our latest consoles
+                </p>
+              </div>
+              <div class="product-card">
+                <div class="card-icon">
+                  <svg
+                    width="52"
+                    height="52"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  >
+                    <path d="M12 4h16v6c0 2-2 3-4 3h-8c-2 0-4-1-4-3V4z" />
+                    <path
+                      d="M10 10h20c1.5 0 2 1 2 2v20c0 2-2 4-4 4H12c-2 0-4-2-4-4V12c0-1 .5-2 2-2z"
+                    />
+                    <path
+                      d="M16 18c0-2 1-3 4-3s4 1 4 3"
+                      fill="currentColor"
+                      opacity="0.2"
+                    />
+                  </svg>
+                </div>
+                <h3 class="card-title">Precision Controllers</h3>
+                <p class="card-text">
+                  Take full control of your games with ergonomic, responsive
+                  controllers
+                </p>
+              </div>
+              <button class="btn btn-explore">Explore Story</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Navigation -->
+      <div class="carousel-dots">
+        <a href="#page-1" class="dot"></a>
+        <a href="#page-2" class="dot"></a>
+        <a href="#page-3" class="dot"></a>
+        <a href="#page-4" class="dot"></a>
+        <a href="#page-5" class="dot"></a>
+      </div>
+
+      <div class="carousel-nav">
+        <a href="#page-1" class="nav-btn">↑</a>
+        <a href="#page-5" class="nav-btn">↓</a>
       </div>
     </section>
 
@@ -778,7 +1660,9 @@
                     class="video-card"
                     data-bs-toggle="modal"
                     data-bs-target="#videoCosmetics"
-                    style="background-image: url('./Landing_page_assets/video/image/cosmatic.png')"
+                    style="
+                      background-image: url('./Landing_page_assets/video/image/cosmatic.png');
+                    "
                   >
                     <div class="video-duration">4:10</div>
                     <div class="play-button">
@@ -795,7 +1679,9 @@
                     class="video-card"
                     data-bs-toggle="modal"
                     data-bs-target="#videoFootwear"
-                    style="background-image: url('./Landing_page_assets/video/image/foot.png')"
+                    style="
+                      background-image: url('./Landing_page_assets/video/image/foot.png');
+                    "
                   >
                     <div class="video-duration">2:50</div>
                     <div class="play-button">
@@ -812,7 +1698,9 @@
                     class="video-card"
                     data-bs-toggle="modal"
                     data-bs-target="#videoLatesGming"
-                    style="background-image: url('./Landing_page_assets/video/image/game.png')"
+                    style="
+                      background-image: url('./Landing_page_assets/video/image/game.png');
+                    "
                   >
                     <div class="video-duration">2:45</div>
                     <div class="play-button">
@@ -835,7 +1723,9 @@
                     class="video-card"
                     data-bs-toggle="modal"
                     data-bs-target="#videoSummerStyle"
-                    style="background-image: url('./Landing_page_assets/video/image/sumtshirt.png')"
+                    style="
+                      background-image: url('./Landing_page_assets/video/image/sumtshirt.png');
+                    "
                   >
                     <div class="video-duration">3:25</div>
                     <div class="play-button">
@@ -853,7 +1743,9 @@
                     class="video-card"
                     data-bs-toggle="modal"
                     data-bs-target="#videoSmartHome"
-                    style="background-image: url('./Landing_page_assets/video/image/smt_home.png')"
+                    style="
+                      background-image: url('./Landing_page_assets/video/image/smt_home.png');
+                    "
                   >
                     <div class="video-duration">5:15</div>
                     <div class="play-button">
@@ -1467,70 +2359,216 @@
     </section>
 
     <!-- ===================== Footer ===================== -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-animate">
-            <h5 class="footer-brand">ShopIt</h5>
-            <p class="footer-desc">
-              ShopIt brings you a premium shopping experience with carefully
-              curated products and seamless delivery.
-            </p>
-            <div class="footer-social">
-              <a href="#" aria-label="Facebook"
-                ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="#" aria-label="Instagram"
-                ><i class="bi bi-instagram"></i
-              ></a>
-              <a href="#" aria-label="Twitter"
-                ><i class="bi bi-twitter-x"></i
-              ></a>
-              <a href="#" aria-label="LinkedIn"
-                ><i class="bi bi-linkedin"></i
-              ></a>
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Left Section -->
+        <div class="footer__left">
+          <div class="footer__logo">
+            <div>
+              <h2 class="footer__brand">ShopIt</h2>
+              <p class="footer__tagline">Trends Start Here</p>
             </div>
           </div>
 
-          <!-- Quick Links -->
-          <div class="col-lg-2 col-md-6 footer-animate">
-            <h6 class="footer-title">Quick Links</h6>
-            <ul class="footer-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">Deals</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
+          <p class="footer__description">
+            Shopit is your go-to destination for trending products, unbeatable
+            deals, and effortless shopping—bringing style, quality, and
+            convenience together in one seamless online experience.
+          </p>
 
-          <!-- Customer Support -->
-          <div class="col-lg-3 col-md-6 footer-animate">
-            <h6 class="footer-title">Customer Support</h6>
-            <ul class="footer-links">
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Returns & Refunds</a></li>
-              <li><a href="#">Shipping Info</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-          </div>
-
-          <!-- Newsletter -->
-          <div class="col-lg-3 col-md-6 footer-animate">
-            <h6 class="footer-title">Stay Updated</h6>
-            <p class="footer-desc">
-              Subscribe to get special offers and latest updates.
-            </p>
-
-            <form class="footer-newsletter">
-              <input type="email" placeholder="Your email address" />
-              <button type="submit">Subscribe</button>
+          <div class="footer__newsletter">
+            <h1 class="footer__newsletter-heading">
+              Subscribe to our newsletter
+            </h1>
+            <h3 class="footer__section-title">Stay Updated</h3>
+            <form class="footer__form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="footer__input"
+                required
+              />
+              <button type="submit" class="footer__button">Subscribe</button>
             </form>
+            <p class="footer__helper-text">
+              Receive exclusive offers, product updates, and secure order
+              alerts.
+            </p>
           </div>
         </div>
 
-        <!-- Bottom Bar -->
-        <div class="footer-bottom">
-          <p>© 2025 ShopIt. All rights reserved.</p>
+        <!-- Middle Sections -->
+        <div class="footer__content">
+          <div class="footer__column">
+            <h3 class="footer__column-title">Get to Know Us</h3>
+            <ul class="footer__links">
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">About ShopIt</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">ShopIt Science</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title">Help</h3>
+            <ul class="footer__links">
+              <li><a href="#">Payments</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Cancellation & Returns</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="footer__right">
+          <p class="footer__contact-label">Questions? Contact us:</p>
+          <a href="mailto:support@ShopIt.com" class="footer__email"
+            >support@ShopIt.com</a
+          >
+          <p class="footer__response-time">Response time: < 24 hours</p>
+          <div class="footer__social">
+            <p class="footer__social-label">Follow Us:</p>
+            <div class="footer__social-icons">
+              <a href="#" class="social-icon">
+                <img
+                  src="./Landing_page_assets/social_media/aratai1.png"
+                  alt="Arattai"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="./Landing_page_assets/social_media/linkedin.png"
+                  alt="Linkedin"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="./Landing_page_assets/social_media/pinterest.png"
+                  alt="Pinterest"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="./Landing_page_assets/social_media/youtube.png"
+                  alt="YouTube"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="./Landing_page_assets/social_media/github.png"
+                  alt="Github"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Ecommerce Assurance -->
+        <div class="footer__assurance">
+          <div class="assurance-item">
+            <span class="assurance-icon">🚚</span>
+            <div>
+              <p class="assurance-title">Fast Delivery</p>
+              <p class="assurance-text">Free shipping on eligible orders</p>
+            </div>
+          </div>
+
+          <div class="assurance-item">
+            <span class="assurance-icon">🔁</span>
+            <div>
+              <p class="assurance-title">Easy Returns</p>
+              <p class="assurance-text">7-day hassle-free returns</p>
+            </div>
+          </div>
+
+          <div class="assurance-item">
+            <span class="assurance-icon">🔐</span>
+            <div>
+              <p class="assurance-title">Secure Payments</p>
+              <p class="assurance-text">100% protected transactions</p>
+            </div>
+          </div>
+
+          <div class="assurance-item payments">
+            <p class="assurance-title">We Accept</p>
+            <div class="payment-icons">
+              <svg viewBox="0 0 48 32" class="payment-svg" aria-label="Visa">
+                <rect width="48" height="32" rx="4" fill="#1A1F71" />
+                <text
+                  x="50%"
+                  y="65%"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="14"
+                  font-weight="700"
+                  font-family="Arial"
+                >
+                  VISA
+                </text>
+              </svg>
+
+              <svg
+                viewBox="0 0 48 32"
+                class="payment-svg"
+                aria-label="Mastercard"
+              >
+                <rect width="48" height="32" rx="4" fill="#000" />
+                <circle cx="20" cy="16" r="8" fill="#EB001B" />
+                <circle cx="28" cy="16" r="8" fill="#F79E1B" />
+              </svg>
+
+              <svg viewBox="0 0 48 32" class="payment-svg" aria-label="PayPal">
+                <rect width="48" height="32" rx="4" fill="#003087" />
+                <text
+                  x="50%"
+                  y="65%"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="12"
+                  font-weight="700"
+                  font-family="Arial"
+                >
+                  PayPal
+                </text>
+              </svg>
+
+              <svg viewBox="0 0 48 32" class="payment-svg" aria-label="UPI">
+                <rect width="48" height="32" rx="4" fill="#111" />
+                <text
+                  x="50%"
+                  y="65%"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="12"
+                  font-weight="600"
+                  font-family="Arial"
+                >
+                  UPI
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <p>&copy; 2025 ShopIt. All rights reserved.</p>
+          <nav class="footer__legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+          </nav>
+        </div>
+        <div class="footer__bottom-right">
+          <div class="footer__status">
+            <span class="status-indicator"></span>
+            <span>All systems operational</span>
+          </div>
+          <p class="footer__updated">Last updated: 2 hours ago</p>
         </div>
       </div>
     </footer>
@@ -1541,7 +2579,10 @@
         <div class="modal-content bg-black border-0">
           <div class="modal-body p-0">
             <video class="w-100" controls autoplay>
-              <source src="./Landing_page_assets/video/video/cosmatic.mp4" type="video/mp4" />
+              <source
+                src="./Landing_page_assets/video/video/cosmatic.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
@@ -1553,7 +2594,10 @@
         <div class="modal-content bg-black border-0">
           <div class="modal-body p-0">
             <video class="w-100" controls autoplay>
-              <source src="./Landing_page_assets/videos/footwear.mp4" type="video/mp4" />
+              <source
+                src="./Landing_page_assets/videos/footwear.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
@@ -1566,7 +2610,10 @@
         <div class="modal-content bg-black border-0">
           <div class="modal-body p-0">
             <video class="w-100" controls autoplay>
-              <source src="./Landing_page_assets/video/video/game.mp4" type="video/mp4" />
+              <source
+                src="./Landing_page_assets/video/video/game.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
@@ -1578,7 +2625,10 @@
         <div class="modal-content bg-black border-0">
           <div class="modal-body p-0">
             <video class="w-100" controls autoplay>
-              <source src="./Landing_page_assets/video/video/summertshirt.mp4" type="video/mp4" />
+              <source
+                src="./Landing_page_assets/video/video/summertshirt.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
@@ -1590,7 +2640,10 @@
         <div class="modal-content bg-black border-0">
           <div class="modal-body p-0">
             <video class="w-100" controls autoplay>
-              <source src="./Landing_page_assets/video/video/smarthome.mp4" type="video/mp4" />
+              <source
+                src="./Landing_page_assets/video/video/smarthome.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
@@ -1602,7 +2655,10 @@
         <div class="modal-content bg-black border-0">
           <div class="modal-body p-0">
             <video class="w-100" controls autoplay>
-              <source src="./Landing_page_assets/video/video/workout.mp4" type="video/mp4" />
+              <source
+                src="./Landing_page_assets/video/video/workout.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
@@ -1614,7 +2670,10 @@
         <div class="modal-content bg-black border-0">
           <div class="modal-body p-0">
             <video class="w-100" controls autoplay>
-              <source src="./Landing_page_assets/video/video/cooking.mp4" type="video/mp4" />
+              <source
+                src="./Landing_page_assets/video/video/cooking.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
@@ -1626,7 +2685,10 @@
         <div class="modal-content bg-black border-0">
           <div class="modal-body p-0">
             <video class="w-100" controls autoplay>
-              <source src="./Landing_page_assets/video/video/headphone.mp4" type="video/mp4" />
+              <source
+                src="./Landing_page_assets/video/video/headphone.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
@@ -1638,7 +2700,10 @@
         <div class="modal-content bg-black border-0">
           <div class="modal-body p-0">
             <video class="w-100" controls autoplay>
-              <source src="./Landing_page_assets/video/video/travel.mp4" type="video/mp4" />
+              <source
+                src="./Landing_page_assets/video/video/travel.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
