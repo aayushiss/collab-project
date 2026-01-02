@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopIt-Your One-Stop Shop</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-overlay"></label>
+    <!-- ===================== Top Header ===================== -->
+    <header class="top-header">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- Hamburger (mobile only) -->
+          <div class="col-2 d-md-none">
+            <label for="nav-toggle" class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+
+          <div class="col-md-2 col-4">
+            <a href="#" class="logo">ShopIt</a>
+          </div>
+
+          <div class="col-md-8 d-none d-md-block">
+            <div class="search-container position-relative">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search for products..."
+              />
+            </div>
+          </div>
+
+          <div class="col-md-2 col-6 text-end">
+            <a href="#" class="icon-link"><i class="far fa-user"></i></a>
+            <a href="#" class="icon-link"
+              ><i class="fas fa-shopping-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== Navigation Menu ===================== -->
+    <nav class="nav-menu">
+      <div class="container-fluid">
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="#" class="nav-link">Gaming</a>
+          <a href="#" class="nav-link">Books</a>
+          <a href="#" class="nav-link">Clothing</a>
+          <a href="#" class="nav-link">Electronics</a>
+          <a href="#" class="nav-link">Cosmetics</a>
+          <a href="#" class="nav-link">Footwear</a>
+          <a href="#" class="nav-link">Furniture</a>
+          <a href="./Aboutus.html" class="nav-link">About Us</a>
+          <a href="./contact.html" class="nav-link">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="about">
+<!-- Hero -->
+<section class="about-hero">
+  <div class="container about-hero__grid">
+
+    <!-- Left: Content -->
+    <div class="about-hero__content reveal">
+      <span class="about-hero__tag">About Us</span>
+      <h1 class="about-hero__title">
+        Crafting Quality Products<br />
+        With Passion & Purpose
+      </h1>
+      <p class="about-hero__text">
+        We are an e-commerce brand built on trust, craftsmanship, and
+        customer-first thinking. Every product we create is designed to
+        deliver lasting value and exceptional experience.
+      </p>
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="about-hero__visual reveal delay-2">
+      <div class="hero-card hover-lift">
+        <img
+          src="../Landing_page_assets/About/skin_care.jpg"
+          alt="Featured product"
+        />
+
+        <span class="hero-badge">
+          ★ Trusted by 50K+ Customers
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+      <!-- Brand Story -->
+      <section class="about-story">
+        <div class="container about-story__grid">
+          <div class="about-story__content">
+            <h2 class="section-title">Our Story</h2>
+            <p>
+              What started as a simple idea soon became a commitment to quality,
+              transparency, and thoughtful design. We work closely with skilled
+              creators and trusted partners to ensure every product meets our
+              high standards.
+            </p>
+            <p>
+              Our mission is to bring beautifully crafted, reliable products
+              directly to you — without unnecessary complexity or compromise.
+            </p>
+          </div>
+
+          <div class="about-story__image reveal delay-2">
+            <img src="../Landing_page_assets/About/make.jpg" alt="Our journey" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <section class="about-values">
+        <div class="container">
+          <h2 class="section-title center">What We Stand For</h2>
+
+          <div class="about-values__grid">
+            <div class="value-card hover-lift reveal delay-1">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2l3 6 6 .9-4.5 4.3L17.8 20 12 16.8 6.2 20l1.3-6.8L3 8.9 9 8z"
+                  />
+                </svg>
+              </div>
+              <h3>Quality First</h3>
+              <p>
+                Every product goes through careful selection and quality checks.
+              </p>
+            </div>
+
+            <div class="value-card hover-lift reveal delay-2">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 1l9 4v6c0 5-3.8 9.7-9 11-5.2-1.3-9-6-9-11V5z" />
+                </svg>
+              </div>
+              <h3>Customer Trust</h3>
+              <p>
+                Transparent pricing, honest communication, reliable support.
+              </p>
+            </div>
+
+            <div class="value-card hover-lift reveal delay-3">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 3C10 3 3 10 3 21c8-1 14-5 18-18z" />
+                </svg>
+              </div>
+              <h3>Sustainability</h3>
+              <p>Responsible sourcing and mindful packaging.</p>
+            </div>
+
+            <div class="value-card hover-lift reveal delay-4">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 21h6M12 2a7 7 0 00-4 12c.7.6 1 1.2 1 2h6c0-.8.3-1.4 1-2A7 7 0 0012 2z"
+                  />
+                </svg>
+              </div>
+              <h3>Innovation</h3>
+              <p>Design-led products that solve real problems beautifully.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="about-stats">
+        <div class="container about-stats__grid">
+          <div class="stat">
+            <h3>50K+</h3>
+            <p>Happy Customers</p>
+          </div>
+          <div class="stat">
+            <h3>1K+</h3>
+            <p>Products Delivered</p>
+          </div>
+          <div class="stat">
+            <h3>4.8★</h3>
+            <p>Customer Rating</p>
+          </div>
+          <div class="stat">
+            <h3>24/7</h3>
+            <p>Customer Support</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="about-why">
+        <div class="container about-why__grid">
+          <div class="about-why__image reveal delay-2">
+            <img src="../Landing_page_assets/About/custom.jpg" alt="Why choose us" />
+          </div>
+
+          <div class="about-why__content">
+            <h2 class="section-title">Why Choose Us</h2>
+            <ul>
+              <li>Carefully curated product collections</li>
+              <li>Fast and reliable delivery</li>
+              <li>Secure payments & easy returns</li>
+              <li>Dedicated customer support</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ===================== Footer ===================== -->
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Left Section -->
+        <div class="footer__left">
+          <div class="footer__logo">
+            <div>
+              <h2 class="footer__brand">ShopIt</h2>
+              <p class="footer__tagline">Trends Start Here</p>
+            </div>
+          </div>
+
+          <p class="footer__description">
+            Shopit is your go-to destination for trending products, unbeatable
+            deals, and effortless shopping—bringing style, quality, and
+            convenience together in one seamless online experience.
+          </p>
+
+          <div class="footer__newsletter">
+            <h1 class="footer__newsletter-heading">
+              Subscribe to our newsletter
+            </h1>
+            <h3 class="footer__section-title">Stay Updated</h3>
+            <form class="footer__form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="footer__input"
+                required
+              />
+              <button type="submit" class="footer__button">Subscribe</button>
+            </form>
+            <p class="footer__helper-text">
+              Receive exclusive offers, product updates, and secure order
+              alerts.
+            </p>
+          </div>
+        </div>
+
+        <!-- Middle Sections -->
+        <div class="footer__content">
+          <div class="footer__column">
+            <h3 class="footer__column-title">Get to Know Us</h3>
+            <ul class="footer__links">
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">About ShopIt</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">ShopIt Science</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title">Help</h3>
+            <ul class="footer__links">
+              <li><a href="#">Payments</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Cancellation & Returns</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="footer__right">
+          <p class="footer__contact-label">Questions? Contact us:</p>
+          <a href="mailto:support@ShopIt.com" class="footer__email"
+            >support@ShopIt.com</a
+          >
+          <p class="footer__response-time">Response time: < 24 hours</p>
+          <div class="footer__social">
+            <p class="footer__social-label">Follow Us:</p>
+             <div class="footer__social-icons">
+              <a href="#" class="social-icon">
+                <img
+                  src="../Landing_page_assets/social_media/aratai1.png"
+                  alt="Arattai"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="../Landing_page_assets/social_media/linkedin.png"
+                  alt="Linkedin"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="../Landing_page_assets/social_media/pinterest.png"
+                  alt="Pinterest"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="../Landing_page_assets/social_media/youtube.png"
+                  alt="YouTube"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="../Landing_page_assets/social_media/github.png"
+                  alt="Github"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Ecommerce Assurance -->
+        <div class="footer__assurance">
+          <div class="assurance-item">
+            <span class="assurance-icon">🚚</span>
+            <div>
+              <p class="assurance-title">Fast Delivery</p>
+              <p class="assurance-text">Free shipping on eligible orders</p>
+            </div>
+          </div>
+
+          <div class="assurance-item">
+            <span class="assurance-icon">🔁</span>
+            <div>
+              <p class="assurance-title">Easy Returns</p>
+              <p class="assurance-text">7-day hassle-free returns</p>
+            </div>
+          </div>
+
+          <div class="assurance-item">
+            <span class="assurance-icon">🔐</span>
+            <div>
+              <p class="assurance-title">Secure Payments</p>
+              <p class="assurance-text">100% protected transactions</p>
+            </div>
+          </div>
+
+          <div class="assurance-item payments">
+            <p class="assurance-title">We Accept</p>
+            <div class="payment-icons">
+              <svg viewBox="0 0 48 32" class="payment-svg" aria-label="Visa">
+                <rect width="48" height="32" rx="4" fill="#1A1F71" />
+                <text
+                  x="50%"
+                  y="65%"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="14"
+                  font-weight="700"
+                  font-family="Arial"
+                >
+                  VISA
+                </text>
+              </svg>
+
+              <svg
+                viewBox="0 0 48 32"
+                class="payment-svg"
+                aria-label="Mastercard"
+              >
+                <rect width="48" height="32" rx="4" fill="#000" />
+                <circle cx="20" cy="16" r="8" fill="#EB001B" />
+                <circle cx="28" cy="16" r="8" fill="#F79E1B" />
+              </svg>
+
+              <svg viewBox="0 0 48 32" class="payment-svg" aria-label="PayPal">
+                <rect width="48" height="32" rx="4" fill="#003087" />
+                <text
+                  x="50%"
+                  y="65%"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="12"
+                  font-weight="700"
+                  font-family="Arial"
+                >
+                  PayPal
+                </text>
+              </svg>
+
+              <svg viewBox="0 0 48 32" class="payment-svg" aria-label="UPI">
+                <rect width="48" height="32" rx="4" fill="#111" />
+                <text
+                  x="50%"
+                  y="65%"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="12"
+                  font-weight="600"
+                  font-family="Arial"
+                >
+                  UPI
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <p>&copy; 2025 ShopIt. All rights reserved.</p>
+          <nav class="footer__legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+          </nav>
+        </div>
+        <div class="footer__bottom-right">
+          <div class="footer__status">
+            <span class="status-indicator"></span>
+            <span>All systems operational</span>
+          </div>
+          <p class="footer__updated">Last updated: 2 hours ago</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
