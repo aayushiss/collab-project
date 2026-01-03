@@ -9,9 +9,7 @@ $border-light: #E0E0E0;
 $text-dark: #1A1A1A;
 $text-gray: #6B7280;
 
-/* =========================================================
-   RESET & GLOBAL
-========================================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -37,24 +35,30 @@ h1, h2, h3, h4 {
 
 /*--HEADER-- */
 .top-header {
+  text-align: left;
   background: $white;
   border-bottom: 1px solid $border-light;
-  padding: 1.25rem 0;
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
 
   .header-container {
+    
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 2rem;
+  }
+  span {
+    color: #e7b728;
   }
 
   .logo {
+    
     font-family: "Playfair Display", serif;
     font-size: 2rem;
     font-weight: 700;
@@ -118,6 +122,7 @@ h1, h2, h3, h4 {
 
 /*--NAV BAR--*/
 .main-nav {
+  padding:0 2rem ;
   background: $white;
   border-bottom: 1px solid $border-light;
   position: sticky;
@@ -172,9 +177,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* =========================================================
-   VIDEO BANNER
-   ========================================================= */
+
 .video-banner {
   position: relative;
   width: 100%;
@@ -422,21 +425,22 @@ h1, h2, h3, h4 {
    ========================================================= */
 .books-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
 }
 
-/* =========================================================
-   BOOK CARD
-   ========================================================= */
+
 .book-card {
   background: $white;
   border: 1px solid $border-light;
   border-radius: 12px;
-  padding: 1.25rem;
+  padding: 1rem;
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 94%;
 
   &:hover {
     transform: translateY(-6px);
@@ -445,29 +449,47 @@ h1, h2, h3, h4 {
 
   .book-image {
     margin-bottom: 1rem;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 
     img {
-      height: 260px;
-      width: auto;
-      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
       border-radius: 6px;
     }
   }
 
   .book-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
     h4 {
-      font-size: 1rem;
+      font-size: 0.95rem;
       margin-bottom: 0.4rem;
       color: $text-dark;
       font-family: "Inter", sans-serif;
       font-weight: 600;
       line-height: 1.3;
+      min-height: 2.6rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .author {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: $text-gray;
       margin-bottom: 0.5rem;
+      min-height: 1.2rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .rating {
@@ -476,39 +498,43 @@ h1, h2, h3, h4 {
       justify-content: center;
       gap: 0.4rem;
       margin-bottom: 0.6rem;
+      min-height: 1.4rem;
 
       .stars {
         color: $accent-yellow;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
       }
 
       .reviews {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         color: $text-gray;
       }
     }
 
     .price {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: $text-dark;
       margin-bottom: 0.75rem;
+      min-height: 1.5rem;
     }
 
     .add-to-cart {
       width: 100%;
-      padding: 0.65rem 1rem;
+      padding: 0.6rem 1rem;
       background: $accent-yellow;
       color: $text-dark;
       border: none;
       border-radius: 8px;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       cursor: pointer;
       transition: all 0.2s ease;
+      margin-top: auto;
 
       &:hover {
-        background: darken($accent-yellow, 8%);
+        background: $primary-dark;
+        color: #DEDEE0;
         transform: translateY(-2px);
       }
 
@@ -518,10 +544,6 @@ h1, h2, h3, h4 {
     }
   }
 }
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
 
 /* =========================================================
    RESPONSIVE
@@ -610,8 +632,14 @@ h1, h2, h3, h4 {
   }
 
   .books-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .book-card {
+    .book-image {
+      height: 200px;
+    }
   }
 
   .content-header h1 {
@@ -668,6 +696,44 @@ h1, h2, h3, h4 {
   }
 
   .books-grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+
+  .book-card {
+    padding: 0.75rem;
+
+    .book-image {
+      height: 180px;
+    }
+
+    .book-info {
+      h4 {
+        font-size: 0.85rem;
+        min-height: 2.4rem;
+      }
+
+      .author {
+        font-size: 0.75rem;
+      }
+
+      .rating {
+        .stars {
+          font-size: 0.75rem;
+        }
+
+        .reviews {
+          font-size: 0.7rem;
+        }
+      }
+
+      .price {
+        font-size: 1rem;
+      }
+
+      .add-to-cart {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+      }
+    }
   }
 }
