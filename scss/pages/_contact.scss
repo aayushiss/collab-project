@@ -135,3 +135,25 @@
     transform: translateY(-2px);
   }
 }
+.contact-form form {
+  .invalid-feedback {
+    display: none;
+  }
+  &:has(.btn-submit:focus),
+  &:has(.btn-submit:active) {
+    .form-control:invalid ~ .invalid-feedback,
+    .form-select:invalid ~ .invalid-feedback {
+      display: block;
+    }
+
+    .form-control:invalid,
+    .form-select:invalid {
+      border-color: #dc3545;
+    }
+
+    .form-control:valid,
+    .form-select:valid {
+      border-color: #198754;
+    }
+  }
+}
