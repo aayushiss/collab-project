@@ -1,3 +1,5 @@
+@use "../../scss/layout/footer";
+
 $body-bg: #1b2838;
 $body-txt-bg: #c7d5e0;
 $top-nav-color: #171a21;
@@ -38,6 +40,7 @@ body {
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav-links {
@@ -73,10 +76,119 @@ body {
     }
   }
 }
+
 .content {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
+  display: flex;
+  gap: 24px;
+}
+
+// ================= SIDEBAR STYLES =================
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.sidebar-category {
+  background: #16202d;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 100px; 
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+ 
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    &::before {
+      background: rgba(0, 0, 0, 0.35);
+    }
+  }
+}
+
+
+.bestsellers-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://images.unsplash.com/photo-1766051666522-9cfa12675f5b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.goty-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltcfc5d4efe7445255/690cc3a6cca3c05acc15bdfb/futureclass2025posterfeatured.jpg?width=1280&auto=webp&quality=80&disable=upscale');
+}
+.toprated-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://images.pexels.com/photos/163077/mario-yoschi-figures-funny-163077.jpeg');
+}
+
+.newreleases-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://images.pexels.com/photos/10194139/pexels-photo-10194139.jpeg');
+}
+
+.category-header {
+  padding: 24px 16px; 
+  background: transparent;
+  border-left: 3px solid $navlink-hover-color;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s ease;
+  position: relative;
+  z-index: 2;
+  min-height: 100px; 
+
+  &:hover {
+    background: rgba(42, 74, 101, 0.4);
+  }
+
+ 
+}
+
+.category-icon {
+  font-size: 24px; 
+  color: $navlink-hover-color;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.category-title {
+  font-size: 16px; 
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.category-badge {
+  margin-left: auto;
+  background: rgba(102, 192, 244, 0.3);
+  color: #ffffff;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+
+.store-section {
+  flex: 1;
 }
 
 .store-grid {
@@ -96,6 +208,7 @@ body {
   &:hover {
     transform: scale(1.18);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    z-index: 10;
   }
 }
 
@@ -236,219 +349,9 @@ body {
   }
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-}
 
 
-
-/* ================= Base Footer ================= */
-.site-footer {
-  position: relative;
-  background: linear-gradient(180deg, #171a21 0%, #0f141b 100%);
-  padding: 4rem 0 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* ================= Subtle Top Divider ================= */
-.site-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 92%;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(102, 192, 244, 0.35),
-    transparent
-  );
-}
-
-/* ================= Titles ================= */
-.footer-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #c7d5e0;
-  letter-spacing: 0.3px;
-}
-
-.footer-title::after {
-  content: "";
-  display: block;
-  width: 90px;
-  height: 2px;
-  background: #66c0f4;
-  margin-top: 0.45rem;
-  border-radius: 2px;
-}
-
-/* ================= Brand ================= */
-.footer-brand {
-  font-family: $font-display;
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 0.4px;
-  color: #ffffff;
-}
-
-.footer-desc {
-  font-size: 0.85rem;
-  color: #8f98a0;
-  line-height: 1.6;
-  margin-top: 0.75rem;
-  max-width: 320px;
-}
-
-/* ================= Links ================= */
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  li {
-    margin-bottom: 0.55rem;
-  }
-
-  a {
-    font-size: 0.85rem;
-    color: #8f98a0;
-    text-decoration: none;
-    transition: color 200ms ease;
-
-    &:hover {
-      color: #66c0f4;
-    }
-  }
-}
-
-/* ================= Newsletter ================= */
-.footer-newsletter {
-  display: flex;
-  margin-top: 1rem;
-
-  input {
-    flex: 1;
-    padding: 0.55rem 0.7rem;
-    font-size: 0.8rem;
-    border-radius: $radius-sm 0 0 $radius-sm;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: #0b1117;
-    color: #c7d5e0;
-    outline: none;
-
-    &::placeholder {
-      color: #6b7280;
-    }
-
-    &:focus {
-      border-color: #66c0f4;
-    }
-  }
-
-  button {
-    padding: 0 1.1rem;
-    background: linear-gradient(180deg, #66c0f4, #4fa3d1);
-    color: #0b1117;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 0 $radius-sm $radius-sm 0;
-    cursor: pointer;
-    transition: background 200ms ease, transform 150ms ease;
-
-    &:hover {
-      background: linear-gradient(180deg, #7fd1ff, #66c0f4);
-      transform: translateY(-1px);
-    }
-  }
-}
-
-/* ================= Bottom Bar ================= */
-.footer-bottom {
-  margin-top: 3rem;
-  padding-top: 1.3rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  text-align: center;
-
-  p {
-    font-size: 0.75rem;
-    color: #6b7280;
-    margin: 0;
-  }
-}
-
-/* ================= Social Icons ================= */
-.footer-social {
-  display: flex;
-  gap: 0.6rem;
-  margin-top: 1.3rem;
-
-  a {
-    width: 36px;
-    height: 36px;
-    border-radius: 4px;
-    background: #0b1117;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #8f98a0;
-    font-size: 0.95rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: all 200ms ease;
-
-    &:hover {
-      color: #ffffff;
-      border-color: #66c0f4;
-      background: rgba(102, 192, 244, 0.15);
-    }
-  }
-}
-
-/* ================= Scroll Animation ================= */
-.footer-animate {
-  opacity: 0;
-  transform: translateY(24px);
-  animation: footerFadeUp 0.75s ease forwards;
-}
-
-.footer-animate:nth-child(1) { animation-delay: 0.1s; }
-.footer-animate:nth-child(2) { animation-delay: 0.25s; }
-.footer-animate:nth-child(3) { animation-delay: 0.4s; }
-.footer-animate:nth-child(4) { animation-delay: 0.55s; }
-
-@keyframes footerFadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ================= Responsive ================= */
-@media (max-width: $bp-md) {
-  .footer-newsletter {
-    flex-direction: column;
-
-    input,
-    button {
-      width: 100%;
-      border-radius: $radius-sm;
-    }
-
-    button {
-      margin-top: 0.6rem;
-    }
-  }
-}
-
-
-
-
+/* ================= VIDEO BANNER ================= */
 .video-banner {
   position: relative;
   width: 100%;
@@ -500,5 +403,62 @@ body {
   span {
     font-weight: 500;
     color: #66c0f4;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 968px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .sidebar-category {
+    margin-bottom: 0;
+    min-height: 90px; 
+  }
+
+  .category-header {
+    min-height: 90px;
+    padding: 18px 16px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    
+    a {
+      font-size: 14px;
+    }
+  }
+
+  .search-container {
+    margin: 10px;
+    
+    .search-input {
+      width: 180px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: $bp-md) {
+  .footer-newsletter {
+    flex-direction: column;
+
+    input,
+    button {
+      width: 100%;
+      border-radius: $radius-sm;
+    }
+
+    button {
+      margin-top: 0.6rem;
+    }
   }
 }
