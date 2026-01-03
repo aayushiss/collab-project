@@ -390,9 +390,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* =========================================================
-   CONTENT HEADER
-   ========================================================= */
+/* CONTENT HEADER*/
 .content-header {
   display: flex;
   justify-content: space-between;
@@ -420,9 +418,9 @@ h1, h2, h3, h4 {
   }
 }
 
-/* =========================================================
+/* 
    BOOKS GRID
-   ========================================================= */
+    */
 .books-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -545,9 +543,9 @@ h1, h2, h3, h4 {
   }
 }
 
-/* =========================================================
+/* 
    RESPONSIVE
-   ========================================================= */
+    */
 @media (max-width: 1024px) {
   .books-section {
     grid-template-columns: 220px 1fr;
@@ -737,3 +735,28 @@ h1, h2, h3, h4 {
     }
   }
 }
+
+/* ================= AUTO ROTATING BESTSELLERS ================= */
+
+
+#carouselTrack {
+  animation: autoScroll 30s linear infinite;
+  will-change: transform;
+}
+
+/* Pause on hover*/
+#carouselContainer:hover #carouselTrack {
+  animation-play-state: paused;
+}
+
+/* Keyframes */
+@keyframes autoScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-75%);
+  }
+}
+
