@@ -31,6 +31,106 @@
     }
   }
 }
+/* ================= CONTACT HERO VISUAL ================= */
+
+.contact-hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include respond(md) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Right visual wrapper */
+.contact-hero__visual {
+  position: relative;
+  min-height: 360px;
+
+  @include respond(md) {
+    min-height: 300px;
+  }
+}
+
+/* Image cards */
+.contact-hero__visual .visual-card {
+  position: absolute;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  background: $bg-white;
+  @include shadow(soft);
+  transition: $transition-base;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    @include shadow(hover);
+  }
+}
+
+.contact-hero__visual .card-1 {
+  width: 240px;
+  height: 300px;
+  top: 0;
+  left: 0;
+}
+
+.contact-hero__visual .card-2 {
+  width: 220px;
+  height: 260px;
+  bottom: 0;
+  right: 0;
+}
+
+/* Floating badge */
+.contact-hero__visual .visual-badge {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  background: $accent-yellow;
+  color: $primary-teal;
+  border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 12px 25px rgba(244, 198, 17, 0.4);
+
+  small {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+}
+
+/* Mobile stacking fix */
+@include respond(md) {
+  .contact-hero__visual {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    .visual-card {
+      position: static;
+      width: 45%;
+      height: 220px;
+    }
+
+    .visual-badge {
+      display: none;
+    }
+  }
+}
+
 
 .contact-tag {
   display: inline-block;

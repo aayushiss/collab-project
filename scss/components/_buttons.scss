@@ -34,6 +34,47 @@ button,
   }
 }
 
+// =========================================================================
+  //  Buy Now – FLASH SALES (DARK CTA)
+  //  ========================================================= */
+
+  .buy-now-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #ffb703, #f4c611);
+  border: none;
+  border-radius: 10px;
+  padding: 0.65rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+
+  box-shadow: 0 6px 14px rgba(244, 198, 17, 0.35);
+  transition: 
+    background 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, #f4c611, #ffb703);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(244, 198, 17, 0.45);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(244, 198, 17, 0.3);
+  }
+}
+
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; 
+}
+
+
 /* =========================================================
    ADD TO CART – DEALS / PRODUCTS (DARK CTA)
    ========================================================= */
