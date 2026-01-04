@@ -1,0 +1,78 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.deals-section {
+  background: #FDFDFD;
+  border-radius: 28px;
+  padding: 3.5rem 2rem;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.06);
+}
+
+/* Header */
+.header-section {
+  border-bottom: 1px solid $divider-color;
+  padding-bottom: 2rem;
+}
+
+.deals-title {
+  font-family: $font-display;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: $primary-text;
+}
+
+.deals-subtitle {
+  font-size: 1rem;
+  color: $muted-text;
+}
+
+/* CTA */
+.btn-specials {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: $accent-yellow;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #e2b600;
+    transform: translateY(-2px);
+  }
+}
+
+/* Product Overlay */
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2,42,33,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.btn-quick-view {
+  background: $color-white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@include responsive(768px) {
+  .deals-title {
+    font-size: 2.2rem;
+  }
+
+  .deals-section {
+    padding: 2.5rem 1.5rem;
+  }
+}

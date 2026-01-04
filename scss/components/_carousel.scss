@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 52px;
+  height: 52px;
+  background: $bg-white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  z-index: 10;
+  @include shadow(soft);
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $accent-yellow;
+    transform: translateY(-50%) scale(1.08);
+
+   
+  }
+}
+ .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(1);
+      width: 22px;
+      height: 22px;
+      transition: filter 0.3s ease;
+    }
+.carousel-item {
+  pointer-events: none;
+
+  .product-card,
+  .video-card {
+    pointer-events: auto;
+  }
+}

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books | ShopIt</title>
+
+     <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+  <link rel="stylesheet" href="sass/books.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="top-header">
+  <div class="header-container">
+    <a class="logo" href="http://127.0.0.1:5500/collab-project/index.html">ShopIt<span>Books</span></a>
+
+    <div class="search-wrapper">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" placeholder="Search for products..." />
+    </div>
+
+    <div class="header-actions">
+      <i class="far fa-user"></i>
+      <i class="fas fa-shopping-cart"></i>
+      <i class="fas fa-heart"></i>
+    </div>
+  </div>
+</header>
+
+<!-- ================= NAV BAR ================= -->
+<nav class="main-nav">
+  <div class="nav-links">
+     <a href="/" class="nav-link">Home</a>
+          <a href="./gaming.html" class="nav-link">Gaming</a>
+          <a href="./books.html" class="nav-link active">Books</a>
+          <a href="./clothing.html" class="nav-link">Clothing</a>
+          <a href="./electronics.html" class="nav-link">Electronics</a>
+          <a href="./cosmetics.html" class="nav-link">Cosmetics</a>
+          <a href="./footwear.html" class="nav-link">Footwear</a>
+          <a href="./fashion.html" class="nav-link">Fashion</a>
+          <a href="./Aboutus.html" class="nav-link">About Us</a>
+          <a href="./contact.html" class="nav-link">Contact Us</a>
+  </div>
+</nav>
+
+<!---- VIDEO BANNER -- -->
+<section class="video-banner">
+  <video autoplay muted loop playsinline>
+    <source src="../assets/images/banners/books banner.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="banner-overlay">
+    <div class="banner-content">
+      <h2>Discover Amazing Books</h2>
+      <p>Explore our curated collection of bestsellers and hidden gems</p>
+      <button class="cta-button">Shop Now</button>
+    </div>
+  </div>
+</section>
+
+<!----BESTSELLERS CAROUSEL -- -->
+<section class="bestsellers-section">
+  <div class="section-container">
+    <h2 class="section-title">Bestsellers</h2>
+    
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev-btn" id="prevBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <div class="carousel-container" id="carouselContainer">
+        <div class="carousel-track" id="carouselTrack">
+          
+          <!-- Bestseller Card 1 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="../assets/images/categories/books/bestsellers/midnight.jpg" alt="Bestseller 1">
+            </div>
+            <div class="book-info">
+              <h4>The Midnight Library</h4>
+              <p class="author">Matt Haig</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(5,432)</span>
+              </div>
+              <div class="price">₹599</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 2 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="../assets/images/categories/books/bestsellers/atomic.jpg" alt="Bestseller 2">
+            </div>
+            <div class="book-info">
+              <h4>Atomic Habits</h4>
+              <p class="author">James Clear</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(8,921)</span>
+              </div>
+              <div class="price">₹699</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 3 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="../assets/images/categories/books/bestsellers/crawdads.jpg" alt="Bestseller 3">
+            </div>
+            <div class="book-info">
+              <h4>Where the Crawdads Sing</h4>
+              <p class="author">Delia Owens</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(7,654)</span>
+              </div>
+              <div class="price">₹549</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 4 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="../assets/images/categories/books/bestsellers/silent_patient.jpg" alt="Bestseller 4">
+            </div>
+            <div class="book-info">
+              <h4>The Silent Patient</h4>
+              <p class="author">Alex Michaelides</p>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="reviews">(6,234)</span>
+              </div>
+              <div class="price">₹499</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 5 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="../assets/images/categories/books/bestsellers/educated.jpg" alt="Bestseller 5">
+            </div>
+            <div class="book-info">
+              <h4>Educated</h4>
+              <p class="author">Tara Westover</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(9,876)</span>
+              </div>
+              <div class="price">₹649</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 6 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="../assets/images/categories/books/bestsellers/becoming.jpg" alt="Bestseller 6">
+            </div>
+            <div class="book-info">
+              <h4>Becoming</h4>
+              <p class="author">Michelle Obama</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(11,234)</span>
+              </div>
+              <div class="price">₹799</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 7 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="../assets/images/categories/books/bestsellers/alchemist.jpg" alt="Bestseller 7">
+            </div>
+            <div class="book-info">
+              <h4>The Alchemist</h4>
+              <p class="author">Paulo Coelho</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(15,432)</span>
+              </div>
+              <div class="price">₹399</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 8 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="../assets/images/categories/books/bestsellers/sapiens.jpg" alt="Bestseller 8">
+            </div>
+            <div class="book-info">
+              <h4>Sapiens</h4>
+              <p class="author">Yuval Noah Harari</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(12,876)</span>
+              </div>
+              <div class="price">₹899</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 9 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="../assets/images/categories/books/bestsellers/powerofnow.jpg" alt="Bestseller 9">
+            </div>
+            <div class="book-info">
+              <h4>The Power of Now</h4>
+              <p class="author">Eckhart Tolle</p>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="reviews">(7,543)</span>
+              </div>
+              <div class="price">₹549</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Bestseller Card 10 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="../assets/images/categories/books/bestsellers/onenineeightfour.jpg" alt="Bestseller 10">
+            </div>
+            <div class="book-info">
+              <h4>1984</h4>
+              <p class="author">George Orwell</p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(18,765)</span>
+              </div>
+              <div class="price">₹449</div>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <button class="carousel-btn next-btn" id="nextBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!---OUR RECOMMENDATIONS ---->
+<section class="books-section">
+
+  <!-- Sidebar -->
+  <aside class="filter-sidebar">
+    <h3>Genre</h3>
+    <ul>
+      <li><input type="checkbox" id="fiction"><label for="fiction">Fiction</label></li>
+      <li><input type="checkbox" id="nonfiction"><label for="nonfiction">Non-Fiction</label></li>
+      <li><input type="checkbox" id="education"><label for="education">Education</label></li>
+      <li><input type="checkbox" id="children"><label for="children">Children</label></li>
+      <li><input type="checkbox" id="comics"><label for="comics">Comics</label></li>
+    </ul>
+
+    <h3>Format</h3>
+    <ul>
+      <li><input type="checkbox" id="hardcover"><label for="hardcover">Hardcover</label></li>
+      <li><input type="checkbox" id="paperback"><label for="paperback">Paperback</label></li>
+      <li><input type="checkbox" id="kindle"><label for="kindle">Kindle</label></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="books-main">
+    <div class="content-header">
+      <h2 class="section-title">Our Recommendations</h2>
+      <select class="sort-select">
+        <option>Sort by: Popularity</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+      </select>
+    </div>
+
+    <div class="books-grid">
+
+      <!-- Book Card -->
+      <div class="book-card">
+        <div class="book-image">
+          <img src="../assets/images/categories/books/booksimgs/spyandthetraitor.jpg" alt="The Art of Coding">
+        </div>
+        <div class="book-info">
+          <h4>The Spy And The Traitor</h4>
+          <p class="author">Ben Macintyre</p>
+          <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(1,245)</span>
+          </div>
+          <div class="price">₹799</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-image">
+          <img src="../assets/images/categories/books/booksimgs/stevejobs.jpg" alt="Design Thinking">
+        </div>
+        <div class="book-info">
+          <h4>Steve Jobs</h4>
+          <p class="author">Walter Issacson</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(876)</span>
+          </div>
+          <div class="price">₹1,099</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-image">
+          <img src="../assets/images/categories/books/booksimgs/autobiographyofayogi.jpg" alt="Web Development">
+        </div>
+        <div class="book-info">
+          <h4>Autobiography of a Yogi</h4>
+          <p class="author">Paramahansa Yogananda</p>
+          <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(2,134)</span>
+          </div>
+          <div class="price">₹899</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-image">
+          <img src="../assets/images/categories/books/booksimgs/godfather.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>The Godfather</h4>
+          <p class="author">Mario Puzo</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹699</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+            <div class="book-card">
+        <div class="book-image">
+          <img src="../assets/images/categories/books/booksimgs/littleprince.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>The Little Prince</h4>
+          <p class="author">Antoine De Saint-Exupery</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹399</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+            <div class="book-card">
+        <div class="book-image">
+          <img src="../assets/images/categories/books/booksimgs/fountainhead.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>The Fountainhead</h4>
+          <p class="author">Ayn Rand</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹499</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+            <div class="book-card">
+        <div class="book-image">
+          <img src="../assets/images/categories/books/booksimgs/gullivers.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>Gulliver's Travels</h4>
+          <p class="author">Jonathan Swift</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹399</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+        <div class="book-card">
+        <div class="book-image">
+          <img src="../assets/images/categories/books/booksimgs/mockingbird.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>To Kill a Mockingbird</h4>
+          <p class="author">Harper Lee</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹499</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+            <div class="book-card">
+        <div class="book-image">
+          <img src="../assets/images/categories/books/booksimgs/factfullness.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>Factfulness</h4>
+          <p class="author">Hans Rosling</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹699</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+            <div class="book-card">
+        <div class="book-image">
+          <img src="../assets/images/categories/books/booksimgs/sherlock.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>Sherlock Holmes</h4>
+          <p class="author">Sir Arthur Conan Doyle</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹699</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+        <div class="book-card">
+        <div class="book-image">
+          <img src="../assets/images/categories/books/booksimgs/crimeandpunishment.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>Crime and Punishment</h4>
+          <p class="author">Fyodor Dostoevsky</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹799</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+        <div class="book-card">
+        <div class="book-image">
+          <img src="../assets/images/categories/books/booksimgs/davincidode.jpg" alt="Python Basics">
+        </div>
+        <div class="book-info">
+          <h4>The Da Vinci Code</h4>
+          <p class="author">Dan Brown</p>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="reviews">(3,456)</span>
+          </div>
+          <div class="price">₹599</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+</section>
+
+     <!-- ===================== Footer ===================== -->
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Left Section -->
+        <div class="footer__left">
+          <div class="footer__logo">
+            <div>
+              <h2 class="footer__brand">ShopIt</h2>
+              <p class="footer__tagline">Trends Start Here</p>
+            </div>
+          </div>
+
+          <p class="footer__description">
+            Shopit is your go-to destination for trending products, unbeatable
+            deals, and effortless shopping—bringing style, quality, and
+            convenience together in one seamless online experience.
+          </p>
+
+          <div class="footer__newsletter">
+            <h1 class="footer__newsletter-heading">
+              Subscribe to our newsletter
+            </h1>
+            <h3 class="footer__section-title">Stay Updated</h3>
+            <form class="footer__form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="footer__input"
+                required
+              />
+              <button type="submit" class="footer__button">Subscribe</button>
+            </form>
+            <p class="footer__helper-text">
+              Receive exclusive offers, product updates, and secure order
+              alerts.
+            </p>
+          </div>
+        </div>
+
+        <!-- Middle Sections -->
+        <div class="footer__content">
+          <div class="footer__column">
+            <h3 class="footer__column-title">Get to Know Us</h3>
+            <ul class="footer__links">
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">About ShopIt</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">ShopIt Science</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title">Help</h3>
+            <ul class="footer__links">
+              <li><a href="#">Payments</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Cancellation & Returns</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="footer__right">
+          <p class="footer__contact-label">Questions? Contact us:</p>
+          <a href="mailto:support@ShopIt.com" class="footer__email"
+            >support@ShopIt.com</a
+          >
+          <p class="footer__response-time">Response time: < 24 hours</p>
+          <div class="footer__social">
+            <p class="footer__social-label">Follow Us:</p>
+            <div class="footer__social-icons">
+              <a href="#" class="social-icon">
+                <img
+                  src="./Landing_page_assets/social_media/aratai1.png"
+                  alt="Arattai"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="./Landing_page_assets/social_media/linkedin.png"
+                  alt="Linkedin"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="./Landing_page_assets/social_media/pinterest.png"
+                  alt="Pinterest"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="./Landing_page_assets/social_media/youtube.png"
+                  alt="YouTube"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="./Landing_page_assets/social_media/github.png"
+                  alt="Github"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Ecommerce Assurance -->
+        <div class="footer__assurance">
+          <div class="assurance-item">
+            <span class="assurance-icon">🚚</span>
+            <div>
+              <p class="assurance-title">Fast Delivery</p>
+              <p class="assurance-text">Free shipping on eligible orders</p>
+            </div>
+          </div>
+
+          <div class="assurance-item">
+            <span class="assurance-icon">🔁</span>
+            <div>
+              <p class="assurance-title">Easy Returns</p>
+              <p class="assurance-text">7-day hassle-free returns</p>
+            </div>
+          </div>
+
+          <div class="assurance-item">
+            <span class="assurance-icon">🔐</span>
+            <div>
+              <p class="assurance-title">Secure Payments</p>
+              <p class="assurance-text">100% protected transactions</p>
+            </div>
+          </div>
+
+          <div class="assurance-item payments">
+            <p class="assurance-title">We Accept</p>
+            <div class="payment-icons">
+              <svg viewBox="0 0 48 32" class="payment-svg" aria-label="Visa">
+                <rect width="48" height="32" rx="4" fill="#1A1F71" />
+                <text
+                  x="50%"
+                  y="65%"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="14"
+                  font-weight="700"
+                  font-family="Arial"
+                >
+                  VISA
+                </text>
+              </svg>
+
+              <svg
+                viewBox="0 0 48 32"
+                class="payment-svg"
+                aria-label="Mastercard"
+              >
+                <rect width="48" height="32" rx="4" fill="#000" />
+                <circle cx="20" cy="16" r="8" fill="#EB001B" />
+                <circle cx="28" cy="16" r="8" fill="#F79E1B" />
+              </svg>
+
+              <svg viewBox="0 0 48 32" class="payment-svg" aria-label="PayPal">
+                <rect width="48" height="32" rx="4" fill="#003087" />
+                <text
+                  x="50%"
+                  y="65%"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="12"
+                  font-weight="700"
+                  font-family="Arial"
+                >
+                  PayPal
+                </text>
+              </svg>
+
+              <svg viewBox="0 0 48 32" class="payment-svg" aria-label="UPI">
+                <rect width="48" height="32" rx="4" fill="#111" />
+                <text
+                  x="50%"
+                  y="65%"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="12"
+                  font-weight="600"
+                  font-family="Arial"
+                >
+                  UPI
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <p>&copy; 2025 ShopIt. All rights reserved.</p>
+          <nav class="footer__legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+          </nav>
+        </div>
+        <div class="footer__bottom-right">
+          <div class="footer__status">
+            <span class="status-indicator"></span>
+            <span>All systems operational</span>
+          </div>
+          <p class="footer__updated">Last updated: 2 hours ago</p>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

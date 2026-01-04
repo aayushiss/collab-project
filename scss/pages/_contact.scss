@@ -1,0 +1,259 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* ================= CONTACT PAGE ================= */
+
+.contact {
+  color: $text-primary;
+}
+
+/* HERO */
+.contact-hero {
+  background: linear-gradient(120deg, $bg-soft, $bg-page);
+
+  &__content {
+    max-width: 640px;
+  }
+
+  h1 {
+    font-family: $font-display;
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    color: $text-muted;
+  }
+
+  @include respond(md) {
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+}
+/* ================= CONTACT HERO VISUAL ================= */
+
+.contact-hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+
+  @include respond(md) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Right visual wrapper */
+.contact-hero__visual {
+  position: relative;
+  min-height: 360px;
+
+  @include respond(md) {
+    min-height: 300px;
+  }
+}
+
+/* Image cards */
+.contact-hero__visual .visual-card {
+  position: absolute;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  background: $bg-white;
+  @include shadow(soft);
+  transition: $transition-base;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    @include shadow(hover);
+  }
+}
+
+.contact-hero__visual .card-1 {
+  width: 240px;
+  height: 300px;
+  top: 0;
+  left: 0;
+}
+
+.contact-hero__visual .card-2 {
+  width: 220px;
+  height: 260px;
+  bottom: 0;
+  right: 0;
+}
+
+/* Floating badge */
+.contact-hero__visual .visual-badge {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  background: $accent-yellow;
+  color: $primary-teal;
+  border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 12px 25px rgba(244, 198, 17, 0.4);
+
+  small {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+}
+
+/* Mobile stacking fix */
+@include respond(md) {
+  .contact-hero__visual {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    .visual-card {
+      position: static;
+      width: 45%;
+      height: 220px;
+    }
+
+    .visual-badge {
+      display: none;
+    }
+  }
+}
+
+
+.contact-tag {
+  display: inline-block;
+  font-weight: 600;
+  color: $blue-color;
+  margin-bottom: 0.4rem;
+}
+
+/* INFO CARDS */
+.contact-info {
+  background: $bg-white;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  @include respond(md) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.info-card {
+  background: $bg-soft;
+  padding: 1.8rem;
+  text-align: center;
+  border-radius: $radius-md;
+  @include shadow(soft);
+
+  h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+  }
+
+  p {
+    color: $text-muted;
+    font-size: 0.9rem;
+  }
+}
+
+/* FORM */
+.contact-form {
+  background: $bg-page;
+}
+
+.form-wrapper {
+  max-width: 780px;
+  margin: auto;
+  background: $bg-white;
+  padding: 3rem;
+  border-radius: $radius-lg;
+  @include shadow(soft);
+
+  h2 {
+    font-family: $font-display;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-subtext {
+    color: $text-muted;
+    margin-bottom: 2rem;
+  }
+
+  @include respond(sm) {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Bootstrap overrides */
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.form-control,
+.form-select {
+  font-size: 0.9rem;
+  border-radius: $radius-sm;
+  border-color: $border-color;
+
+  &:focus {
+    border-color: $accent-yellow;
+    box-shadow: 0 0 0 0.15rem rgba(244, 198, 17, 0.25);
+  }
+}
+
+/* Submit button */
+.btn-submit {
+  width: 100%;
+  padding: 0.9rem;
+  background: $accent-yellow;
+  color: $color-white;
+  font-weight: 600;
+  border-radius: $radius-md;
+  transition: $transition-base;
+
+  &:hover {
+    background: darken($accent-yellow, 6%);
+    transform: translateY(-2px);
+  }
+}
+.contact-form form {
+  .invalid-feedback {
+    display: none;
+  }
+  &:has(.btn-submit:focus),
+  &:has(.btn-submit:active) {
+    .form-control:invalid ~ .invalid-feedback,
+    .form-select:invalid ~ .invalid-feedback {
+      display: block;
+    }
+
+    .form-control:invalid,
+    .form-select:invalid {
+      border-color: #dc3545;
+    }
+
+    .form-control:valid,
+    .form-select:valid {
+      border-color: #198754;
+    }
+  }
+}

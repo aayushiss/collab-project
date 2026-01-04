@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as *;
+
+body {
+  background-color: $bg-page;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+.btn {
+  font-family: $font-body;
+  border: none;
+  cursor: pointer;
+  transition: $transition-base;
+}
+
+/* Global transitions */
+button,
+a,
+.product-card,
+.video-card {
+  transition: all 0.3s ease;
+}
+
+/* Global shadows */
+.product-card,
+.video-card,
+.deals-section {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+/* Body override (MUST stay last) */
+body {
+  background: $page-bg;
+}

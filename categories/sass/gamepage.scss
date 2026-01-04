@@ -1,0 +1,431 @@
+@use "../../scss/layout/footer";
+
+$body-bg: #1b2838;
+$body-txt-bg: #c7d5e0;
+$top-nav-color: #171a21;
+$navlink-hover-color: #66c0f4;
+$btn-color: #08a70879;
+$font-display: 'Segoe UI', Arial, sans-serif;
+$radius-sm: 4px;
+$bp-md: 768px;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body-bg;
+  color: $body-txt-bg;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(gamepage_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+
+
+.top-nav {
+  width: 100%;
+  height: 40px;
+  background: $top-nav-color;
+}
+
+.nav-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+
+  a {
+    text-decoration: none;
+    color: $body-txt-bg;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: $navlink-hover-color;
+      transition: width 0.25s ease;
+    }
+
+    &:hover {
+      color: $navlink-hover-color;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 24px;
+}
+
+// ================= SIDEBAR STYLES =================
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.sidebar-category {
+  background: #16202d;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 100px; 
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+ 
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    &::before {
+      background: rgba(0, 0, 0, 0.35);
+    }
+  }
+}
+
+
+.bestsellers-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://images.unsplash.com/photo-1766051666522-9cfa12675f5b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.goty-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltcfc5d4efe7445255/690cc3a6cca3c05acc15bdfb/futureclass2025posterfeatured.jpg?width=1280&auto=webp&quality=80&disable=upscale');
+}
+.toprated-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://images.pexels.com/photos/163077/mario-yoschi-figures-funny-163077.jpeg');
+}
+
+.newreleases-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://images.pexels.com/photos/10194139/pexels-photo-10194139.jpeg');
+}
+
+.category-header {
+  padding: 24px 16px; 
+  background: transparent;
+  border-left: 3px solid $navlink-hover-color;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s ease;
+  position: relative;
+  z-index: 2;
+  min-height: 100px; 
+
+  &:hover {
+    background: rgba(42, 74, 101, 0.4);
+  }
+
+ 
+}
+
+.category-icon {
+  font-size: 24px; 
+  color: $navlink-hover-color;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.category-title {
+  font-size: 16px; 
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.category-badge {
+  margin-left: auto;
+  background: rgba(102, 192, 244, 0.3);
+  color: #ffffff;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+
+.store-section {
+  flex: 1;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  overflow: visible;
+}
+
+
+.game-card {
+  background: #16202d;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: scale(1.18);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+  }
+}
+
+/* BOOTSTRAP CAROUSEL CUSTOMIZATION */
+
+.carousel {
+  height: 150px;
+  position: relative;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 150px;
+
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+}
+
+
+.game-card:hover .carousel-item img {
+  transform: scale(1.1);
+}
+
+
+/* ---------------- GAME INFO ---------------- */
+
+.game-info {
+  padding: 12px;
+
+  h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: $body-txt-bg;
+  }
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: bold;
+  color: $body-txt-bg;
+}
+
+.cart-btn {
+  border: none;
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: $btn-color;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background-color: #08a708;
+  }
+}
+
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+
+  .search-input {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 2px solid #1b2838;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 250px;
+
+   
+  }
+
+  .search-button {
+    
+    font-size: 23px;
+    border: 1px solid $body-bg;
+    border-left: none;
+    background-color: #1c4373;
+    color: rgba(255, 255, 255, 0.808);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+
+
+/* ================= VIDEO BANNER ================= */
+.video-banner {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  min-height: 120px;
+  max-height: 400px;
+  overflow: hidden;
+
+  video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+}
+
+.video-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.15)
+  );
+  z-index: 1;
+}
+
+.banner-logo {
+  position: absolute;
+  top: 16px;
+  left: 22px;
+  z-index: 2;
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  span {
+    font-weight: 500;
+    color: #66c0f4;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 968px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .sidebar-category {
+    margin-bottom: 0;
+    min-height: 90px; 
+  }
+
+  .category-header {
+    min-height: 90px;
+    padding: 18px 16px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    
+    a {
+      font-size: 14px;
+    }
+  }
+
+  .search-container {
+    margin: 10px;
+    
+    .search-input {
+      width: 180px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: $bp-md) {
+  .footer-newsletter {
+    flex-direction: column;
+
+    input,
+    button {
+      width: 100%;
+      border-radius: $radius-sm;
+    }
+
+    button {
+      margin-top: 0.6rem;
+    }
+  }
+}

@@ -1,11 +1,2374 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collaboration!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopIt-Your One-Stop Shop</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/main.css" />
 </head>
+
 <body>
-    <h1>Hello everyone!!!</h1>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <label for="nav-toggle" class="nav-overlay"></label>
+  <!-- ===================== Top Header ===================== -->
+  <header class="top-header">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <!-- Hamburger (mobile only) -->
+        <div class="col-2 d-md-none">
+          <label for="nav-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+
+        <div class="col-md-2 col-4">
+          <a href="#" class="logo">ShopIt</a>
+        </div>
+
+        <div class="col-md-8 d-none d-md-block">
+          <div class="search-container position-relative">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" placeholder="Search for products..." />
+          </div>
+        </div>
+
+        <div class="col-md-2 col-6 text-end">
+          <a href="#" class="icon-link"><i class="far fa-user"></i></a>
+          <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
+          <a href="#" class="icon-link"><i class="fas fa-heart"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== Navigation Menu ===================== -->
+  <nav class="nav-menu">
+    <div class="container-fluid">
+      <div class="nav-links">
+        <a href="/" class="nav-link active">Home</a>
+        <a href="./categories/gaming.html" class="nav-link">Gaming</a>
+        <a href="./categories/books.html" class="nav-link">Books</a>
+        <a href="./categories/clothing.html" class="nav-link">Clothing</a>
+        <a href="./categories/electronics.html" class="nav-link">Electronics</a>
+        <a href="./categories/cosmetics.html" class="nav-link">Cosmetics</a>
+        <a href="./categories/footwear.html" class="nav-link">Footwear</a>
+        <a href="./categories/fashion.html" class="nav-link">Fashion</a>
+        <a href="./categories/Aboutus.html" class="nav-link">About Us</a>
+        <a href="./categories/contact.html" class="nav-link">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== Hero Section ===================== -->
+  <section id="hero-carousel">
+    <div class="carousel-container">
+      <!-- PAGE 1 -->
+      <section class="carousel-page page-1" id="page-1">
+        <style>
+          .page-1 {
+            --bg-gradient-top: #9fa8b8;
+            --bg-gradient-upper: #7b879f;
+            --bg-gradient-lower: #4a5776;
+            --bg-gradient-bottom: #2e3853;
+            --btn-color: #5dd9db;
+            --btn-glow: rgba(93, 217, 219, 0.5);
+          }
+        </style>
+        <div class="hero-wrapper">
+          <div class="hero-left">
+            <h1 class="hero-title">Handcrafted<br />with Soul</h1>
+            <p class="hero-subtitle">
+              Timeless, handcrafted sneakers made to move with you.
+            </p>
+            <button class="btn btn-shop">Shop Collection</button>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M10 10h20M10 10v20h20V10" />
+                    <path d="M14 14h2M24 14h2M14 20h2M24 20h2" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>100%<br />Signature Crafted</h3>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="20" cy="20" r="15" />
+                    <path d="M20 8v24M8 20h24" stroke-linecap="round" />
+                    <path d="M28 12l-16 16M12 12l16 16" opacity="0.5" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Eco-friendly<br />& Durable</h3>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M20 4l4 12h12l-9 7 3 12-10-8-10 8 3-12-9-7h12z" fill="currentColor" opacity="0.3" />
+                    <rect x="8" y="24" width="6" height="6" fill="none" stroke="currentColor" />
+                    <rect x="18" y="28" width="6" height="6" fill="none" stroke="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Unique, No Two<br />Pieces Alike</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-center">
+            <div class="arch-background">
+              <div class="arch-ring arch-ring-1"></div>
+              <div class="arch-ring arch-ring-2"></div>
+              <div class="arch-ring arch-ring-3"></div>
+            </div>
+            <img src="./Landing_page_assets/Hero/s4.png" alt="Handcrafted ceramic vase with white flowers"
+              class="vase-img" />
+          </div>
+          <div class="hero-right">
+            <div class="product-card">
+              <div class="card-icon">
+                <svg width="52" height="52" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <!-- Sole -->
+                  <path d="M6 26c0 3 4 5 10 5h12c4 0 6-2 6-4 0-2-2-4-5-4H14c-4 0-8 1-8 3z" />
+
+                  <!-- Upper body -->
+                  <path d="M10 23c1-6 6-9 14-9 4 0 7 2 8 4" />
+
+                  <!-- Stitch / strap detail -->
+                  <path d="M16 22h8" />
+
+                  <!-- Heel curve -->
+                  <path d="M6 26c0-4 2-6 4-7" />
+                </svg>
+              </div>
+              <h3 class="card-title">Loafers</h3>
+              <p class="card-text">
+                Handcrafted comfort with a refined, timeless look.
+              </p>
+            </div>
+            <div class="product-card">
+              <div class="card-icon">
+                <svg width="52" height="52" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <!-- Sole -->
+                  <path d="M8 28c0 2 3 4 8 4h10c5 0 8-2 8-4s-3-4-8-4H16c-5 0-8 2-8 4z" />
+
+                  <!-- Front strap -->
+                  <path d="M14 22h12" />
+
+                  <!-- Middle strap -->
+                  <path d="M18 20v6" />
+
+                  <!-- Back strap -->
+                  <path d="M10 24c0-2 2-4 4-4" />
+                </svg>
+              </div>
+              <h3 class="card-title">Sandals</h3>
+              <p class="card-text">
+                Light, breathable, and made for everyday ease.
+              </p>
+            </div>
+            <button class="btn btn-explore">Explore Story</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 2 -->
+      <section class="carousel-page page-2" id="page-2">
+        <style>
+          .page-2 {
+            --bg-gradient-top: #d4a5a5;
+            --bg-gradient-upper: #c08080;
+            --bg-gradient-lower: #a0604a;
+            --bg-gradient-bottom: #6b3e2e;
+            --btn-color: #f4a261;
+            --btn-glow: rgba(244, 162, 97, 0.5);
+          }
+        </style>
+        <div class="hero-wrapper">
+          <div class="hero-left">
+            <h1 class="hero-title">Luxury<br />Skincare</h1>
+            <p class="hero-subtitle">
+              Indulge in the purity of nature and science with every bottle
+            </p>
+            <button class="btn btn-shop">Shop Collection</button>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M10 10h20M10 10v20h20V10" />
+                    <path d="M14 14h2M24 14h2M14 20h2M24 20h2" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>100%<br />Natural</h3>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="20" cy="20" r="15" />
+                    <path d="M20 8v24M8 20h24" stroke-linecap="round" />
+                    <path d="M28 12l-16 16M12 12l16 16" opacity="0.5" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Eco-friendly<br />& Healthy</h3>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M20 4l4 12h12l-9 7 3 12-10-8-10 8 3-12-9-7h12z" fill="currentColor" opacity="0.3" />
+                    <rect x="8" y="24" width="6" height="6" fill="none" stroke="currentColor" />
+                    <rect x="18" y="28" width="6" height="6" fill="none" stroke="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>No Chemicals<br />Praben Free</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-center">
+            <div class="arch-background">
+              <div class="arch-ring arch-ring-1"></div>
+              <div class="arch-ring arch-ring-2"></div>
+              <div class="arch-ring arch-ring-3"></div>
+            </div>
+            <img src="./Landing_page_assets/Hero/c1.png" alt="Artisan pottery collection" class="vase-img" />
+          </div>
+          <div class="hero-right">
+            <div class="product-card">
+              <div class="card-icon">
+                <svg width="52" height="52" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M8 12h24c1 0 2 1 2 2v12c0 1-1 2-2 2H8c-1 0-2-1-2-2V14c0-1 1-2 2-2z" />
+                  <ellipse cx="20" cy="14" rx="12" ry="3" />
+                  <path d="M10 28h20" stroke-linecap="round" />
+                  <circle cx="14" cy="28" r="2" fill="currentColor" />
+                  <circle cx="26" cy="28" r="2" fill="currentColor" />
+                </svg>
+              </div>
+              <h3 class="card-title">Natural Lip Balm</h3>
+              <p class="card-text">
+                Nourish your lips with rich, natural ingredients for a soft,
+                lasting glow
+              </p>
+            </div>
+            <div class="product-card">
+              <div class="card-icon">
+                <svg width="52" height="52" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M12 4h16v6c0 2-2 3-4 3h-8c-2 0-4-1-4-3V4z" />
+                  <path d="M10 10h20c1.5 0 2 1 2 2v20c0 2-2 4-4 4H12c-2 0-4-2-4-4V12c0-1 .5-2 2-2z" />
+                  <path d="M16 18c0-2 1-3 4-3s4 1 4 3" fill="currentColor" opacity="0.2" />
+                </svg>
+              </div>
+              <h3 class="card-title">Hydrating Face Cream</h3>
+              <p class="card-text">
+                Keep your skin radiant and moisturized with a blend of
+                botanicals and vitamins
+              </p>
+            </div>
+            <button class="btn btn-explore">Explore Story</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 3 -->
+      <section class="carousel-page page-3" id="page-3">
+        <style>
+          .page-3 {
+            --bg-gradient-top: #c9a6d9;
+            --bg-gradient-upper: #a876ba;
+            --bg-gradient-lower: #7d3fa0;
+            --bg-gradient-bottom: #4a1f5f;
+            --btn-color: #d8a2d6;
+            --btn-glow: rgba(216, 162, 214, 0.5);
+          }
+        </style>
+        <div class="hero-wrapper">
+          <div class="hero-left">
+            <h1 class="hero-title">Premium<br />Collection</h1>
+            <p class="hero-subtitle">
+              Elevate your style with our precision-crafted, timeless watches
+            </p>
+            <button class="btn btn-shop">Shop Collection</button>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M10 10h20M10 10v20h20V10" />
+                    <path d="M14 14h2M24 14h2M14 20h2M24 20h2" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>100%<br />Crafted</h3>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="20" cy="20" r="15" />
+                    <path d="M20 8v24M8 20h24" stroke-linecap="round" />
+                    <path d="M28 12l-16 16M12 12l16 16" opacity="0.5" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Elegant<br />& Durable</h3>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M20 4l4 12h12l-9 7 3 12-10-8-10 8 3-12-9-7h12z" fill="currentColor" opacity="0.3" />
+                    <rect x="8" y="24" width="6" height="6" fill="none" stroke="currentColor" />
+                    <rect x="18" y="28" width="6" height="6" fill="none" stroke="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Exclusive Design<br />Each One Distinct</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-center">
+            <div class="arch-background">
+              <div class="arch-ring arch-ring-1"></div>
+              <div class="arch-ring arch-ring-2"></div>
+              <div class="arch-ring arch-ring-3"></div>
+            </div>
+            <img src="./Landing_page_assets/Hero/f1.png" alt="Premium pottery collection" class="vase-img" />
+          </div>
+          <div class="hero-right">
+            <div class="product-card">
+              <div class="card-icon">
+                <svg width="52" height="52" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M8 12h24c1 0 2 1 2 2v12c0 1-1 2-2 2H8c-1 0-2-1-2-2V14c0-1 1-2 2-2z" />
+                  <ellipse cx="20" cy="14" rx="12" ry="3" />
+                  <path d="M10 28h20" stroke-linecap="round" />
+                  <circle cx="14" cy="28" r="2" fill="currentColor" />
+                  <circle cx="26" cy="28" r="2" fill="currentColor" />
+                </svg>
+              </div>
+              <h3 class="card-title">Designer Handbags</h3>
+              <p class="card-text">
+                Carry style and sophistication wherever you go with our
+                curated collections
+              </p>
+            </div>
+            <div class="product-card">
+              <div class="card-icon">
+                <svg width="52" height="52" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M12 4h16v6c0 2-2 3-4 3h-8c-2 0-4-1-4-3V4z" />
+                  <path d="M10 10h20c1.5 0 2 1 2 2v20c0 2-2 4-4 4H12c-2 0-4-2-4-4V12c0-1 .5-2 2-2z" />
+                  <path d="M16 18c0-2 1-3 4-3s4 1 4 3" fill="currentColor" opacity="0.2" />
+                </svg>
+              </div>
+              <h3 class="card-title">Luxury Scarves</h3>
+              <p class="card-text">
+                Wrap yourself in elegance with fabrics that blend comfort and
+                fashion
+              </p>
+            </div>
+            <button class="btn btn-explore">Explore Story</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 4 -->
+      <section class="carousel-page page-4" id="page-4">
+        <style>
+          .page-4 {
+            --bg-gradient-top: #a8d8ea;
+            --bg-gradient-upper: #7ecce8;
+            --bg-gradient-lower: #3b9ac7;
+            --bg-gradient-bottom: #1a5f7a;
+            --btn-color: #00bcd4;
+            --btn-glow: rgba(0, 188, 212, 0.5);
+          }
+        </style>
+        <div class="hero-wrapper">
+          <div class="hero-left">
+            <h1 class="hero-title">Wizarding<br />World</h1>
+            <p class="hero-subtitle">
+              Discover spells, stories, and magic in every Harry Potter book
+            </p>
+
+            <button class="btn btn-shop">Shop Collection</button>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M10 10h20M10 10v20h20V10" />
+                    <path d="M14 14h2M24 14h2M14 20h2M24 20h2" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Authentic<br />Editions</h3>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="20" cy="20" r="15" />
+                    <path d="M20 8v24M8 20h24" stroke-linecap="round" />
+                    <path d="M28 12l-16 16M12 12l16 16" opacity="0.5" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Enchanted<br />& Collectible</h3>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M20 4l4 12h12l-9 7 3 12-10-8-10 8 3-12-9-7h12z" fill="currentColor" opacity="0.3" />
+                    <rect x="8" y="24" width="6" height="6" fill="none" stroke="currentColor" />
+                    <rect x="18" y="28" width="6" height="6" fill="none" stroke="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Each Book<br />A Treasure</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-center">
+            <div class="arch-background">
+              <div class="arch-ring arch-ring-1"></div>
+              <div class="arch-ring arch-ring-2"></div>
+              <div class="arch-ring arch-ring-3"></div>
+            </div>
+            <img src="./Landing_page_assets/Hero/b2.png" alt="Ocean inspired pottery" class="vase-img" />
+          </div>
+          <div class="hero-right">
+            <div class="product-card">
+              <div class="card-icon">
+                <svg width="52" height="52" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M8 12h24c1 0 2 1 2 2v12c0 1-1 2-2 2H8c-1 0-2-1-2-2V14c0-1 1-2 2-2z" />
+                  <ellipse cx="20" cy="14" rx="12" ry="3" />
+                  <path d="M10 28h20" stroke-linecap="round" />
+                  <circle cx="14" cy="28" r="2" fill="currentColor" />
+                  <circle cx="26" cy="28" r="2" fill="currentColor" />
+                </svg>
+              </div>
+              <h3 class="card-title">Mystery Thrillers</h3>
+              <p class="card-text">
+                Unravel suspense and intrigue with every page, keeping you on
+                the edge
+              </p>
+            </div>
+            <div class="product-card">
+              <div class="card-icon">
+                <svg width="52" height="52" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M12 4h16v6c0 2-2 3-4 3h-8c-2 0-4-1-4-3V4z" />
+                  <path d="M10 10h20c1.5 0 2 1 2 2v20c0 2-2 4-4 4H12c-2 0-4-2-4-4V12c0-1 .5-2 2-2z" />
+                  <path d="M16 18c0-2 1-3 4-3s4 1 4 3" fill="currentColor" opacity="0.2" />
+                </svg>
+              </div>
+              <h3 class="card-title">Travel Adventures</h3>
+              <p class="card-text">
+                Explore the world from your bookshelf with guides to every
+                hidden gem
+              </p>
+            </div>
+            <button class="btn btn-explore">Explore Story</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 5 -->
+      <section class="carousel-page page-5" id="page-5">
+        <style>
+          .page-5 {
+            --bg-gradient-top: #b8d4b4;
+            --bg-gradient-upper: #8ba77d;
+            --bg-gradient-lower: #5a7e5f;
+            --bg-gradient-bottom: #2d4a35;
+            --btn-color: #6ba574;
+            --btn-glow: rgba(107, 165, 116, 0.5);
+          }
+        </style>
+        <div class="hero-wrapper">
+          <div class="hero-left">
+            <h1 class="hero-title">Gaming<br />Universe</h1>
+            <p class="hero-subtitle">
+              Explore, conquer, and play with our curated collection of top PC
+              games
+            </p>
+            <button class="btn btn-shop">Shop Collection</button>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M10 10h20M10 10v20h20V10" />
+                    <path d="M14 14h2M24 14h2M14 20h2M24 20h2" fill="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Digitally<br />Mastered</h3>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="20" cy="20" r="15" />
+                    <path d="M20 8v24M8 20h24" stroke-linecap="round" />
+                    <path d="M28 12l-16 16M12 12l16 16" opacity="0.5" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Immersive<br />& Engaging</h3>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M20 4l4 12h12l-9 7 3 12-10-8-10 8 3-12-9-7h12z" fill="currentColor" opacity="0.3" />
+                    <rect x="8" y="24" width="6" height="6" fill="none" stroke="currentColor" />
+                    <rect x="18" y="28" width="6" height="6" fill="none" stroke="currentColor" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Every Quest<br />Is Unique</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-center">
+            <div class="arch-background">
+              <div class="arch-ring arch-ring-1"></div>
+              <div class="arch-ring arch-ring-2"></div>
+              <div class="arch-ring arch-ring-3"></div>
+            </div>
+            <img src="./Landing_page_assets/Hero/g1.png" alt="Nature inspired pottery" class="vase-img" />
+          </div>
+          <div class="hero-right">
+            <div class="product-card">
+              <div class="card-icon">
+                <svg width="52" height="52" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M8 12h24c1 0 2 1 2 2v12c0 1-1 2-2 2H8c-1 0-2-1-2-2V14c0-1 1-2 2-2z" />
+                  <ellipse cx="20" cy="14" rx="12" ry="3" />
+                  <path d="M10 28h20" stroke-linecap="round" />
+                  <circle cx="14" cy="28" r="2" fill="currentColor" />
+                  <circle cx="26" cy="28" r="2" fill="currentColor" />
+                </svg>
+              </div>
+              <h3 class="card-title">Next-Gen Consoles</h3>
+              <p class="card-text">
+                Experience cutting-edge graphics and seamless gameplay with
+                our latest consoles
+              </p>
+            </div>
+            <div class="product-card">
+              <div class="card-icon">
+                <svg width="52" height="52" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <path d="M12 4h16v6c0 2-2 3-4 3h-8c-2 0-4-1-4-3V4z" />
+                  <path d="M10 10h20c1.5 0 2 1 2 2v20c0 2-2 4-4 4H12c-2 0-4-2-4-4V12c0-1 .5-2 2-2z" />
+                  <path d="M16 18c0-2 1-3 4-3s4 1 4 3" fill="currentColor" opacity="0.2" />
+                </svg>
+              </div>
+              <h3 class="card-title">Precision Controllers</h3>
+              <p class="card-text">
+                Take full control of your games with ergonomic, responsive
+                controllers
+              </p>
+            </div>
+            <button class="btn btn-explore">Explore Story</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Navigation -->
+    <div class="carousel-dots">
+      <a href="#page-1" class="dot"></a>
+      <a href="#page-2" class="dot"></a>
+      <a href="#page-3" class="dot"></a>
+      <a href="#page-4" class="dot"></a>
+      <a href="#page-5" class="dot"></a>
+    </div>
+
+    <div class="carousel-nav">
+      <a href="#page-1" class="nav-btn">↑</a>
+      <a href="#page-5" class="nav-btn">↓</a>
+    </div>
+  </section>
+
+  <!-- ===================== Flash Sales Section ===================== -->
+  <section class="body_flashsale">
+    <div class="container">
+      <div class="flash-sales-header">
+        <h1 class="flash-sales-title">Flash Sales</h1>
+        <div class="limited-offer-badge">Limited Time Offer</div>
+      </div>
+
+      <div class="carousel-container">
+        <div id="flashSalesCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                  <div class="product-card">
+                    <div class="product-image-wrapper">
+                      <img src="./Landing_page_assets/product-asste/flash-sale/f2.jpg" alt="watch"
+                        class="product-image" />
+                      <div class="discount-badge">-31%</div>
+                      <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-category">Fashion</div>
+                      <h3 class="product-title">Modern Watch</h3>
+                      <div class="product-rating">
+                        <span class="stars">★ 4.9</span>
+                        <span class="rating-text">(345)</span>
+                      </div>
+                      <div class="product-pricing">
+                        <span class="current-price">₹899.99</span>
+                        <span class="original-price">₹1299.99</span>
+                      </div>
+                      <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                        </button>
+                        <button class="buy-now-btn">
+                          <i class="fas fa-bolt"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="product-card">
+                    <div class="product-image-wrapper">
+                      <img src="./Landing_page_assets/product-asste/flash-sale/programing_headset.jpg"
+                        alt="Pro Gaming Headset" class="product-image" />
+                      <div class="discount-badge">-38%</div>
+                      <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-category">Gaming</div>
+                      <h3 class="product-title">Pro Gaming Headset</h3>
+                      <div class="product-rating">
+                        <span class="stars">★ 4.5</span>
+                        <span class="rating-text">(342)</span>
+                      </div>
+                      <div class="product-pricing">
+                        <span class="current-price">₹79.99</span>
+                        <span class="original-price">₹129.99</span>
+                      </div>
+                      <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                        </button>
+                        <button class="buy-now-btn">
+                          <i class="fas fa-bolt"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="product-card">
+                    <div class="product-image-wrapper">
+                      <img src="./Landing_page_assets/product-asste/flash-sale/gam-cont.jpg"
+                        alt="Wireless Gaming Controller" class="product-image" />
+                      <div class="discount-badge">-25%</div>
+                      <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-category">Gaming</div>
+                      <h3 class="product-title">
+                        Wireless Gaming Controller
+                      </h3>
+                      <div class="product-rating">
+                        <span class="stars">★ 4.8</span>
+                        <span class="rating-text">(567)</span>
+                      </div>
+                      <div class="product-pricing">
+                        <span class="current-price">₹59.99</span>
+                        <span class="original-price">₹79.99</span>
+                      </div>
+                      <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                        </button>
+                        <button class="buy-now-btn">
+                          <i class="fas fa-bolt"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="product-card">
+                    <div class="product-image-wrapper">
+                      <img src="./Landing_page_assets/product-asste/flash-sale/game_mos.jpg" alt="Gaming Mouse Pro"
+                        class="product-image" />
+                      <div class="discount-badge">-25%</div>
+                      <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-category">Gaming</div>
+                      <h3 class="product-title">Gaming Mouse Pro</h3>
+                      <div class="product-rating">
+                        <span class="stars">★ 4.6</span>
+                        <span class="rating-text">(421)</span>
+                      </div>
+                      <div class="product-pricing">
+                        <span class="current-price">₹89.99</span>
+                        <span class="original-price">₹119.99</span>
+                      </div>
+                      <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                        </button>
+                        <button class="buy-now-btn">
+                          <i class="fas fa-bolt"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                  <div class="product-card">
+                    <div class="product-image-wrapper">
+                      <img src="./Landing_page_assets/product-asste/flash-sale/mec-key.jpg" alt="Mechanical Keyboard"
+                        class="product-image" />
+                      <div class="discount-badge">-40%</div>
+                      <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-category">Gaming</div>
+                      <h3 class="product-title">Mechanical Keyboard</h3>
+                      <div class="product-rating">
+                        <span class="stars">★ 4.7</span>
+                        <span class="rating-text">(289)</span>
+                      </div>
+                      <div class="product-pricing">
+                        <span class="current-price">₹119.99</span>
+                        <span class="original-price">₹199.99</span>
+                      </div>
+                      <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                        </button>
+                        <button class="buy-now-btn">
+                          <i class="fas fa-bolt"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="product-card">
+                    <div class="product-image-wrapper">
+                      <img src="./Landing_page_assets/product-asste/flash-sale/moni.jpg" alt="4K Gaming Monitor"
+                        class="product-image" />
+                      <div class="discount-badge">-35%</div>
+                      <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-category">Gaming</div>
+                      <h3 class="product-title">4K Gaming Monitor</h3>
+                      <div class="product-rating">
+                        <span class="stars">★ 4.9</span>
+                        <span class="rating-text">(512)</span>
+                      </div>
+                      <div class="product-pricing">
+                        <span class="current-price">₹449.99</span>
+                        <span class="original-price">₹699.99</span>
+                      </div>
+                      <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                        </button>
+                        <button class="buy-now-btn">
+                          <i class="fas fa-bolt"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="product-card">
+                    <div class="product-image-wrapper">
+                      <img src="./Landing_page_assets/product-asste/flash-sale/f1.jpg" alt="Watch"
+                        class="product-image" />
+                      <div class="discount-badge">-28%</div>
+                      <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-category">Fashion</div>
+                      <h3 class="product-title">Classic Watch</h3>
+                      <div class="product-rating">
+                        <span class="stars">★ 4.6</span>
+                        <span class="rating-text">(378)</span>
+                      </div>
+                      <div class="product-pricing">
+                        <span class="current-price">₹299.99</span>
+                        <span class="original-price">₹419.99</span>
+                      </div>
+                      <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                        </button>
+                        <button class="buy-now-btn">
+                          <i class="fas fa-bolt"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="product-card">
+                    <div class="product-image-wrapper">
+                      <img src="./Landing_page_assets/product-asste/flash-sale/blu_speaker.jpg" alt="Bluetooth Speaker"
+                        class="product-image" />
+                      <div class="discount-badge">-45%</div>
+                      <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-category">Audio</div>
+                      <h3 class="product-title">Bluetooth Speaker</h3>
+                      <div class="product-rating">
+                        <span class="stars">★ 4.4</span>
+                        <span class="rating-text">(256)</span>
+                      </div>
+                      <div class="product-pricing">
+                        <span class="current-price">₹54.99</span>
+                        <span class="original-price">₹99.99</span>
+                      </div>
+                      <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                        </button>
+                        <button class="buy-now-btn">
+                          <i class="fas fa-bolt"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                  <div class="product-card">
+                    <div class="product-image-wrapper">
+                      <img src="./Landing_page_assets/product-asste/flash-sale/watch_pro.jpg" alt="Smart Watch"
+                        class="product-image" />
+                      <div class="discount-badge">-33%</div>
+                      <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-category">Wearables</div>
+                      <h3 class="product-title">Smart Watch Pro</h3>
+                      <div class="product-rating">
+                        <span class="stars">★ 4.5</span>
+                        <span class="rating-text">(423)</span>
+                      </div>
+                      <div class="product-pricing">
+                        <span class="current-price">₹199.99</span>
+                        <span class="original-price">₹299.99</span>
+                      </div>
+                      <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                        </button>
+                        <button class="buy-now-btn">
+                          <i class="fas fa-bolt"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="product-card">
+                    <div class="product-image-wrapper">
+                      <img src="./Landing_page_assets/product-asste/flash-sale/ear-bud.jpg" alt="Wireless Earbuds"
+                        class="product-image" />
+                      <div class="discount-badge">-42%</div>
+                      <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-category">Audio</div>
+                      <h3 class="product-title">Wireless Earbuds</h3>
+                      <div class="product-rating">
+                        <span class="stars">★ 4.8</span>
+                        <span class="rating-text">(634)</span>
+                      </div>
+                      <div class="product-pricing">
+                        <span class="current-price">₹69.99</span>
+                        <span class="original-price">₹119.99</span>
+                      </div>
+                      <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                        </button>
+                        <button class="buy-now-btn">
+                          <i class="fas fa-bolt"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="product-card">
+                    <div class="product-image-wrapper">
+                      <img src="./Landing_page_assets/product-asste/flash-sale/power_bank.jpg" alt="Power Bank"
+                        class="product-image" />
+                      <div class="discount-badge">-50%</div>
+                      <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-category">Accessories</div>
+                      <h3 class="product-title">Power Bank 20000mAh</h3>
+                      <div class="product-rating">
+                        <span class="stars">★ 4.3</span>
+                        <span class="rating-text">(198)</span>
+                      </div>
+                      <div class="product-pricing">
+                        <span class="current-price">₹29.99</span>
+                        <span class="original-price">₹59.99</span>
+                      </div>
+                      <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                        </button>
+                        <button class="buy-now-btn">
+                          <i class="fas fa-bolt"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                  <div class="product-card">
+                    <div class="product-image-wrapper">
+                      <img src="./Landing_page_assets/product-asste/flash-sale/lap_bag.jpg" alt="Laptop Backpack"
+                        class="product-image" />
+                      <div class="discount-badge">-30%</div>
+                      <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </div>
+                    <div class="product-content">
+                      <div class="product-category">Accessories</div>
+                      <h3 class="product-title">Laptop Backpack</h3>
+                      <div class="product-rating">
+                        <span class="stars">★ 4.7</span>
+                        <span class="rating-text">(312)</span>
+                      </div>
+                      <div class="product-pricing">
+                        <span class="current-price">₹48.99</span>
+                        <span class="original-price">₹69.99</span>
+                      </div>
+                      <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                          <i class="fas fa-shopping-cart"></i>
+                          Add to Cart
+                        </button>
+                        <button class="buy-now-btn">
+                          <i class="fas fa-bolt"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#flashSalesCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#flashSalesCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Monthly Deals Section ===================== -->
+  <section class="container mb-custom">
+    <div class="deals-section">
+      <div class="container py-5">
+        <!-- Header Section -->
+        <div class="header-section mb-5">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <div>
+              <h1 class="deals-title mb-2">Monthly Deals</h1>
+              <p class="deals-subtitle">
+                Curated selections for the modern lifestyle
+              </p>
+            </div>
+            <button class="btn-specials">
+              <span>December Specials</span>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="row g-4 mb-5">
+          <!-- Product Card 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrapper">
+                <img src="./Landing_page_assets/Deals/Jacket.jpg" class="product-image" alt="Premium Cotton T-Shirt" />
+                <div class="discount-badge">-33%</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Quick View</button>
+                </div>
+              </div>
+              <div class="product-content">
+                <p class="category-label">Clothing</p>
+                <h3 class="product-title">Premium Jacket</h3>
+                <div class="rating-section">
+                  <div class="stars">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <span class="rating-count">(567)</span>
+                </div>
+                <div class="price-section">
+                  <span class="current-price">₹29000.99</span>
+                  <span class="original-price">₹44000.99</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                  </button>
+                  <button class="buy-now-btn">
+                    <i class="fas fa-bolt"></i>
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrapper">
+                <img src="./Landing_page_assets/Deals/lap2.jpg" class="product-image" alt="Ultra Slim Laptop" />
+                <div class="discount-badge">-19%</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Quick View</button>
+                </div>
+              </div>
+              <div class="product-content">
+                <p class="category-label">Electronics</p>
+                <h3 class="product-title">Ultra Slim Laptop</h3>
+                <div class="rating-section">
+                  <div class="stars">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <span class="rating-value">4.8</span>
+                  </div>
+                  <span class="rating-count">(1456)</span>
+                </div>
+                <div class="price-section">
+                  <span class="current-price">₹1299.99</span>
+                  <span class="original-price">₹1599.99</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                  </button>
+                  <button class="buy-now-btn">
+                    <i class="fas fa-bolt"></i>
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrapper">
+                <img src="./Landing_page_assets/Deals/phone.jpg" class="product-image" alt="5G Smartphone Pro" />
+                <div class="discount-badge">-18%</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Quick View</button>
+                </div>
+              </div>
+              <div class="product-content">
+                <p class="category-label">Electronics</p>
+                <h3 class="product-title">5G Smartphone Pro</h3>
+                <div class="rating-section">
+                  <div class="stars">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                  <span class="rating-count">(2341)</span>
+                </div>
+                <div class="price-section">
+                  <span class="current-price">₹899.99</span>
+                  <span class="original-price">₹1099.99</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                  </button>
+                  <button class="buy-now-btn">
+                    <i class="fas fa-bolt"></i>
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-wrapper">
+                <img src="./Landing_page_assets/Deals/make.jpg" class="product-image" alt="Luxury Makeup Set" />
+                <div class="discount-badge">-35%</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Quick View</button>
+                </div>
+              </div>
+              <div class="product-content">
+                <p class="category-label">Cosmetics</p>
+                <h3 class="product-title">Luxury Makeup Set</h3>
+                <div class="rating-section">
+                  <div class="stars">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <span class="rating-value">4.7</span>
+                  </div>
+                  <span class="rating-count">(789)</span>
+                </div>
+                <div class="price-section">
+                  <span class="current-price">₹129.99</span>
+                  <span class="original-price">₹199.99</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                  </button>
+                  <button class="buy-now-btn">
+                    <i class="fas fa-bolt"></i>
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Featured Videos Section ===================== -->
+  <section class="container mb-custom">
+    <div class="carousel-container position-relative">
+      <!-- Section Header -->
+      <div class="section-header">
+        <h1 class="section-title">Featured Videos</h1>
+        <p class="section-subtitle">Discover our products in action</p>
+      </div>
+
+      <!-- Carousel -->
+      <div id="videoCarousel" class="carousel slide" data-bs-interval="false" data-bs-touch="true"
+        data-bs-pause="hover">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <div class="col-lg-4 col-md-6">
+                <div class="video-card" data-bs-toggle="modal" data-bs-target="#videoCosmetics" style="
+                      background-image: url('./Landing_page_assets/video/image/cosmatic.png');
+                    ">
+                  <div class="video-duration">4:10</div>
+                  <div class="play-button">
+                    <div class="play-icon"></div>
+                  </div>
+                  <div class="video-content">
+                    <div class="video-category">Cosmetics</div>
+                    <h3 class="video-title">Beauty & Skincare Routine</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="video-card" data-bs-toggle="modal" data-bs-target="#videoFootwear" style="
+                      background-image: url('./Landing_page_assets/video/image/foot.png');
+                    ">
+                  <div class="video-duration">2:50</div>
+                  <div class="play-button">
+                    <div class="play-icon"></div>
+                  </div>
+                  <div class="video-content">
+                    <div class="video-category">Footwear</div>
+                    <h3 class="video-title">Footwear Guide</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="video-card" data-bs-toggle="modal" data-bs-target="#videoLatesGming" style="
+                      background-image: url('./Landing_page_assets/video/image/game.png');
+                    ">
+                  <div class="video-duration">2:45</div>
+                  <div class="play-button">
+                    <div class="play-icon"></div>
+                  </div>
+                  <div class="video-content">
+                    <div class="video-category">Gaming</div>
+                    <h3 class="video-title">Latest Gaming Technology</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-lg-4 col-md-6">
+                <div class="video-card" data-bs-toggle="modal" data-bs-target="#videoSummerStyle" style="
+                      background-image: url('./Landing_page_assets/video/image/sumtshirt.png');
+                    ">
+                  <div class="video-duration">3:25</div>
+                  <div class="play-button">
+                    <div class="play-icon"></div>
+                  </div>
+                  <div class="video-content">
+                    <div class="video-category">Fashion</div>
+                    <h3 class="video-title">Summer Style Trends</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6">
+                <div class="video-card" data-bs-toggle="modal" data-bs-target="#videoSmartHome" style="
+                      background-image: url('./Landing_page_assets/video/image/smt_home.png');
+                    ">
+                  <div class="video-duration">5:15</div>
+                  <div class="play-button">
+                    <div class="play-icon"></div>
+                  </div>
+                  <div class="video-content">
+                    <div class="video-category">Technology</div>
+                    <h3 class="video-title">Smart Home Essentials</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6">
+                <div class="video-card">
+                  <div class="video-duration">4:30</div>
+                  <div class="play-button">
+                    <div class="play-icon"></div>
+                  </div>
+                  <div class="video-content">
+                    <div class="video-category">Fitness</div>
+                    <h3 class="video-title">Workout Equipment Review</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-lg-4 col-md-6">
+                <div class="video-card">
+                  <div class="video-duration">6:00</div>
+                  <div class="play-button">
+                    <div class="play-icon"></div>
+                  </div>
+                  <div class="video-content">
+                    <div class="video-category">Kitchen</div>
+                    <h3 class="video-title">Cooking Gadgets Tour</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6">
+                <div class="video-card">
+                  <div class="video-duration">3:40</div>
+                  <div class="play-button">
+                    <div class="play-icon"></div>
+                  </div>
+                  <div class="video-content">
+                    <div class="video-category">Audio</div>
+                    <h3 class="video-title">Premium Headphones Test</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6">
+                <div class="video-card">
+                  <div class="video-duration">4:55</div>
+                  <div class="play-button">
+                    <div class="play-icon"></div>
+                  </div>
+                  <div class="video-content">
+                    <div class="video-category">Travel</div>
+                    <h3 class="video-title">Travel Accessories Guide</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== All Products Section ===================== -->
+  <section class="products-section py-5">
+    <div class="container">
+      <div class="section-header mb-5">
+        <h1 class="display-4 fw-bold mb-2">Sitewide Offers</h1>
+        <p class="text-muted fs-5">16 products found</p>
+      </div>
+
+      <!-- Electronics & Cosmetics Row -->
+      <div class="row g-4 mb-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/ultra_slim_laptop.jpg" alt="Ultra Slim Laptop"
+                class="product-image" />
+              <span class="discount-badge">-19%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Electronics</span>
+              <h3 class="product-title">Ultra Slim Laptop</h3>
+
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.8</span>
+                <span class="rating-count">(1456)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹1299.99</span>
+                <span class="original-price">₹1599.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/5g_smartphone.jpg" alt="5G Smartphone Pro"
+                class="product-image" />
+              <span class="discount-badge">-18%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Electronics</span>
+              <h3 class="product-title">5G Smartphone Pro</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.9</span>
+                <span class="rating-count">(2341)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹899.99</span>
+                <span class="original-price">₹1099.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/makeup.jpg" alt="Luxury Makeup Set"
+                class="product-image" />
+              <span class="discount-badge">-35%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Cosmetics</span>
+              <h3 class="product-title">Luxury Makeup Set</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.7</span>
+                <span class="rating-count">(789)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹129.99</span>
+                <span class="original-price">₹199.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/skin_care.jpg" alt="Skincare Essentials Kit"
+                class="product-image" />
+              <span class="discount-badge">-35%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Cosmetics</span>
+              <h3 class="product-title">Skincare Essentials Kit</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.6</span>
+                <span class="rating-count">(456)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹79.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gaming Products Row -->
+      <div class="row g-4 mb-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/programing_headset.jpg" alt="Pro Gaming Headset"
+                class="product-image" />
+              <span class="discount-badge">-38%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Gaming</span>
+              <h3 class="product-title">Pro Gaming Headset</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.5</span>
+                <span class="rating-count">(342)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹79.99</span>
+                <span class="original-price">₹129.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/gam-cont.jpg" alt="Wireless Gaming Controller"
+                class="product-image" />
+              <span class="discount-badge">-25%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Gaming</span>
+              <h3 class="product-title">Wireless Gaming Controller</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.8</span>
+                <span class="rating-count">(567)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹59.99</span>
+                <span class="original-price">₹79.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/mec-key.jpg" alt="RGB Mechanical Keyboard"
+                class="product-image" />
+              <span class="discount-badge">-35%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Gaming</span>
+              <h3 class="product-title">RGB Mechanical Keyboard</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.7</span>
+                <span class="rating-count">(289)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹149.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/game_mos.jpg" alt="Gaming Mouse Pro"
+                class="product-image" />
+              <span class="discount-badge">-25%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Gaming</span>
+              <h3 class="product-title">Gaming Mouse Pro</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.6</span>
+                <span class="rating-count">(421)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹89.99</span>
+                <span class="original-price">₹119.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footwear & Furniture Row -->
+      <div class="row g-4 mb-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/snekar.jpg" alt="Premium Sneakers"
+                class="product-image" />
+              <span class="discount-badge">-25%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Footwear</span>
+              <h3 class="product-title">Premium Sneakers</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.8</span>
+                <span class="rating-count">(923)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹149.99</span>
+                <span class="original-price">₹199.99</span>
+              </div>
+              <button class="add-to-cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/running_shoe.jpg"
+                alt="Performance Running Shoes" class="product-image" />
+              <span class="discount-badge">-25%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Footwear</span>
+              <h3 class="product-title">Performance Running Shoes</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.7</span>
+                <span class="rating-count">(1234)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹119.99</span>
+                <span class="original-price">₹159.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/f2.jpg" alt="Modern Watch"
+                class="product-image" />
+              <span class="discount-badge">-31%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Fashion</span>
+              <h3 class="product-title">Modern Watch</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.9</span>
+                <span class="rating-count">(345)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹899.99</span>
+                <span class="original-price">₹1299.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/f1.jpg" alt="Classic Watch"
+                class="product-image" />
+              <span class="discount-badge">-35%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Fashion</span>
+              <h3 class="product-title">Classic Watch</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.6</span>
+                <span class="rating-count">(567)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹299.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Books & Clothing Row -->
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/bok-col.jpg" alt="Classic Literature Collection"
+                class="product-image" />
+              <span class="discount-badge">-33%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Books</span>
+              <h3 class="product-title">Classic Literature Collection</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.9</span>
+                <span class="rating-count">(1203)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹39.99</span>
+                <span class="original-price">₹59.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/bok-fic.jpg" alt="Modern Fiction Bestseller"
+                class="product-image" />
+              <span class="discount-badge">-35%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Books</span>
+              <h3 class="product-title">Modern Fiction Bestseller</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.6</span>
+                <span class="rating-count">(892)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹24.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/desig_dress.jpg" alt="Designer Dress Collection"
+                class="product-image" />
+              <span class="discount-badge">-40%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Clothing</span>
+              <h3 class="product-title">Designer Dress Collection</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.4</span>
+                <span class="rating-count">(245)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹89.99</span>
+                <span class="original-price">₹149.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./Landing_page_assets/product-asste/all_product/cot_ts.jpg" alt="Premium Cotton T-Shirt"
+                class="product-image" />
+              <span class="discount-badge">-33%</span>
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category-tag">Clothing</span>
+              <h3 class="product-title">Premium Cotton T-Shirt</h3>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <span class="rating-value">4.7</span>
+                <span class="rating-count">(567)</span>
+              </div>
+              <div class="price-wrapper">
+                <span class="current-price">₹29.99</span>
+                <span class="original-price">₹44.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i>
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Brand Association Strip -->
+  <section class="brand-strip">
+    <div class="container">
+
+      <p class="brand-strip__title">
+        Partnered with Leading Global Brands
+      </p>
+
+      <div class="brand-strip__grid">
+
+        <!-- Footwear / Sneakers -->
+        <img src="./Landing_page_assets/brand/nike.svg" alt="Nike" class="brand-logo">
+        <img src="./Landing_page_assets/brand/Adidas.svg" alt="Adidas" class="brand-logo">
+
+        <!-- Electronics / Gaming -->
+        <img src="./Landing_page_assets/brand/Apple.svg" alt="Apple" class="brand-logo">
+        <img src="./Landing_page_assets/brand/Samsung.svg" alt="Samsung" class="brand-logo">
+        <img src="./Landing_page_assets/brand/Sony.svg" alt="Sony" class="brand-logo">
+
+        <!-- Watches -->
+        <img src="./Landing_page_assets/brand/Casio_logo.svg" alt="Casio" class="brand-logo">
+        <img src="./Landing_page_assets/brand/Fossil_Group_logo.svg" alt="Fossil" class="brand-logo">
+        <img src="./Landing_page_assets/brand/Titan Logo Vector.svg" alt="Titan" class="brand-logo">
+
+        <!-- Fashion -->
+        <img src="./Landing_page_assets/brand/Zara_Logo.svg" alt="Zara" class="brand-logo">
+        <img src="./Landing_page_assets/brand/H&M-Logo.svg" alt="H&M" class="brand-logo">
+        <img src="./Landing_page_assets/brand/Levi's_logo.svg" alt="Levi’s" class="brand-logo">
+
+        <!-- Cosmetics -->
+        <img src="./Landing_page_assets/brand/L'Oréal_logo.svg" alt="L’Oreal" class="brand-logo">
+        <img src="./Landing_page_assets/brand/Maybelline-Logo.svg" alt="Maybelline" class="brand-logo">
+
+        <!-- Books -->
+        <img src="./Landing_page_assets/brand/penguin.svg" alt="Penguin" class="brand-logo">
+        <img src="./Landing_page_assets/brand/harpercollins-logo.svg" alt="HarperCollins" class="brand-logo">
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <!-- Left Section -->
+      <div class="footer__left">
+        <div class="footer__logo">
+          <div>
+            <h2 class="footer__brand">ShopIt</h2>
+            <p class="footer__tagline">Trends Start Here</p>
+          </div>
+        </div>
+
+        <p class="footer__description">
+          Shopit is your go-to destination for trending products, unbeatable
+          deals, and effortless shopping—bringing style, quality, and
+          convenience together in one seamless online experience.
+        </p>
+
+        <div class="footer__newsletter">
+          <h1 class="footer__newsletter-heading">
+            Subscribe to our newsletter
+          </h1>
+          <h3 class="footer__section-title">Stay Updated</h3>
+          <form class="footer__form">
+            <input type="email" placeholder="Enter your email" class="footer__input" required />
+            <button type="submit" class="footer__button">Subscribe</button>
+          </form>
+          <p class="footer__helper-text">
+            Receive exclusive offers, product updates, and secure order
+            alerts.
+          </p>
+        </div>
+      </div>
+
+      <!-- Middle Sections -->
+      <div class="footer__content">
+        <div class="footer__column">
+          <h3 class="footer__column-title">Get to Know Us</h3>
+          <ul class="footer__links">
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About ShopIt</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">ShopIt Science</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3 class="footer__column-title">Help</h3>
+          <ul class="footer__links">
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Cancellation & Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="footer__right">
+        <p class="footer__contact-label">Questions? Contact us:</p>
+        <a href="mailto:support@ShopIt.com" class="footer__email">support@ShopIt.com</a>
+        <p class="footer__response-time">Response time: < 24 hours</p>
+            <div class="footer__social">
+              <p class="footer__social-label">Follow Us:</p>
+              <div class="footer__social-icons">
+                <a href="#" class="social-icon">
+                  <img src="./Landing_page_assets/social_media/aratai1.png" alt="Arattai" />
+                </a>
+                <a href="#" class="social-icon">
+                  <img src="./Landing_page_assets/social_media/linkedin.png" alt="Linkedin" />
+                </a>
+                <a href="#" class="social-icon">
+                  <img src="./Landing_page_assets/social_media/pinterest.png" alt="Pinterest" />
+                </a>
+                <a href="#" class="social-icon">
+                  <img src="./Landing_page_assets/social_media/youtube.png" alt="YouTube" />
+                </a>
+                <a href="#" class="social-icon">
+                  <img src="./Landing_page_assets/social_media/github.png" alt="Github" />
+                </a>
+              </div>
+            </div>
+      </div>
+      <!-- Footer Ecommerce Assurance -->
+      <div class="footer__assurance">
+        <div class="assurance-item">
+          <span class="assurance-icon">🚚</span>
+          <div>
+            <p class="assurance-title">Fast Delivery</p>
+            <p class="assurance-text">Free shipping on eligible orders</p>
+          </div>
+        </div>
+
+        <div class="assurance-item">
+          <span class="assurance-icon">🔁</span>
+          <div>
+            <p class="assurance-title">Easy Returns</p>
+            <p class="assurance-text">7-day hassle-free returns</p>
+          </div>
+        </div>
+
+        <div class="assurance-item">
+          <span class="assurance-icon">🔐</span>
+          <div>
+            <p class="assurance-title">Secure Payments</p>
+            <p class="assurance-text">100% protected transactions</p>
+          </div>
+        </div>
+
+        <div class="assurance-item payments">
+          <p class="assurance-title">We Accept</p>
+          <div class="payment-icons">
+            <svg viewBox="0 0 48 32" class="payment-svg" aria-label="Visa">
+              <rect width="48" height="32" rx="4" fill="#1A1F71" />
+              <text x="50%" y="65%" text-anchor="middle" fill="#fff" font-size="14" font-weight="700"
+                font-family="Arial">
+                VISA
+              </text>
+            </svg>
+
+            <svg viewBox="0 0 48 32" class="payment-svg" aria-label="Mastercard">
+              <rect width="48" height="32" rx="4" fill="#000" />
+              <circle cx="20" cy="16" r="8" fill="#EB001B" />
+              <circle cx="28" cy="16" r="8" fill="#F79E1B" />
+            </svg>
+
+            <svg viewBox="0 0 48 32" class="payment-svg" aria-label="PayPal">
+              <rect width="48" height="32" rx="4" fill="#003087" />
+              <text x="50%" y="65%" text-anchor="middle" fill="#fff" font-size="12" font-weight="700"
+                font-family="Arial">
+                PayPal
+              </text>
+            </svg>
+
+            <svg viewBox="0 0 48 32" class="payment-svg" aria-label="UPI">
+              <rect width="48" height="32" rx="4" fill="#111" />
+              <text x="50%" y="65%" text-anchor="middle" fill="#fff" font-size="12" font-weight="600"
+                font-family="Arial">
+                UPI
+              </text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer__bottom">
+      <div class="footer__bottom-left">
+        <p>&copy; 2025 ShopIt. All rights reserved.</p>
+        <nav class="footer__legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Accessibility</a>
+        </nav>
+      </div>
+      <div class="footer__bottom-right">
+        <div class="footer__status">
+          <span class="status-indicator"></span>
+          <span>All systems operational</span>
+        </div>
+        <p class="footer__updated">Last updated: 2 hours ago</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cosmetics Video -->
+  <div class="modal fade" id="videoCosmetics" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-black border-0">
+        <div class="modal-body p-0">
+          <video class="w-100" controls autoplay>
+            <source src="./Landing_page_assets/video/video/cosmatic.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footwear Video -->
+  <div class="modal fade" id="videoFootwear" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-black border-0">
+        <div class="modal-body p-0">
+          <video class="w-100" controls autoplay>
+            <source src="./Landing_page_assets/videos/footwear.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lates Gming Video -->
+  <div class="modal fade" id="videoLatesGming" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-black border-0">
+        <div class="modal-body p-0">
+          <video class="w-100" controls autoplay>
+            <source src="./Landing_page_assets/video/video/game.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- summer style Video -->
+  <div class="modal fade" id="videoSummerStyle" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-black border-0">
+        <div class="modal-body p-0">
+          <video class="w-100" controls autoplay>
+            <source src="./Landing_page_assets/video/video/summertshirt.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- smart home Video -->
+  <div class="modal fade" id="videoSmartHome" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-black border-0">
+        <div class="modal-body p-0">
+          <video class="w-100" controls autoplay>
+            <source src="./Landing_page_assets/video/video/smarthome.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--workout Video -->
+  <div class="modal fade" id="videoWorkout" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-black border-0">
+        <div class="modal-body p-0">
+          <video class="w-100" controls autoplay>
+            <source src="./Landing_page_assets/video/video/workout.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--cooking Video -->
+  <div class="modal fade" id="videoCooking" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-black border-0">
+        <div class="modal-body p-0">
+          <video class="w-100" controls autoplay>
+            <source src="./Landing_page_assets/video/video/cooking.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--headphone Video -->
+  <div class="modal fade" id="videoHeadphone" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-black border-0">
+        <div class="modal-body p-0">
+          <video class="w-100" controls autoplay>
+            <source src="./Landing_page_assets/video/video/headphone.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--travel Video -->
+  <div class="modal fade" id="videoTravel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-black border-0">
+        <div class="modal-body p-0">
+          <video class="w-100" controls autoplay>
+            <source src="./Landing_page_assets/video/video/travel.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ===================== Bootstrap  ===================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
