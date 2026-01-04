@@ -788,60 +788,29 @@ body {
   z-index: 10;
 }
 
-/* carousel imgs*/
-.image-carousel {
-  position: relative;
-  width: 100%;
+/* BOOTSTRAP CAROUSEL CUSTOMIZATION */
+.carousel {
   height: 150px;
-  overflow: hidden;
+  position: relative;
 }
 
-.carousel-track {
-  display: flex;
+.carousel-inner {
   height: 100%;
-  transition: transform 0.4s ease;
 }
-.carousel-track img {
+
+.carousel-item {
+  height: 150px;
+}
+.carousel-item img {
   width: 100%;
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
-  flex-shrink: 0;
   transition: transform 0.35s ease;
 }
 
-/*image zoom*/
-.game-card:hover .carousel-track img {
+.game-card:hover .carousel-item img {
   transform: scale(1.1);
-}
-
-/* carousel*/
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: none;
-  font-size: 20px;
-  padding: 4px 10px;
-  cursor: pointer;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 0.2s ease, background 0.2s ease;
-}
-.carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.85);
-}
-.carousel-btn.prev {
-  left: 6px;
-}
-.carousel-btn.next {
-  right: 6px;
-}
-
-.game-card:hover .carousel-btn {
-  opacity: 1;
 }
 
 /* ---------------- GAME INFO ---------------- */
