@@ -2473,4 +2473,23 @@ body:not(:has(:target)) #hero-carousel .carousel-dots .dot:nth-child(1) {
 .btn-submit:hover {
   background: rgb(220.221686747, 177.6578313253, 10.178313253);
   transform: translateY(-2px);
+}
+
+.contact-form form .invalid-feedback {
+  display: none;
+}
+.contact-form form:has(.btn-submit:focus) .form-control:invalid ~ .invalid-feedback,
+.contact-form form:has(.btn-submit:focus) .form-select:invalid ~ .invalid-feedback, .contact-form form:has(.btn-submit:active) .form-control:invalid ~ .invalid-feedback,
+.contact-form form:has(.btn-submit:active) .form-select:invalid ~ .invalid-feedback {
+  display: block;
+}
+.contact-form form:has(.btn-submit:focus) .form-control:invalid,
+.contact-form form:has(.btn-submit:focus) .form-select:invalid, .contact-form form:has(.btn-submit:active) .form-control:invalid,
+.contact-form form:has(.btn-submit:active) .form-select:invalid {
+  border-color: #dc3545;
+}
+.contact-form form:has(.btn-submit:focus) .form-control:valid,
+.contact-form form:has(.btn-submit:focus) .form-select:valid, .contact-form form:has(.btn-submit:active) .form-control:valid,
+.contact-form form:has(.btn-submit:active) .form-select:valid {
+  border-color: #198754;
 }/*# sourceMappingURL=main.css.map */
