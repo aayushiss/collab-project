@@ -1,0 +1,174 @@
+// @use "abstracts/variables";
+// @use "abstracts/mixins";
+
+// @use "base/reset";
+// @use "base/typography";
+// @use "base/globals";
+
+// @use "layout/header";
+// @use "layout/nav";
+// @use "layout/footer";
+
+// @use "components/buttons";
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.profile-page {
+  padding: 4rem 0;
+  background-color: $bg-page;
+}
+
+.profile-card {
+  max-width: 1100px;
+  margin: auto;
+  background: $bg-white;
+  border-radius: $radius-lg;
+  padding: 3rem;
+  @include shadow(soft);
+
+  @include respond(md) {
+    padding: 2rem;
+  }
+}
+
+/* =======================
+   HEADER
+======================= */
+.profile-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  .profile-avatar {
+    font-size: 5.5rem;
+    color: $text-muted;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 0.75rem;
+  }
+
+  .profile-email {
+    font-size: 1.05rem;
+    color: $text-muted;
+  }
+}
+
+/* =======================
+   SECTIONS (CARDS)
+======================= */
+.profile-section {
+  border: 1px solid $border-light;
+  border-radius: $radius-md;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background: $bg-white;
+
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+/* Full width sections */
+.full-width {
+  width: 100%;
+}
+
+/* =======================
+   EDIT ICON
+======================= */
+.edit-icon {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  color: $blue-color;
+  cursor: pointer;
+  transition: $transition-base;
+
+  &:hover {
+    color: darken($blue-color, 10%);
+  }
+}
+
+/* =======================
+   LINKS
+======================= */
+.profile-links {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 0.75rem;
+  }
+
+  a {
+    font-size: 1.05rem;
+    color: $blue-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* =======================
+   RECENT ORDERS
+======================= */
+.order-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $border-light;
+  border-radius: $radius-sm;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  background: $bg-soft;
+
+  p {
+    font-size: 1rem;
+  }
+
+  small {
+    font-size: 0.9rem;
+  }
+
+  @include respond(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+.view-all-orders {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  color: $blue-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* =======================
+   FOOTER
+======================= */
+.profile-footer {
+  text-align: center;
+  margin-top: 2.5rem;
+
+  a {
+    font-size: 1.05rem;
+    color: $blue-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
