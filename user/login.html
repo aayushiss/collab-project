@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login | ShopIt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+
+
+</head>
+
+<body>
+
+    <div class="login-card">
+
+        <!-- LEFT -->
+        <div class="left">
+            <img src="../assets/images/banners/login_leftcard.png" alt="Illustration">
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right">
+
+            <h1>Welcome</h1>
+            <p>Sign in to ShopIt</p>
+
+            <form class="needs-validation" novalidate action="../index.html">
+
+                <label>Email address</label>
+                <input 
+                    type="email" 
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter email"
+                    required
+                >
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+            
+                <label>Password</label>
+                <input 
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    placeholder="Enter password"
+                    minlength="8"
+                    required
+                >
+                <div class="invalid-feedback">
+                    Password must be at least 8 characters long.
+                </div>
+            
+                <div class="forgot">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            
+                <button type="submit">Login</button>
+            
+            </form>
+
+                <div class="signup">
+                    Don’t have an account? <a href="register.html">Sign up</a>
+                </div>
+
+                <div class="social">
+                    <button><i class="fa-brands fa-google"></i></button>
+                    <button><i class="fa-brands fa-yahoo"></i></button>
+                </div>
+        </div>
+
+    </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (() => {
+          'use strict'
+        
+          const forms = document.querySelectorAll('.needs-validation')
+        
+          Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+              form.classList.add('was-validated')
+            }, false)
+          })
+        })()
+        </script>
+        
+</body>
+
+</html>

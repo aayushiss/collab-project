@@ -1,0 +1,131 @@
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+
+@use "base/reset";
+@use "base/typography";
+// @use "base/globals";
+
+body {
+  min-height: 100vh;
+  background: $bg-soft;
+  @include flex-center;
+  background-image: url(../assets/images/banners/bg1.jpg);
+  background-color: rgba($color: $color-white, $alpha: 0.6);
+  background-blend-mode: lighten;
+}
+
+.login-card {
+  width: 900px;
+  max-width: 95%;
+  background: $color-white;
+  border-radius: $radius-md;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px 5px rgba(165, 165, 165,0.5);
+  // @include shadow(soft);
+
+  @include respond(md) {
+    flex-direction: column;
+  }
+}
+
+.left {
+  flex: 1;
+  background: $color-white;
+//   padding: 40px;
+  @include flex-center;
+
+  img {
+    max-width: 100%;
+  }
+
+  @include respond(md) {
+    display: none;
+  }
+}
+
+.right {
+  flex: 1;
+  padding: 40px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: $blue-color;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: $text-primary;
+  font-weight: bold;
+}
+
+p {
+  color: $text-muted;
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid $border-light;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: $font-body;
+}
+
+.forgot {
+  text-align: right;
+  font-size: 13px;
+  margin-bottom: 20px;
+
+  a {
+    color: $blue-color;
+    text-decoration: none;
+  }
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: $blue-color;
+  color: $color-white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.signup {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+
+  a {
+    color: $blue-color;
+    text-decoration: none;
+  }
+}
+
+.social {
+  margin-top: 25px;
+  text-align: center;
+
+  button {
+    width: 60px;
+    margin: 0 5px;
+    background: $color-white;
+    color: $text-primary;
+    border: 1px solid $border-light;
+    cursor: pointer;
+  }
+}
