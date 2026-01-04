@@ -218,6 +218,24 @@ body {
   transform: translateX(-50%);
   transition: 250ms ease;
 }
+.nav-menu .nav-link.active {
+  color: #F4C611;
+  font-weight: 600;
+}
+.nav-menu .nav-link.active::after {
+  width: 60%;
+}
+.nav-menu .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #F4C611;
+  transform: translateX(-50%);
+  transition: 250ms ease;
+}
 
 @media (max-width: 768px) {
   .nav-menu {
@@ -1143,11 +1161,11 @@ body {
 
 /* PRODUCT CARD */
 .product-card {
-  background: #fff;
+  background: #f4f4f4;
   border-radius: 18px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s;
   overflow: hidden;
   position: relative;
@@ -1173,6 +1191,35 @@ body {
   border-radius: 20px;
   z-index: 2;
 }
+.product-card .wishlist-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+.product-card .wishlist-btn i {
+  color: #111;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.product-card .wishlist-btn:hover i {
+  color: #e11d48;
+}
+.product-card .wishlist-btn:active {
+  background-color: #e11d48;
+}
+.product-card .wishlist-btn:active i {
+  color: white;
+}
 .product-card img {
   width: 100%;
   height: 210px;
@@ -1180,46 +1227,32 @@ body {
   border-radius: 12px;
   margin-bottom: 12px;
   transition: transform 0.4s ease;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.1);
 }
 .product-card .category {
-  display: block;
   font-size: 12px;
   font-weight: 600;
   color: #9ca3af;
   letter-spacing: 1px;
-  margin-bottom: 4px;
 }
 .product-card h6 {
   margin: 6px 0;
   font-weight: 700;
   font-size: 16px;
-  color: #111827;
 }
 .product-card .rating {
-  margin: 6px 0;
-  font-size: 14px;
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 6px;
+  font-size: 14px;
 }
 .product-card .rating i {
   color: #f4b400;
-  font-size: 14px;
-}
-.product-card .rating .rating-value {
-  font-weight: 600;
-  color: #111;
-}
-.product-card .rating .rating-count {
-  font-size: 13px;
-  color: #6b7280;
 }
 .product-card .price {
   font-size: 18px;
   font-weight: 700;
   margin: 10px 0;
-  color: #111;
 }
 .product-card .price span {
   font-size: 14px;
@@ -1227,9 +1260,15 @@ body {
   color: #9ca3af;
   margin-left: 6px;
 }
+.product-card .action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .product-card .btn {
   border-radius: 12px;
   font-weight: 600;
+  padding: 10px;
   transition: all 0.3s ease;
 }
 .product-card .btn:hover {

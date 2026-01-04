@@ -1,0 +1,56 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* ================= BRAND LOGO STRIP ================= */
+
+.brand-strip {
+  background: $bg-white;
+  padding: 3.5rem 0;
+  border-top: 1px solid $divider-color;
+  border-bottom: 1px solid $divider-color;
+}
+
+.brand-strip__title {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: $text-muted;
+  margin-bottom: 2.5rem;
+}
+
+/* Grid */
+.brand-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 2.2rem;
+  align-items: center;
+  justify-items: center;
+
+  @include respond(lg) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include respond(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include respond(sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Logo style */
+.brand-logo {
+  max-width: 110px;
+  max-height: 42px;
+  object-fit: contain;
+  opacity: 0.65;
+  filter: grayscale(100%);
+  transition: $transition-base;
+
+  &:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: translateY(-4px);
+  }
+}
