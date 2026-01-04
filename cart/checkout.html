@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="./css/cart.css">
+
+</head>
+<body>
+
+    <header class="top-header">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- Hamburger (mobile only) -->
+          <div class="col-2 d-md-none">
+            <label for="nav-toggle" class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+
+          <div class="col-md-2 col-4">
+            <a href="#" class="logo" style="text-decoration: none;">ShopIt</a>
+          </div>
+
+          <div class="col-md-8 d-none d-md-block">
+            <div class="search-container position-relative">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search for products..."
+              />
+            </div>
+          </div>
+
+          <div class="col-md-2 col-6 text-end">
+            <a style="text-decoration: none; color: #000;" href="#" class="icon-link"><i class="far fa-user"></i></a>
+            <a style="text-decoration: none; color: #000;" href="#" class="icon-link"
+              ><i class="fas fa-shopping-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== Navigation Menu ===================== -->
+ <nav style="margin-top: 0%; margin-bottom: 0%;" class="nav-menu">
+      <div class="container-fluid">
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="#" class="nav-link">Gaming</a>
+          <a href="#" class="nav-link">Books</a>
+          <a href="#" class="nav-link">Clothing</a>
+          <a href="/categories/electronics.html" class="nav-link">Electronics</a>
+          <a href="#" class="nav-link">Cosmetics</a>
+          <a href="#" class="nav-link">Footwear</a>
+          <a href="#" class="nav-link">Furniture</a>
+          <a href="./categories/Aboutus.html" class="nav-link">About Us</a>
+          <a href="./categories/contact.html" class="nav-link">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+
+<!-- ========================================================================================== -->
+
+<!-- ================= CAROUSEL ================= -->
+<div id="offerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-caption text-start">
+        <small class="badge-text">Freebies On 🎁</small>
+        <h1 class="fw-bold">BOGO 2 SALE</h1>
+        <p class="fs-5">Live Now</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-caption text-start">
+        <small class="badge-text">Mega Deal ⚡</small>
+        <h1 class="fw-bold">Up to 60% OFF</h1>
+        <p class="fs-5">Live Now</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="carousel-overlay"></div>
+      <div class="carousel-caption text-start">
+        <small class="badge-text">Limited Time ⏰</small>
+        <h1 class="fw-bold">Free Shipping</h1>
+        <p class="fs-5">Ends Tonight</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= CHECKOUT ================= -->
+<section class="checkout-wrap">
+
+  <div class="checkout-layout">
+
+    <!-- LEFT : CART ITEMS -->
+    <div class="cart-panel">
+      <h4 class="cart-title">Items in Bag</h4>
+
+      <div class="cart-item">
+        <img src="../assets/images/categories/cosmetics/ads.jpg" alt="">
+        <div class="cart-info">
+          <h6>Huda Beauty Lipstick</h6>
+          <div class="cart-price">
+            <span class="old">₹499</span>
+            <span class="off">20% OFF</span>
+          </div>
+          <strong>₹399</strong>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="../assets/images/categories/electronics/sub/watches/card8.jpg" alt="">
+        <div class="cart-info">
+          <h6>Ultra Smart Watch</h6>
+          <div class="cart-price">
+            <span class="old">₹3499</span>
+            <span class="off">15% OFF</span>
+          </div>
+          <strong>₹2999</strong>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="../assets/images/categories/footwear/card8.jpg" alt="">
+        <div class="cart-info">
+          <h6>Comfy Shoes</h6>
+          <div class="cart-price">
+            <span class="old">₹3499</span>
+            <span class="off">15% OFF</span>
+          </div>
+          <strong>₹2999</strong>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="../assets/images/categories/books/bestsellers/becoming.jpg" alt="">
+        <div class="cart-info">
+          <h6>Joysticks</h6>
+          <div class="cart-price">
+            <span class="old">₹1999</span>
+            <span class="off">25% OFF</span>
+          </div>
+          <strong>₹1499</strong>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- RIGHT : SUMMARY + PAYMENT -->
+    <div class="payment-panel">
+      <h5>Price Details</h5>
+
+      <div class="price-row">
+        <span>Subtotal</span><span>₹10,196</span>
+      </div>
+      <div class="price-row discount">
+        <span>Discount</span><span>- ₹2,071</span>
+      </div>
+      <div class="price-row">
+        <span>Shipping</span><span>₹99</span>
+      </div>
+
+      <hr>
+
+      <div class="price-row total">
+        <span>Total</span><span>₹8,224</span>
+      </div>
+
+      <!-- ACCORDION (BOOTSTRAP SAFE) -->
+     <div class="payment-panel">
+
+  <h5 class="mb-3 fw-semibold">Payment Options</h5>
+
+  <div class="pay-accordion" id="payOptions">
+
+    <!-- UPI -->
+    <div class="pay-item">
+      <button class="pay-header" data-bs-toggle="collapse" data-bs-target="#pay-upi">
+        <span>💸 UPI</span>
+        <span class="pay-offer">10% OFF</span>
+      </button>
+
+      <div id="pay-upi" class="collapse show" data-bs-parent="#payOptions">
+        <div class="pay-body">
+          Google Pay • PhonePe • Paytm
+          <small>Max discount ₹500</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD -->
+    <div class="pay-item">
+      <button class="pay-header collapsed" data-bs-toggle="collapse" data-bs-target="#pay-card">
+        <span>💳 Credit / Debit Card</span>
+        <span class="pay-offer">Bank Offers</span>
+      </button>
+
+      <div id="pay-card" class="collapse" data-bs-parent="#payOptions">
+        <div class="pay-body">
+          HDFC – 10% Instant Discount<br>
+          SBI – 7% Cashback<br>
+          ICICI – No Cost EMI
+        </div>
+      </div>
+    </div>
+
+    <!-- WALLET -->
+    <div class="pay-item">
+      <button class="pay-header collapsed" data-bs-toggle="collapse" data-bs-target="#pay-wallet">
+        <span>👛 Wallets</span>
+        <span class="pay-offer">₹150 Cashback</span>
+      </button>
+
+      <div id="pay-wallet" class="collapse" data-bs-parent="#payOptions">
+        <div class="pay-body">
+          Amazon Pay • Mobikwik • Freecharge
+          <small>Min order ₹999</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- NET BANKING -->
+    <div class="pay-item">
+      <button class="pay-header collapsed" data-bs-toggle="collapse" data-bs-target="#pay-net">
+        <span>🏦 Net Banking</span>
+        <span class="pay-offer">5% OFF</span>
+      </button>
+
+      <div id="pay-net" class="collapse" data-bs-parent="#payOptions">
+        <div class="pay-body">
+          All Major Banks Supported
+          <small>Max discount ₹300</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- EMI -->
+    <div class="pay-item">
+      <button class="pay-header collapsed" data-bs-toggle="collapse" data-bs-target="#pay-emi">
+        <span>📆 EMI Options</span>
+        <span class="pay-offer">No Cost EMI</span>
+      </button>
+
+      <div id="pay-emi" class="collapse" data-bs-parent="#payOptions">
+        <div class="pay-body">
+          3 / 6 / 9 / 12 Months EMI
+          <small>Available on orders above ₹3,000</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="pay-btn">Proceed to Pay</button>
+</div>
+
+
+
+  </div>
+
+</section>
+<!--------------------------foooter-->
+<footer class="footer">
+      <div class="footer__container">
+        <!-- Left Section -->
+        <div class="footer__left">
+          <div class="footer__logo">
+            <div>
+              <h2 class="footer__brand">ShopIt</h2>
+              <p class="footer__tagline">Trends Start Here</p>
+            </div>
+          </div>
+
+          <p class="footer__description">
+            Shopit is your go-to destination for trending products, unbeatable
+            deals, and effortless shopping—bringing style, quality, and
+            convenience together in one seamless online experience.
+          </p>
+
+          <div class="footer__newsletter">
+            <h1 class="footer__newsletter-heading">
+              Subscribe to our newsletter
+            </h1>
+            <h3 class="footer__section-title">Stay Updated</h3>
+            <form class="footer__form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="footer__input"
+                required
+              />
+              <button type="submit" class="footer__button">Subscribe</button>
+            </form>
+            <p class="footer__helper-text">
+              Receive exclusive offers, product updates, and secure order
+              alerts.
+            </p>
+          </div>
+        </div>
+
+        <!-- Middle Sections -->
+        <div class="footer__content">
+          <div class="footer__column">
+            <h3 class="footer__column-title">Get to Know Us</h3>
+            <ul class="footer__links">
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">About ShopIt</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">ShopIt Science</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__column-title">Help</h3>
+            <ul class="footer__links">
+              <li><a href="#">Payments</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Cancellation & Returns</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="footer__right">
+          <p class="footer__contact-label">Questions? Contact us:</p>
+          <a href="mailto:support@ShopIt.com" class="footer__email"
+            >support@ShopIt.com</a
+          >
+          <p class="footer__response-time">Response time: < 24 hours</p>
+          <div class="footer__social">
+            <p class="footer__social-label">Follow Us:</p>
+            <div class="footer__social-icons">
+              <a href="#" class="social-icon">
+                <img
+                  src="../Landing_page_assets/social_media/aratai1.png"
+                  alt="Arattai"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="../Landing_page_assets/social_media/linkedin.png"
+                  alt="Linkedin"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="../Landing_page_assets/social_media/pinterest.png"
+                  alt="Pinterest"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="../Landing_page_assets/social_media/youtube.png"
+                  alt="YouTube"
+                />
+              </a>
+              <a href="#" class="social-icon">
+                <img
+                  src="../Landing_page_assets/social_media/github.png"
+                  alt="Github"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Ecommerce Assurance -->
+        <div class="footer__assurance">
+          <div class="assurance-item">
+            <span class="assurance-icon">🚚</span>
+            <div>
+              <p class="assurance-title">Fast Delivery</p>
+              <p class="assurance-text">Free shipping on eligible orders</p>
+            </div>
+          </div>
+
+          <div class="assurance-item">
+            <span class="assurance-icon">🔁</span>
+            <div>
+              <p class="assurance-title">Easy Returns</p>
+              <p class="assurance-text">7-day hassle-free returns</p>
+            </div>
+          </div>
+
+          <div class="assurance-item">
+            <span class="assurance-icon">🔐</span>
+            <div>
+              <p class="assurance-title">Secure Payments</p>
+              <p class="assurance-text">100% protected transactions</p>
+            </div>
+          </div>
+
+          <div class="assurance-item payments">
+            <p class="assurance-title">We Accept</p>
+            <div class="payment-icons">
+              <svg viewBox="0 0 48 32" class="payment-svg" aria-label="Visa">
+                <rect width="48" height="32" rx="4" fill="#1A1F71" />
+                <text
+                  x="50%"
+                  y="65%"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="14"
+                  font-weight="700"
+                  font-family="Arial"
+                >
+                  VISA
+                </text>
+              </svg>
+
+              <svg
+                viewBox="0 0 48 32"
+                class="payment-svg"
+                aria-label="Mastercard"
+              >
+                <rect width="48" height="32" rx="4" fill="#000" />
+                <circle cx="20" cy="16" r="8" fill="#EB001B" />
+                <circle cx="28" cy="16" r="8" fill="#F79E1B" />
+              </svg>
+
+              <svg viewBox="0 0 48 32" class="payment-svg" aria-label="PayPal">
+                <rect width="48" height="32" rx="4" fill="#003087" />
+                <text
+                  x="50%"
+                  y="65%"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="12"
+                  font-weight="700"
+                  font-family="Arial"
+                >
+                  PayPal
+                </text>
+              </svg>
+
+              <svg viewBox="0 0 48 32" class="payment-svg" aria-label="UPI">
+                <rect width="48" height="32" rx="4" fill="#111" />
+                <text
+                  x="50%"
+                  y="65%"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="12"
+                  font-weight="600"
+                  font-family="Arial"
+                >
+                  UPI
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <p>&copy; 2025 ShopIt. All rights reserved.</p>
+          <nav class="footer__legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+          </nav>
+        </div>
+        <div class="footer__bottom-right">
+          <div class="footer__status">
+            <span class="status-indicator"></span>
+            <span>All systems operational</span>
+          </div>
+          <p class="footer__updated">Last updated: 2 hours ago</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cosmetics Video -->
+    <div class="modal fade" id="videoCosmetics" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-black border-0">
+          <div class="modal-body p-0">
+            <video class="w-100" controls autoplay>
+              <source
+                src="../Landing_page_assets/video/video/cosmatic.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footwear Video -->
+    <div class="modal fade" id="videoFootwear" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-black border-0">
+          <div class="modal-body p-0">
+            <video class="w-100" controls autoplay>
+              <source
+                src="../Landing_page_assets/videos/footwear.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lates Gming Video -->
+    <div class="modal fade" id="videoLatesGming" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-black border-0">
+          <div class="modal-body p-0">
+            <video class="w-100" controls autoplay>
+              <source
+                src="../Landing_page_assets/video/video/game.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- summer style Video -->
+    <div class="modal fade" id="videoSummerStyle" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-black border-0">
+          <div class="modal-body p-0">
+            <video class="w-100" controls autoplay>
+              <source
+                src="../Landing_page_assets/video/video/summertshirt.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- smart home Video -->
+    <div class="modal fade" id="videoSmartHome" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-black border-0">
+          <div class="modal-body p-0">
+            <video class="w-100" controls autoplay>
+              <source
+                src="../Landing_page_assets/video/video/smarthome.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--workout Video -->
+    <div class="modal fade" id="videoWorkout" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-black border-0">
+          <div class="modal-body p-0">
+            <video class="w-100" controls autoplay>
+              <source
+                src="../Landing_page_assets/video/video/workout.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--cooking Video -->
+    <div class="modal fade" id="videoCooking" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-black border-0">
+          <div class="modal-body p-0">
+            <video class="w-100" controls autoplay>
+              <source
+                src="../Landing_page_assets/video/video/cooking.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--headphone Video -->
+    <div class="modal fade" id="videoHeadphone" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-black border-0">
+          <div class="modal-body p-0">
+            <video class="w-100" controls autoplay>
+              <source
+                src="../Landing_page_assets/video/video/headphone.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--travel Video -->
+    <div class="modal fade" id="videoTravel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-black border-0">
+          <div class="modal-body p-0">
+            <video class="w-100" controls autoplay>
+              <source
+                src="../Landing_page_assets/video/video/travel.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+        
+    
+    <!-- ========= Bootstrap  ========== -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ===================================================================================== -->
+</body>
+
+
+<script>
+const minRange = document.getElementById("minRange");
+const maxRange = document.getElementById("maxRange");
+const minVal = document.getElementById("minVal");
+const maxVal = document.getElementById("maxVal");
+const wrapper = document.querySelector(".range-wrapper");
+
+function updateRange() {
+  let min = parseInt(minRange.value);
+  let max = parseInt(maxRange.value);
+
+  if (min > max) [min, max] = [max, min];
+
+  minVal.textContent = min;
+  maxVal.textContent = max;
+
+  wrapper.style.setProperty("--min", min);
+  wrapper.style.setProperty("--max", max);
+}
+
+minRange.addEventListener("input", updateRange);
+maxRange.addEventListener("input", updateRange);
+
+updateRange();
+
+
+
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
