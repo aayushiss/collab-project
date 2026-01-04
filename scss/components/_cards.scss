@@ -38,4 +38,55 @@
       background: linear-gradient(120deg, rgba(255,255,255,.35), transparent);
     }
   }
+  .wishlist-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.92);
+  border: none;
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+
+  i {
+    font-size: 0.95rem;
+    color: #333;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+
+    i {
+      transform: scale(1.1);
+      color: #e63946;
+    }
+  }
+
+  &.active {
+    background: #fff0f1;
+
+    i {
+      color: #e63946;
+      font-weight: 900;
+    }
+  }
+}
+
 }
